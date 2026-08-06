@@ -54,15 +54,21 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "geolocation=(), microphone=(), camera=()"
 
-# ==========================================================================
-#  ESIKATSELUTILA — POISTA TÄMÄ OSIO ENNEN JULKAISUA findera.fi-OSOITTEESEEN
-#
-#  Estää hakukoneita löytämästä keskeneräistä versiota. Poista alla olevat
-#  6 riviä (tästä kommentista seuraavaan tyhjään riviin), kun sivusto
-#  otetaan oikeasti käyttöön — muuten sivusto ei koskaan näy Googlessa.
-# ==========================================================================
+# Sisältökansion tekstitiedostot julkaistaan sivuston mukana, mutta ne eivät
+# kuulu hakutuloksiin — muuten sama teksti näkyisi Googlessa kahteen kertaan.
 [[headers]]
-  for = "/*"
+  for = "/content/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
+# Työkalut ja ohjeet eivät myöskään kuulu hakutuloksiin
+[[headers]]
+  for = "/tools/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
+[[headers]]
+  for = "/README.md"
   [headers.values]
     X-Robots-Tag = "noindex, nofollow"
 
