@@ -1,0 +1,112 @@
+# Netlify-asetukset. Tiedosto luetaan automaattisesti julkaisun yhteydessä.
+
+[build]
+  publish = "."
+  # Vie content/-kansion tekstit sivuille ennen julkaisua, jotta julkaistu
+  # sivusto vastaa aina content/-kansiota. Jos skripti epäonnistuu, julkaisu
+  # keskeytyy ja edellinen versio jää pystyyn.
+  command = "python3 tools/apply_content.py"
+
+# Fontit eivät koskaan muutu, joten ne saavat pitkän välimuistin.
+[[headers]]
+  for = "/assets/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Kuvat, tyylit ja skriptit tarkistetaan palvelimelta jokaisella käynnillä.
+# Selain käyttää välimuistia vain, jos tiedosto ei ole muuttunut.
+#
+# HUOM: kuvatiedostojen nimet pysyvät samoina päivitysten välillä
+# (esim. galleria-1-800.webp), joten pitkä välimuisti jättäisi vanhat
+# kuvat näkyviin päivityksen jälkeen. Siksi tässä käytetään no-cache.
+[[headers]]
+  for = "/assets/img/*"
+  [headers.values]
+    Cache-Control = "public, no-cache"
+
+[[headers]]
+  for = "/assets/logos/*"
+  [headers.values]
+    Cache-Control = "public, no-cache"
+
+[[headers]]
+  for = "/assets/css/*"
+  [headers.values]
+    Cache-Control = "public, no-cache"
+
+[[headers]]
+  for = "/assets/js/*"
+  [headers.values]
+    Cache-Control = "public, no-cache"
+
+# HTML-sivut haetaan aina tuoreena
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, no-cache"
+
+# Perusturvallisuusotsakkeet
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+
+# ==========================================================================
+#  ESIKATSELUTILA — POISTA TÄMÄ OSIO ENNEN JULKAISUA findera.fi-OSOITTEESEEN
+#
+#  Estää hakukoneita löytämästä keskeneräistä versiota. Poista alla olevat
+#  6 riviä (tästä kommentista seuraavaan tyhjään riviin), kun sivusto
+#  otetaan oikeasti käyttöön — muuten sivusto ei koskaan näy Googlessa.
+# ==========================================================================
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
+# Siistit osoitteet ilman .html-päätettä (vanhat osoitteet ohjautuvat uusiin)
+[[redirects]]
+  from = "/palvelut"
+  to = "/palvelut.html"
+  status = 200
+
+[[redirects]]
+  from = "/projektit"
+  to = "/projektit.html"
+  status = 200
+
+[[redirects]]
+  from = "/minusta"
+  to = "/minusta.html"
+  status = 200
+
+[[redirects]]
+  from = "/yhteystiedot"
+  to = "/yhteystiedot.html"
+  status = 200
+
+# Google Sites -aikaiset osoitteet ohjataan uusiin, jotta hakukoneiden
+# ja vanhojen linkkien kautta tulevat kävijät eivät päädy virhesivulle.
+# Vanha yhteystietosivu oli osoitteessa /ota-yhteyttä (ä-kirjaimella).
+[[redirects]]
+  from = "/ota-yhteyttä"
+  to = "/yhteystiedot.html"
+  status = 301
+
+[[redirects]]
+  from = "/ota-yhteytt%C3%A4"
+  to = "/yhteystiedot.html"
+  status = 301
+
+[[redirects]]
+  from = "/ota-yhteytta"
+  to = "/yhteystiedot.html"
+  status = 301
+
+# Google Sitesin etusivu oli myös osoitteessa /findera
+[[redirects]]
+  from = "/findera"
+  to = "/"
+  status = 301

@@ -1,0 +1,18 @@
+# macOS luo näitä automaattisesti kansioihin — eivät kuulu sivustoon
+.DS_Store
+
+# Editorin ja työkalujen paikalliset asetukset
+.vscode/
+.idea/
+.claude/
+
+# Varmuuskopiot kirjoitetaan projektin ulkopuolelle, mutta varmuuden vuoksi
+FinDera-varmuuskopiot/
+.varmuuskopiot/
+
+# Väliaikaiset testitiedostot (esim. _mq_test.html)
+_*.html
+
+# Pythonin välimuisti
+__pycache__/
+*.pyc
