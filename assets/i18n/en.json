@@ -41,7 +41,7 @@
   "pages": {
     "index.html": {
       "meta.title": "FinDera Consulting — Your connection to sustainable solutions in Europe",
-      "meta.desc": "FinDera connects Finnish projects and organisations with the right sites, people and practical lessons in Europe. Site visits, group trips, door opening and mapping — with special expertise in Germany and the DACH region.",
+      "meta.desc": "FinDera connects Finnish projects and organisations with the right sites, people and practical lessons across Europe. Site visits, group trips, door opening and mapping — with special expertise in Germany and the DACH region.",
       "hero.title": "<span class=\"line-mask\"><span style=\"animation-delay:.25s\">Your connection to</span></span><span class=\"line-mask\"><span style=\"animation-delay:.36s\">sustainable <em class=\"hl serif-accent\">Europe</em>.</span></span>",
       "hero.lead": "I connect projects and organisations with the best best-practices, expertise and practical lessons in Europe.",
       "hero.scroll": "Scroll",
