@@ -22,7 +22,7 @@
   "hero.eyebrow.description": "Front page hero section — small label above the heading.",
   "hero.title": "<span class=\"line-mask\"><span style=\"animation-delay:.25s\">Your connection to</span></span><span class=\"line-mask\"><span style=\"animation-delay:.36s\">sustainable <em class=\"hl serif-accent\">Europe</em>.</span></span>",
   "hero.title.description": "Front page hero section — heading. Contains HTML markup (e.g. <em> or <strong>). Keep the tags as they are and change only the text between them.",
-  "hero.lead": "I connect projects and organisations with the best best-practices, expertise and practical lessons in Europe.",
+  "hero.lead": "Findera connects projects and organisations with the best best-practices, expertise and practical lessons in Europe.",
   "hero.lead.description": "Front page hero section — intro paragraph.",
   "cta.bookFree": "Book a free scoping call",
   "cta.bookFree.description": "Call to action — button text. Shared across all pages — if you change this, change the same text in the other page files too.",
