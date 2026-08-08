@@ -22,7 +22,7 @@
   "hero.eyebrow.description": "Hero-Bereich der Startseite — kleine Zeile über der Überschrift.",
   "hero.title": "<span class=\"line-mask\"><span style=\"animation-delay:.25s\">Ihre Verbindung zum</span></span><span class=\"line-mask\"><span style=\"animation-delay:.36s\">nachhaltigen <em class=\"hl serif-accent\">Europa</em>.</span></span>",
   "hero.title.description": "Hero-Bereich der Startseite — Überschrift. Enthält HTML-Auszeichnung (z. B. <em> oder <strong>). Lassen Sie die Tags unverändert und ändern Sie nur den Text dazwischen.",
-  "hero.lead": "Ich verbinde Projekte und Organisationen mit den richtigen Referenzen, Kontakten und praktischen Erkenntnissen im europäischen Raum.",
+  "hero.lead": "FinDera verbindet Projekte und Organisationen mit den richtigen Referenzen, Kontakten und praktischen Erkenntnissen im europäischen Raum.",
   "hero.lead.description": "Hero-Bereich der Startseite — Einleitung.",
   "cta.bookFree": "Kostenloses Erstgespräch vereinbaren",
   "cta.bookFree.description": "Handlungsaufforderung — Beschriftung der Schaltfläche. Auf allen Seiten gleich — wenn Sie das ändern, ändern Sie denselben Text auch in den Dateien der anderen Seiten.",
