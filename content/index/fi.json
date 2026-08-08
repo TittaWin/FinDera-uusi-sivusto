@@ -22,7 +22,7 @@
   "hero.eyebrow.description": "Etusivun pääkuva-osio — pieni yläotsikko.",
   "hero.title": "<span class=\"line-mask\"><span style=\"animation-delay:.25s\">Yhteytesi Euroopan</span></span> <span class=\"line-mask\"><span style=\"animation-delay:.36s\">kestäviin <em class=\"hl serif-accent\">ratkaisuihin</em>.</span></span>",
   "hero.title.description": "Etusivun pääkuva-osio — otsikko. Sisältää HTML-merkintää (esim. <em> tai <strong>). Säilytä tagit ennallaan ja muuta vain niiden välissä oleva teksti.",
-  "hero.lead": "Yhdistän suomalaiset hankkeet ja organisaatiot oikeisiin kohteisiin, ihmisiin ja käytännön oppeihin — erityisosaamisenani Saksa, saksankielinen Eurooppa ja Alankomaat.",
+  "hero.lead": "Findera yhdistää suomalaiset hankkeet ja organisaatiot oikeisiin kohteisiin, ihmisiin ja käytännön oppeihin — erityisosaamisenani Saksa, saksankielinen Eurooppa ja Alankomaat.",
   "hero.lead.description": "Etusivun pääkuva-osio — ingressi.",
   "cta.bookFree": "Varaa maksuton alkukartoitus",
   "cta.bookFree.description": "Yhteydenottokehotus — painikkeen teksti. Yhteinen kaikille sivuille — jos muutat tätä, muuta sama teksti myös muiden sivujen tiedostoihin.",
