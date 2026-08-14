@@ -32,7 +32,18 @@ LOGOS = [
     ("ely",         "ELY_LA01_Logo___FI_B3___RGB.png",         "Varsinais-Suomen ELY-keskus"),
     ("lsjh",        "LSJH_LOGO_HIRES_VÄRI_SUOMI_RGB.jpg",      "Lounais-Suomen Jätehuolto Oy"),
     ("klj",         "KLJ_tunnus_vihreä.png",                   "Kymenlaakson Jäte Oy"),
+    ("turkuamk",    "turun_amk_logo.jpg",                      "Turun ammattikorkeakoulu"),
 ]
+
+
+# Esirajaus niille logoille, joiden alkuperaistiedosto on liian korkea nauhaan.
+# Arvot ovat pikseleita alkuperaisessa kuvassa (vasen, ylä, oikea, ala).
+CROP = {
+    # Turun AMK: tiedostossa on nelirivinen pystyversio. Englanninkielinen
+    # alarivi jaa 32 pikselin nauhassa lukukelvottomaksi, joten kaytetaan
+    # suomenkielista versiota: tahti + TURKU AMK.
+    "turkuamk": (0, 70, 1342, 425),
+}
 
 
 def load(fname):
@@ -139,7 +150,10 @@ def main():
     mono, color = {}, {}
     print("Ladataan:")
     for key, fname, _ in LOGOS:
-        im = trim(load(fname))
+        im = load(fname)
+        if key in CROP:
+            im = im.crop(CROP[key])
+        im = trim(im)
         print(f"  {key:<14} {im.width}x{im.height}")
         color[key] = im
         mono[key] = to_mono(im)

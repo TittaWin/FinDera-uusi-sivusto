@@ -114,6 +114,8 @@ MANIFEST = {
     "case-salaoja":       ("20250415_110936.jpg",        "card", AR_CARD, 0.55),
     "case-ely":           ("20230525_123954.jpg",        "card", AR_CARD, 0.80),
     "case-osao":          ("20180525_110429.jpg",        "card", AR_CARD, 0.95),
+    # Väliaikainen kuva — vaihdetaan oikeaan matkakuvaan myöhemmin
+    "case-turkuamk":      ("PL_D95B3230.jpg",            "card", AR_CARD, 0.50),
 
     # Etusivun esittelykuva
     "intro-ryhma":        ("20180525_102657.jpg",        "card", AR_CARD, 0.90),
