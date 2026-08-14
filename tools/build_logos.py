@@ -33,6 +33,7 @@ LOGOS = [
     ("lsjh",        "LSJH_LOGO_HIRES_VÄRI_SUOMI_RGB.jpg",      "Lounais-Suomen Jätehuolto Oy"),
     ("klj",         "KLJ_tunnus_vihreä.png",                   "Kymenlaakson Jäte Oy"),
     ("turkuamk",    "turun_amk_logo.jpg",                      "Turun ammattikorkeakoulu"),
+    ("muhos",       "Muhos_logo_RGB_musta.png",                "Muhoksen kunta"),
 ]
 
 
