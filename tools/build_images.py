@@ -126,9 +126,12 @@ MANIFEST = {
     # Etusivun esittelykuva
     "intro-ryhma":        ("20180525_102657.jpg",        "card", AR_CARD, 0.90),
 
-    # Etusivu, "Miksi paikan päällä" — kuva ravintolaillasta.
-    # Alkuperainen on jo 3:4, joten pystykuvana siita ei rajaudu mitaan pois.
-    "paikan-paalla":      ("20260429_202252.jpg",        "port", AR_PORT, 0.50),
+    # Etusivu, "Miksi paikan päällä" — kollaasi ravintolaillasta.
+    # Pystyruudut 3:4, vaakaruudut 4:3; ruudukko rajaa loput (object-fit).
+    "illat-1":            ("20260429_202252.jpg",        "gal",  AR_PORT, 0.50),
+    "illat-2":            ("20230204_213909.jpg",        "gal",  AR_GAL,  0.55),
+    "illat-3":            ("20240927_163438.jpg",        "gal",  AR_PORT, 0.45),
+    "illat-4":            ("20240410_122743.jpg",        "gal",  AR_GAL,  0.55),
 
     # Galleria — kaikki samassa 4:3-suhteessa, jotta ruudukko on tasainen
     "galleria-1":         ("PL_D95B3192.jpg",            "gal",  AR_GAL, 0.40),
