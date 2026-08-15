@@ -166,9 +166,10 @@ Kuvat ovat kansiossa `assets/img/` valmiiksi optimoituina useassa koossa
 (esim. `palvelu-matkat-1000.webp` ja `palvelu-matkat.jpg`).
 
 Kuvat tuotetaan skriptillä `tools/build_images.py`. Se lukee alkuperäiset
-kuvat kansiosta `Findera kuvat/good pictures`, kääntää ne oikein päin, rajaa
-kiinteisiin kuvasuhteisiin, yhtenäistää valotuksen ja värit ja pakkaa
-verkkokäyttöön. Ajo (vaatii Pythonin ja Pillow-kirjaston):
+kuvat kahdesta kansiosta — `Findera kuvat/good pictures` ja referenssikorttien
+omat kuvat kansiosta `Documents/FinDera/Referenssikuvat` — kääntää ne oikein
+päin, rajaa kiinteisiin kuvasuhteisiin, yhtenäistää valotuksen ja värit ja
+pakkaa verkkokäyttöön. Ajo (vaatii Pythonin ja Pillow-kirjaston):
 
 ```bash
 python3 tools/build_images.py
@@ -183,7 +184,11 @@ Skriptin kohdassa `MANIFEST` jokaisella kuvalla on rivi muotoa
 Viimeinen luku on **rajauksen painopiste pystysuunnassa**: 0 = rajaa kuvan
 yläreunasta, 1 = alareunasta. Mitä suurempi luku, sitä alempaa kuvasta
 rajataan — käytä isoa arvoa, kun ihmiset ovat kuvan alalaidassa.
-Kuvan vaihtaminen onnistuu vaihtamalla tiedostonimi samalle riville.
+Kuvan vaihtaminen onnistuu vaihtamalla tiedostonimi samalle riville: skripti
+etsii tiedoston molemmista lähdekansioista.
+
+> Muista päivittää myös kuvan `alt`-teksti `projektit.html`-tiedostossa, kun
+> vaihdat referenssikortin kuvan.
 
 ### Asiakaslogot
 

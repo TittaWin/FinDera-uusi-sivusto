@@ -2,7 +2,8 @@
 """
 FinDera — kuvaputki.
 
-Lahde: vain "good pictures" -kansio.
+Lahteet: "good pictures" -kansio ja referenssikorttien omat kuvat
+kansiossa "Referenssikuvat". Tiedosto etsitaan jarjestyksessa naista.
 Jokaiselle kuvalle: EXIF-korjaus, rajaus kiinteaan kuvasuhteeseen,
 yhtenainen savynkorjaus (valotus, kontrasti, kylläisyys) ja WebP-pakkaus.
 """
@@ -10,6 +11,8 @@ from PIL import Image, ImageOps, ImageEnhance, ImageFilter
 import colorsys, os, shutil
 
 SRC = "/Users/titta/Documents/FinDera/Findera kuvat/good pictures"
+SRC_REF = "/Users/titta/Documents/FinDera/Referenssikuvat"
+SOURCES = [SRC, SRC_REF]
 DST = "/Users/titta/Documents/FinDera/Visual Studio - FD/assets/img"
 
 # --- Kuvasuhteet rooleittain ------------------------------------------------
@@ -106,16 +109,18 @@ MANIFEST = {
     "palvelu-kartoitus":  ("20240416_160711.jpg",        "card", AR_CARD, 0.62),
 
     # Referenssit
-    "case-rosknroll":     ("20230908_095221.jpg",        "card", AR_CARD, 0.65),
-    "case-lsjh":          ("20250307_104431.jpg",        "card", AR_CARD, 0.85),
-    "case-seinajoki":     ("20240926_092539.jpg",        "card", AR_CARD, 0.50),
-    "case-ladec":         ("20240409_103452(0).jpg",     "card", AR_CARD, 0.50),
-    "case-salpakierto":   ("20230907_163055.jpg",        "card", AR_CARD, 0.95),
-    "case-salaoja":       ("20250415_110936.jpg",        "card", AR_CARD, 0.55),
-    "case-ely":           ("20230525_123954.jpg",        "card", AR_CARD, 0.80),
-    "case-osao":          ("20180525_110429.jpg",        "card", AR_CARD, 0.95),
-    # Väliaikainen kuva — vaihdetaan oikeaan matkakuvaan myöhemmin
-    "case-turkuamk":      ("PL_D95B3230.jpg",            "card", AR_CARD, 0.50),
+    # Osalla korteista on oma referenssikuva kansiossa Referenssikuvat/,
+    # loput tulevat edelleen "good pictures" -kansiosta.
+    "case-rosknroll":     ("Rosk'n Roll_referenssikuva.png",              "card", AR_CARD, 0.55),
+    "case-lsjh":          ("20250307_104431.jpg",                        "card", AR_CARD, 0.85),
+    "case-seinajoki":     ("20240926_092539.jpg",                        "card", AR_CARD, 0.50),
+    "case-ladec":         ("Lahden seudun kierrätys_referenssikuva.png", "card", AR_CARD, 0.60),
+    "case-salpakierto":   ("Salpakierto_referenssikuva.png",             "card", AR_CARD, 0.60),
+    "case-salaoja":       ("20250415_110936.jpg",                        "card", AR_CARD, 0.55),
+    "case-ely":           ("20230525_123954.jpg",                        "card", AR_CARD, 0.80),
+    "case-osao":          ("Koulutuskuntayhtymä ASAO_referenssikuva.png","card", AR_CARD, 0.55),
+    "case-turkuamk":      ("Turun AMK_referenssikuva.png",               "card", AR_CARD, 0.50),
+    "case-muhos":         ("Muhoksen kunta_referenssikuva.png",          "card", AR_CARD, 0.62),
 
     # Etusivun esittelykuva
     "intro-ryhma":        ("20180525_102657.jpg",        "card", AR_CARD, 0.90),
@@ -142,8 +147,9 @@ def main():
     print(f"{'slug':<20} {'lahde':<28} {'kirkkaus':>9} {'kyll.':>7}")
     print("-" * 70)
     for slug, (fname, role, ratio, focus) in MANIFEST.items():
-        path = os.path.join(SRC, fname)
-        if not os.path.exists(path):
+        path = next((p for p in (os.path.join(d, fname) for d in SOURCES)
+                     if os.path.exists(p)), None)
+        if path is None:
             print(f"  PUUTTUU: {fname}")
             continue
 
