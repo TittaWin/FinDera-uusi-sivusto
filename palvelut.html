@@ -165,11 +165,15 @@
 <section class="section section--paper2" id="matkat" style="scroll-margin-top:6rem">
   <div class="wrap">
     <div class="split split--fill">
-      <div class="split__media" data-reveal="scale">
-        <picture>
-          <source srcset="assets/img/palvelu-matkat-1000.webp" type="image/webp">
-          <img class="img-load" src="assets/img/palvelu-matkat.jpg" alt="Suomalainen asiantuntijaryhmä turvavarusteissa työmaakohteen vierailulla." width="1000" height="750" loading="lazy" decoding="async">
-        </picture>
+      <div class="split__media split__media--cine">
+        <!-- Video ladataan vasta kun se tulee näkyviin (data-src). Ennen sitä
+             ja "vähennä liikettä" -asetuksella näkyy pelkkä poster-kuva. -->
+        <div class="cine" data-reveal="scale">
+          <video class="cine__video" data-src="assets/videos/palvelu-matkat.mp4"
+                 poster="assets/img/palvelu-matkat-video-poster.webp"
+                 width="540" height="960" muted loop playsinline preload="none"
+                 disablepictureinpicture aria-hidden="true"></video>
+        </div>
       </div>
       <div>
         <p class="eyebrow" data-reveal>01 — <span data-i18n="p1.eyebrow">Kohdekäynnit ja ryhmämatkat</span></p>
@@ -220,6 +224,41 @@
             <p style="font-size:.92rem" data-i18n="p1.m2.desc">Vahvistettu ohjelma ja kaikki tarvittavat tiedot — logistiikan hoidatte itse tai oman matkatoimistonne kanssa.</p>
           </div>
         </div>
+
+        <details class="price" data-reveal>
+          <summary>
+            <span data-i18n="price.q">Mitä ryhmämatka maksaa?</span>
+            <svg class="price__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <div class="price__body">
+            <p data-i18n="price.p1">
+              Ryhmämatkan kustannukset voidaan kattaa esimerkiksi hanke- tai muun rahoituksen
+              kautta, jakaa osallistujakohtaisiksi maksuiksi tai laskuttaa kokonaan
+              toimeksiantajalta.
+            </p>
+            <p data-i18n="price.p2">
+              Hinta muodostuu aina matkan sisällön ja toteutustavan mukaan. Siihen vaikuttavat
+              muun muassa matkan pituus ja kohdealue, ryhmän koko, vierailukohteiden määrä,
+              ruokailut ja muu ohjelma sekä se, toiminko matkalla matkanjohtajana. Halutessanne
+              kokonaisuuteen voidaan sisällyttää myös matkalogistiikka, kuten lennot, majoitukset
+              ja bussikuljetukset — tällöin koko matkapaketin tarjoaa yhteistyössä kanssani
+              toimiva matkatoimistokumppani.
+            </p>
+            <p class="price__figure" data-i18n="price.figure">
+              <span class="price__label">Hintatuntumaa</span>
+              <span class="price__num">1&nbsp;200–1&nbsp;800&nbsp;€ + alv / osallistuja</span>
+              <span class="price__small">Tähän mennessä toteutetuissa kolmen päivän
+              Keski-Euroopan matkoissa kokonaiskustannus on ollut tyypillisesti tällä
+              tasolla, kun kokonaisuuteen ovat sisältyneet matkalogistiikka ja
+              matkanjohtajuuteni.</span>
+            </p>
+            <p data-i18n="price.p3">
+              Jokainen matka suunnitellaan kuitenkin omana kokonaisuutenaan. Sopiva
+              toteutustapa, sisältö ja alustava budjettiraami käydään yhdessä läpi jo
+              aloituskeskustelussa.
+            </p>
+          </div>
+        </details>
 
         <div class="btn-group" style="margin-top:2rem" data-reveal>
           <a class="btn" href="yhteystiedot.html">

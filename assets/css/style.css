@@ -794,6 +794,36 @@ p:last-child { margin-bottom: 0; }
 }
 .split__media { position: relative; }
 .split__media img { border-radius: var(--radius-lg); width: 100%; }
+
+/* Videosarake: pystykuva, joka pysyy näkyvissä tekstiä luettaessa */
+.split--fill .split__media--cine { display: block; min-height: 0; }
+.cine {
+  position: sticky; top: 5.5rem;
+  aspect-ratio: 9 / 16; max-height: 78vh;
+  border-radius: var(--radius-lg); overflow: hidden;
+  background: var(--paper-3);
+  box-shadow: var(--shadow-md);
+}
+.cine__video {
+  display: block; width: 100%; height: 100%; object-fit: cover;
+  transform: scale(1.02);
+}
+/* Pehmeä tummennus ala- ja ylälaitaan — antaa kuvalle syvyyttä ja
+   sitoo sen sivun väreihin. */
+.cine::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background:
+    linear-gradient(to top, rgba(13, 43, 27, .34), transparent 42%),
+    radial-gradient(120% 80% at 50% 40%, transparent 55%, rgba(13, 43, 27, .22) 100%);
+}
+@media (prefers-reduced-motion: no-preference) {
+  /* Hyvin hidas lähestyminen — huomaa vasta kun katsoo hetken. */
+  .cine__video { animation: cine-drift 28s var(--ease-io) infinite alternate; }
+}
+@keyframes cine-drift {
+  from { transform: scale(1.02); }
+  to   { transform: scale(1.1) translateY(-1.2%); }
+}
 .split__media::before {
   content: ""; position: absolute; inset: auto auto -1.25rem -1.25rem;
   width: 55%; height: 60%; border-radius: var(--radius-lg);
@@ -859,6 +889,77 @@ p:last-child { margin-bottom: 0; }
 }
 .note p { margin: 0; max-width: 68ch; color: var(--ink-2); }
 .section--paper2 .note { background: var(--paper-3); }
+
+/* Hinnoittelu — avautuva osio.
+   Korkeuden animointi tehdaan ::details-content -pseudoelementilla, jota
+   uudemmat selaimet tukevat. Vanhemmissa osio avautuu ilman korkeusliuku-
+   animaatiota, mutta sisalto tulee silti pehmeasti esiin (.price__body). */
+.price {
+  margin-top: clamp(2rem, 4vw, 2.75rem);
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: clamp(1.15rem, 2.4vw, 1.6rem) clamp(1.25rem, 3vw, 2rem);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow .45s var(--ease), border-color .45s var(--ease);
+}
+.price:hover, .price[open] { box-shadow: var(--shadow-md); border-color: var(--line-2); }
+
+.price summary {
+  display: flex; align-items: center; gap: 1rem; justify-content: space-between;
+  font-size: 1.05rem; font-weight: 600; color: var(--forest);
+  cursor: pointer; list-style: none;
+}
+.price summary::-webkit-details-marker { display: none; }
+.price summary:focus-visible { outline: 2px solid var(--moss); outline-offset: 4px; border-radius: 3px; }
+
+/* Pyorea kuvake, joka kaantyy avattaessa */
+.price__chevron {
+  flex: none; width: 2.1rem; height: 2.1rem; padding: .5rem;
+  border-radius: 50%; background: var(--leaf-soft);
+  transition: transform .45s var(--ease), background-color .3s var(--ease);
+}
+.price[open] .price__chevron { transform: rotate(180deg); }
+.price summary:hover .price__chevron { background: var(--sun-soft); }
+
+.price__body { padding-top: 1.1rem; }
+.price__body p { font-size: .97rem; color: var(--muted); max-width: 66ch; margin: 0 0 .9rem; }
+.price__body p:last-child { margin-bottom: 0; }
+.price__body strong { color: var(--ink-2); }
+
+/* Hintatuntuma nostettuna omaksi lohkokseen */
+.price__figure {
+  display: grid; gap: .3rem;
+  margin: 1.35rem 0 1.2rem !important;
+  padding: clamp(1rem, 2.2vw, 1.3rem) clamp(1.1rem, 2.6vw, 1.5rem);
+  background: var(--leaf-soft);
+  border-radius: var(--radius);
+  color: var(--ink-2) !important;
+  max-width: none !important;
+}
+.price__label {
+  font-size: var(--t-micro); letter-spacing: .1em; text-transform: uppercase;
+  font-weight: 600; color: var(--moss);
+}
+.price__num {
+  font-family: var(--font-display);
+  font-size: clamp(1.45rem, 1rem + 1.4vw, 2rem);
+  font-weight: 500; line-height: 1.15; color: var(--forest);
+  text-wrap: balance;
+}
+.price__small { font-size: .92rem; color: var(--muted); margin-top: .25rem; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .price { interpolate-size: allow-keywords; }
+  .price::details-content {
+    block-size: 0; overflow: hidden;
+    transition: block-size .55s var(--ease), content-visibility .55s allow-discrete;
+  }
+  .price[open]::details-content { block-size: auto; }
+
+  .price[open] .price__body { animation: more-in .5s var(--ease) both; }
+  .price[open] .price__figure { animation: more-in .55s .12s var(--ease) both; }
+}
 
 /* 9. LOMAKE ------------------------------------------------------------- */
 .form { display: grid; gap: 1.25rem; }
@@ -987,6 +1088,8 @@ p:last-child { margin-bottom: 0; }
 @media (max-width: 860px) {
   .grid-3 { grid-template-columns: 1fr; }
   .split, .split--reverse .split__media { grid-template-columns: 1fr; order: 0; }
+  /* Yhden palstan näkymässä video ei jää roikkumaan eikä vie koko ruutua */
+  .cine { position: static; aspect-ratio: 4 / 5; max-height: none; }
   .section-head--split { grid-template-columns: 1fr; align-items: start; }
 
   .burger { display: grid; }

@@ -165,6 +165,33 @@
     });
   }
 
+  /* --- 6b. Taustavideot: ladataan ja toistetaan vasta näkyvissä --------- */
+  function initVideos() {
+    var vids = document.querySelectorAll("video[data-src]");
+    if (!vids.length) return;
+
+    // "Vahenna liiketta" -asetuksella videota ei ladata lainkaan: nakyviin jaa
+    // poster-kuva. Sailyttaa myos mobiilidataa.
+    if (reduced) return;
+
+    if (!("IntersectionObserver" in window)) return;
+
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        var v = e.target;
+        if (e.isIntersecting) {
+          if (!v.src) { v.src = v.dataset.src; v.load(); }
+          var p = v.play();
+          if (p && p.catch) p.catch(function () { /* selain esti — poster jaa nakyviin */ });
+        } else if (!v.paused) {
+          v.pause();
+        }
+      });
+    }, { rootMargin: "200px 0px", threshold: 0.01 });
+
+    vids.forEach(function (v) { io.observe(v); });
+  }
+
   /* --- 7. Logonauhan kahdennus loputonta vieritystä varten -------------- */
   function initMarquee() {
     document.querySelectorAll(".marquee__track").forEach(function (track) {
@@ -409,6 +436,7 @@
     initCounters();
     initParallax();
     initImages();
+    initVideos();
     initMarquee();
     initForm();
     I18N.init();
