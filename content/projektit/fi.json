@@ -22,7 +22,7 @@
   "ph.eyebrow.description": "Sivun otsikko-osio — pieni yläotsikko.",
   "ph.title": "Esimerkkejä <em class=\"hl serif-accent\">toteutuksista</em>.",
   "ph.title.description": "Sivun otsikko-osio — otsikko. Sisältää HTML-merkintää (esim. <em> tai <strong>). Säilytä tagit ennallaan ja muuta vain niiden välissä oleva teksti.",
-  "ph.lead": "Yli 70 kestävään kehitykseen liittyvää opinto- ja benchmarkkausmatkaa ympäri Eurooppaa, joihin on osallistunut yhteensä jo noin 1 300 suomalaista asiantuntijaa. Tässä muutama esimerkki.",
+  "ph.lead": "Yli 70 kestävään kehitykseen liittyvää opinto- ja benchmarkkausmatkaa ympäri Eurooppaa, joihin on osallistunut yhteensä jo noin 1 300 suomalaista asiantuntijaa. Tässä muutama esimerkki viime vuosilta.",
   "ph.lead.description": "Sivun otsikko-osio — ingressi.",
   "case.type.research": "Tutkimus- ja koulutuslaitos",
   "case.type.research.description": "Referenssikortit — kortin merkintä (asiakas- tai matkatyyppi).",
