@@ -12,7 +12,8 @@ import colorsys, os, shutil
 
 SRC = "/Users/titta/Documents/FinDera/Findera kuvat/good pictures"
 SRC_REF = "/Users/titta/Documents/FinDera/Referenssikuvat"
-SOURCES = [SRC, SRC_REF]
+SRC_ILLAT = "/Users/titta/Documents/FinDera/Ravintolaillat"
+SOURCES = [SRC, SRC_REF, SRC_ILLAT]
 DST = "/Users/titta/Documents/FinDera/Visual Studio - FD/assets/img"
 
 # --- Kuvasuhteet rooleittain ------------------------------------------------
@@ -124,6 +125,10 @@ MANIFEST = {
 
     # Etusivun esittelykuva
     "intro-ryhma":        ("20180525_102657.jpg",        "card", AR_CARD, 0.90),
+
+    # Etusivu, "Miksi paikan päällä" — kuva ravintolaillasta.
+    # Alkuperainen on jo 3:4, joten pystykuvana siita ei rajaudu mitaan pois.
+    "paikan-paalla":      ("20260429_202252.jpg",        "port", AR_PORT, 0.50),
 
     # Galleria — kaikki samassa 4:3-suhteessa, jotta ruudukko on tasainen
     "galleria-1":         ("PL_D95B3192.jpg",            "gal",  AR_GAL, 0.40),

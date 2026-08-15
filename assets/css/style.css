@@ -626,6 +626,9 @@ p:last-child { margin-bottom: 0; }
   letter-spacing: .13em; text-transform: uppercase;
   color: var(--muted-2); padding-top: .55em; padding-right: 1rem;
 }
+/* Variantti ilman numerosaraketta — kapeaan palstaan kuvan viereen */
+.why--plain .why__item { grid-template-columns: 1fr; }
+.why--plain .why__item:hover { background: none; }
 .why__item h3 { font-size: var(--t-h4); font-family: var(--font-sans); font-weight: 600; margin-bottom: .35rem; }
 .why__item p { color: var(--muted); margin-bottom: 0; max-width: 68ch; }
 
