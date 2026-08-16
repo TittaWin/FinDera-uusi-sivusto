@@ -781,25 +781,22 @@ p:last-child { margin-bottom: 0; }
 }
 .mosaic__cell:hover::after { opacity: .1; }
 
-/* Kuvakollaasi — leveä nauha ylhäällä ja sen alla neljä ruutua tuulimylly-
-   asetelmassa: kaksi korkeaa ja kaksi matalaa vuorottelevat niin, että
-   molemmat palstat päättyvät samaan korkeuteen. */
+/* Kuvakollaasi — kaksi palstaa, joissa ruudut ovat eri korkuisia. Jokainen
+   ruutu saa kuvasuhteensa --ar-muuttujasta, ja arvo on sama kuin millä kuva
+   on tuotettu: näin selain ei rajaa kuvista mitään pois. Selain tasapainottaa
+   palstojen korkeudet itse. */
 .collage {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1.38fr repeat(3, 1fr);
-  gap: clamp(.5rem, 1vw, .8rem);
-  aspect-ratio: 2 / 3;
+  columns: 2;
+  column-gap: clamp(.5rem, 1vw, .8rem);
 }
 .collage__cell {
   position: relative; overflow: hidden; border-radius: var(--radius-lg);
-  background: var(--paper-3); margin: 0;
+  background: var(--paper-3);
+  margin: 0 0 clamp(.5rem, 1vw, .8rem);
+  break-inside: avoid;
+  aspect-ratio: var(--ar, 1);
 }
-.collage__cell:nth-child(1) { grid-column: 1 / -1; grid-row: 1; }
-.collage__cell:nth-child(2) { grid-column: 1; grid-row: 2 / 4; }
-.collage__cell:nth-child(3) { grid-column: 2; grid-row: 2; }
-.collage__cell:nth-child(4) { grid-column: 2; grid-row: 3 / 5; }
-.collage__cell:nth-child(5) { grid-column: 1; grid-row: 4; }
+.collage__cell:last-child { margin-bottom: 0; }
 .collage__cell picture { display: block; height: 100%; }
 .collage__cell img {
   position: absolute; inset: 0;
@@ -1129,8 +1126,6 @@ p:last-child { margin-bottom: 0; }
   .split, .split--reverse .split__media { grid-template-columns: 1fr; order: 0; }
   /* Yhden palstan näkymässä video ei jää roikkumaan eikä vie koko ruutua */
   .cine { position: static; aspect-ratio: 4 / 5; max-height: none; }
-  /* Kollaasi hieman korkeampana, jotta pienet ruudut eivät litisty */
-  .collage { aspect-ratio: 5 / 8; }
   .section-head--split { grid-template-columns: 1fr; align-items: start; }
 
   .burger { display: grid; }

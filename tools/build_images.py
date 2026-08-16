@@ -22,11 +22,15 @@ AR_CARD = 3 / 2      # palvelu- ja referenssikortit
 AR_GAL  = 4 / 3      # gallerian ruudukko (kaikki samat -> tasainen sommittelu)
 AR_PORT = 3 / 4      # pystykuva (Martin)
 
-# Etusivun kollaasin ruudut — arvot vastaavat ruutujen todellisia mittasuhteita,
-# jotta kuvista ei rajaudu selaimessa enaa mitaan ylimaaraista.
-AR_BAND = 2.18       # ylanauha koko leveydelta
-AR_WIDE = 1.48       # matalat ruudut
-AR_TALL = 0.72       # korkeat ruudut
+# Etusivun kollaasin ruudut. Jokainen arvo on hieman pienempi kuin kuvan oma
+# kuvasuhde, jolloin crop_to kaventaa kuvaa sivuilta eika koskaan leikkaa ylä-
+# tai alareunaa — ihmisten paat pysyvat mukana. Samat arvot ovat CSS:ssa
+# ruutujen aspect-ratio-arvoina, joten selain ei raja kuvia enaa uudelleen.
+AR_SALI    = 1.30    # ravintolasali   (kuva 1.441)
+AR_TUOPIT  = 0.93    # savituopit      (kuva 0.940)
+AR_VARIKAS = 1.15    # värikäs sali    (kuva 1.333)
+AR_MUSA    = 0.68    # musiikkiyhtye   (kuva 0.688)
+AR_RUOKA   = 0.76    # ruokahetki      (kuva 0.768)
 
 WIDTHS = {
     "hero": [1920, 1280, 800],
@@ -133,13 +137,12 @@ MANIFEST = {
     "intro-ryhma":        ("20180525_102657.jpg",        "card", AR_CARD, 0.90),
 
     # Etusivu, "Miksi paikan päällä" — kollaasi ravintolaillasta.
-    # Jarjestys vastaa ruutuja: 1 ylanauha, 2 korkea vasen, 3 matala oikea,
-    # 4 korkea oikea, 5 matala vasen.
-    "illat-1":            ("hieno ravintola.png",        "gal",  AR_BAND, 0.55),
-    "illat-2":            ("musiikki.png",               "gal",  AR_TALL, 0.50),
-    "illat-3":            ("oluttuopit.png",             "gal",  AR_WIDE, 0.45),
-    "illat-4":            ("ruokahetki.png",             "gal",  AR_TALL, 0.45),
-    "illat-5":            ("20240410_122743.jpg",        "gal",  AR_WIDE, 0.55),
+    # Jarjestys vastaa ruutuja: 1-3 vasen palsta, 4-5 oikea palsta.
+    "illat-1":            ("hieno ravintola.png",        "gal",  AR_SALI,    0.50),
+    "illat-2":            ("oluttuopit.png",             "gal",  AR_TUOPIT,  0.50),
+    "illat-3":            ("20240410_122743.jpg",        "gal",  AR_VARIKAS, 0.50),
+    "illat-4":            ("musiikki.png",               "gal",  AR_MUSA,    0.50),
+    "illat-5":            ("ruokahetki.png",             "gal",  AR_RUOKA,   0.50),
 
     # Galleria — kaikki samassa 4:3-suhteessa, jotta ruudukko on tasainen
     "galleria-1":         ("PL_D95B3192.jpg",            "gal",  AR_GAL, 0.40),
