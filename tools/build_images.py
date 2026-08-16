@@ -22,6 +22,12 @@ AR_CARD = 3 / 2      # palvelu- ja referenssikortit
 AR_GAL  = 4 / 3      # gallerian ruudukko (kaikki samat -> tasainen sommittelu)
 AR_PORT = 3 / 4      # pystykuva (Martin)
 
+# Etusivun kollaasin ruudut — arvot vastaavat ruutujen todellisia mittasuhteita,
+# jotta kuvista ei rajaudu selaimessa enaa mitaan ylimaaraista.
+AR_BAND = 2.18       # ylanauha koko leveydelta
+AR_WIDE = 1.48       # matalat ruudut
+AR_TALL = 0.72       # korkeat ruudut
+
 WIDTHS = {
     "hero": [1920, 1280, 800],
     "card": [1000, 600],
@@ -127,11 +133,13 @@ MANIFEST = {
     "intro-ryhma":        ("20180525_102657.jpg",        "card", AR_CARD, 0.90),
 
     # Etusivu, "Miksi paikan päällä" — kollaasi ravintolaillasta.
-    # Pystyruudut 3:4, vaakaruudut 4:3; ruudukko rajaa loput (object-fit).
-    "illat-1":            ("20260429_202252.jpg",        "gal",  AR_PORT, 0.50),
-    "illat-2":            ("20230204_213909.jpg",        "gal",  AR_GAL,  0.55),
-    "illat-3":            ("20240927_163438.jpg",        "gal",  AR_PORT, 0.45),
-    "illat-4":            ("20240410_122743.jpg",        "gal",  AR_GAL,  0.55),
+    # Jarjestys vastaa ruutuja: 1 ylanauha, 2 korkea vasen, 3 matala oikea,
+    # 4 korkea oikea, 5 matala vasen.
+    "illat-1":            ("hieno ravintola.png",        "gal",  AR_BAND, 0.55),
+    "illat-2":            ("musiikki.png",               "gal",  AR_TALL, 0.50),
+    "illat-3":            ("oluttuopit.png",             "gal",  AR_WIDE, 0.45),
+    "illat-4":            ("ruokahetki.png",             "gal",  AR_TALL, 0.45),
+    "illat-5":            ("20240410_122743.jpg",        "gal",  AR_WIDE, 0.55),
 
     # Galleria — kaikki samassa 4:3-suhteessa, jotta ruudukko on tasainen
     "galleria-1":         ("PL_D95B3192.jpg",            "gal",  AR_GAL, 0.40),
