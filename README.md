@@ -15,6 +15,7 @@ ei riippuvuuksia, ei asennuksia. Kansion sisältö on sellaisenaan valmis sivust
 - [Yhteydenottolomake](#yhteydenottolomake)
 - [Esikatselu asiakkaalle](#esikatselu-asiakkaalle-ennen-varsinaista-julkaisua)
 - [Julkaisu ja findera.fi-osoitteen siirto](#julkaisu-ja-finderafi-osoitteen-siirto)
+- [Laskeutumissivu](#laskeutumissivu-landing1html)
 - [Tekniset ratkaisut](#tekniset-ratkaisut)
 
 ---
@@ -46,6 +47,7 @@ projektit.html        Projektit ja referenssit
 minusta.html          Martin Brandt
 yhteystiedot.html     Yhteystiedot ja lomake
 kiitos.html           Kiitossivu lomakkeen lähetyksen jälkeen
+landing1.html         Kampanjan laskeutumissivu (findera.fi/landing1)
 
 assets/
   css/style.css       Kaikki tyylit (värit, typografia, animaatiot)
@@ -71,6 +73,7 @@ content/              Sivuston tekstit sivuittain ja kielittäin — ks. content
 
 tools/
   build_images.py     Kuvaskripti (rajaus + sävyjen yhtenäistäminen)
+  build_landing_images.py  Laskeutumissivun kuvat (lp-*.webp)
   build_logos.py      Asiakaslogojen käsittely (yksiväristys + koon tasaus)
   build_content.py    Kokoaa content/-kansion sivuston nykyisestä sisällöstä
   apply_content.py    Vie content/-kansion tekstit takaisin sivustolle
@@ -372,6 +375,40 @@ Jos haluat automaattisen julkaisun, vie kansio GitHubiin ja kytke se Netlifyyn �
 tällöin jokainen tallennettu muutos päivittyy verkkoon itsestään.
 
 ---
+
+## Laskeutumissivu (landing1.html)
+
+`landing1.html` on erillinen kampanjasivu osoitteessa **findera.fi/landing1**.
+Se poikkeaa muista sivuista kolmella tavalla:
+
+1. **Tekstit ovat suoraan HTML-tiedostossa**, eivät `content/`-kansiossa.
+   Sivu on vain suomeksi, joten `apply_content.py` ei koske siihen.
+   Merkintä `<html lang="fi" data-no-i18n>` kertoo `main.js`:lle, ettei
+   kielenvaihtoa saa soveltaa tähän sivuun.
+2. **Ei valikkoa eikä alatunnisteen linkkiverkkoa.** Laskeutumissivun idea on,
+   että lukija etenee CTA-painikkeiden kautta eikä eksy muualle. Painikkeet
+   vievät sivuston varsinaisille sivuille (`minusta.html`, `projektit.html`,
+   `palvelut.html#matkat`, `yhteystiedot.html`).
+3. **`noindex`-tagi.** Sivu ei näy Googlessa eikä ole sivukartassa, jottei se
+   kilpaile etusivun kanssa samoista hakusanoista.
+
+Ulkoasu käyttää samaa `assets/css/style.css`-tiedostoa kuin muu sivusto, joten
+värit ja typografia pysyvät yhtenäisinä. Sivun omat asettelusäännöt ovat
+`<style>`-lohkossa tiedoston alussa, ja ne on nimetty `lp-`-etuliitteellä.
+
+**Kuvat.** Sivun omat kuvat tuotetaan kansiosta `Documents/FinDera/Landing Pages`:
+
+```bash
+python3 tools/build_landing_images.py
+```
+
+Skripti irrottaa kuvakollaasista ruudut kiinteillä pikselirajoilla ja tallentaa
+ne nimillä `lp-*.webp` (+ jpg-varmistus). Referenssikorttien kuvat ovat sivuston
+omia `case-*`-kuvia. Jos kollaasin ruutujen paikat muuttuvat, päivitä `RUUDUT`-
+sanakirja skriptin alussa.
+
+> **Muista:** referenssikorttien tekstit on kopioitu `projektit.html`-sivulta.
+> Jos muutat caseja siellä, päivitä myös laskeutumissivu.
 
 ## Tekniset ratkaisut
 

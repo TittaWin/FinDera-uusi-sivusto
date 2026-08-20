@@ -294,6 +294,10 @@
     }
 
     function init() {
+      // Kampanja- ja laskeutumissivut ovat yksikielisiä: ne merkitään
+      // <html data-no-i18n>. Ilman tätä aiemmin tallennettu kielivalinta
+      // vaihtaisi sivun kieliattribuutin, vaikka tekstit pysyvät suomena.
+      if (document.documentElement.hasAttribute("data-no-i18n")) return;
       snapshotFi();
       var wrap = document.querySelector(".lang");
       if (wrap) {

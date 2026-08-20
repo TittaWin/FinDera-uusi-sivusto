@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<!-- FinDera — laskeutumissivu (findera.fi/landing1)
+     Erillinen mainos- ja kampanjasivu. EI kuulu content/-käännösputkeen:
+     tekstit muokataan suoraan tähän tiedostoon. Sivu on vain suomeksi ja
+     merkitty noindex-tagilla, jotta se ei kilpaile etusivun kanssa Googlessa.
+
+     Kuvat tuotetaan skriptillä tools/build_landing_images.py (lp-*.webp).
+     Referenssikorttien kuvat ovat sivuston omia (case-*.webp). -->
+<html lang="fi" data-no-i18n>
+<head>
+<script>document.documentElement.classList.add("js");</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Benchmarking-matkat ammattilaisryhmille — FinDera Consulting</title>
+<meta name="description" content="FinDera suunnittelee ja toteuttaa asiantuntija- ja benchmarking-matkoja organisaatioille, hankkeille ja ammattilaisryhmille Suomessa ja Euroopassa. Yli 70 toteutusta.">
+<meta name="robots" content="noindex, follow">
+<meta name="theme-color" content="#16402a">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fi_FI">
+<meta property="og:site_name" content="FinDera Consulting">
+<meta property="og:title" content="Ideat muuttuvat arvokkaammiksi, kun ne näkee käytännössä.">
+<meta property="og:description" content="Asiantuntija- ja benchmarking-matkat organisaatioille, hankkeille ja ammattilaisryhmille Suomessa ja Euroopassa.">
+<meta property="og:image" content="https://www.findera.fi/assets/img/lp-hero-1200.webp">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<!-- Esilataus käyttää samaa srcset/sizes-paria kuin sivun picture-elementti,
+     jolloin selain esilataa varmasti sen tiedoston jonka se myös näyttää. -->
+<link rel="preload" as="image" type="image/webp" fetchpriority="high"
+      imagesrcset="assets/img/lp-hero-1600.webp 1600w, assets/img/lp-hero-1200.webp 1200w, assets/img/lp-hero-800.webp 800w"
+      imagesizes="(max-width: 760px) 100vw, 70vw">
+<link rel="stylesheet" href="assets/css/style.css">
+
+<style>
+/* ====================================================================
+   Laskeutumissivun omat tyylit.
+   Kaikki värit, fontit ja välit tulevat style.css:n muuttujista, joten
+   sivu pysyy automaattisesti muun sivuston näköisenä. Luokat on merkitty
+   lp-etuliitteellä, jotta ne eivät sekoitu sivuston jaettuihin luokkiin.
+   ==================================================================== */
+
+/* --- Ylätunniste: pelkkä logo, ei valikkoa ------------------------------
+   Laskeutumissivulla ei ole navigaatiota — lukijan halutaan etenevän
+   CTA-painikkeiden kautta, ei poistuvan valikosta. */
+.lp-topbar { padding-block: 1.6rem 0; }
+
+/* --- Pääkuva-osio -------------------------------------------------------- */
+.lp-hero { padding-block: clamp(2.5rem, 5vw, 4rem) clamp(3.5rem, 7vw, 6rem); overflow-x: clip; }
+.lp-hero__inner {
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  gap: clamp(2rem, 5vw, 4.5rem); align-items: center;
+}
+.lp-hero__title { font-size: var(--t-h1); margin-bottom: 1.6rem; }
+.lp-hero__lead { color: var(--muted); max-width: 42ch; margin-bottom: 2.2rem; }
+/* Ohut vihreä viiva otsikon ja ingressin väliin, kuten mallissa */
+.lp-hero__rule { width: 3.5rem; height: 3px; background: var(--sun); margin-bottom: 1.6rem; }
+/* Kuva jatkuu näytön oikeaan reunaan asti. 50% - 50vw on negatiivinen luku,
+   joka vetää reunan ulos wrap-kehyksestä. */
+.lp-hero__media {
+  margin-right: calc(50% - 50vw);
+  border-radius: var(--radius-lg) 0 0 var(--radius-lg);
+  overflow: hidden; box-shadow: var(--shadow-md);
+}
+.lp-hero__media img {
+  display: block; width: 100%; height: 100%;
+  min-height: clamp(18rem, 34vw, 27rem);
+  object-fit: cover;
+}
+
+/* --- Kolme myyntiargumenttia --------------------------------------------- */
+.lp-feats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(1.75rem, 4vw, 3.5rem); }
+.lp-feat__icon {
+  width: 2.6rem; height: 2.6rem; margin-bottom: 1rem;
+  display: grid; place-items: center;
+  border: 1px solid var(--line-2); border-radius: 50%; color: var(--forest);
+}
+.lp-feat__icon svg { width: 1.25rem; height: 1.25rem; }
+.lp-feat h3 { font-size: var(--t-h4); font-family: var(--font-sans); font-weight: 600; margin-bottom: .45rem; }
+.lp-feat p { color: var(--muted); font-size: .95rem; margin-bottom: 0; }
+
+/* --- Kuvakaista väliotsikolla -------------------------------------------- */
+.lp-strip { position: relative; overflow: hidden; background: var(--forest-deep); }
+.lp-strip img {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; object-position: center 60%;
+}
+/* Tumma liuku vasemmalta, jotta valkoinen otsikko erottuu kuvasta.
+   Peittää samalla sen, että kaistan lähdekuva on melko pieni. */
+.lp-strip::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(100deg, rgba(9, 26, 17, .88) 0%, rgba(9, 26, 17, .62) 38%, rgba(9, 26, 17, .12) 72%);
+}
+.lp-strip__inner {
+  position: relative; z-index: 1;
+  min-height: clamp(14rem, 22vw, 19rem);
+  display: flex; flex-direction: column; justify-content: center;
+  padding-block: clamp(3rem, 6vw, 4.5rem);
+}
+.lp-strip h2 { color: #fff; max-width: 21ch; margin-bottom: 0; }
+.lp-strip__rule { width: 3.5rem; height: 3px; background: var(--sun); margin-bottom: 1.5rem; }
+
+/* --- Aihekortit ---------------------------------------------------------- */
+.lp-topics { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(1.25rem, 2.5vw, 1.75rem); }
+.lp-topic {
+  display: flex; flex-direction: column;
+  background: #fff; border: 1px solid var(--line); border-radius: var(--radius-lg);
+  overflow: hidden; color: inherit;
+  transition: transform .5s var(--ease), box-shadow .5s var(--ease), border-color .5s var(--ease);
+}
+.lp-topic:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--line-2); }
+.lp-topic__media { aspect-ratio: 2 / 1; overflow: hidden; background: var(--paper-3); }
+.lp-topic__media img { width: 100%; height: 100%; object-fit: cover; transition: transform .7s var(--ease); }
+.lp-topic:hover .lp-topic__media img { transform: scale(1.06); }
+.lp-topic__body {
+  display: flex; align-items: flex-end; justify-content: space-between; gap: 1rem;
+  padding: 1.1rem 1.25rem 1.25rem; flex: 1;
+}
+.lp-topic__body h3 {
+  font-size: 1rem; font-family: var(--font-sans); font-weight: 600;
+  line-height: 1.3; margin: 0;
+}
+.lp-topic__arrow { flex: none; color: var(--forest); transition: transform .35s var(--ease); }
+.lp-topic__arrow svg { width: 1.15rem; height: 1.15rem; display: block; }
+.lp-topic:hover .lp-topic__arrow { transform: translateX(4px); }
+
+/* --- Prosessi neljässä vaiheessa ----------------------------------------- */
+.lp-flow { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(1.5rem, 3vw, 2.5rem); }
+.lp-flow__step { position: relative; }
+/* Vaakaviiva ympyröiden välissä. Piirretään ympyrän keskikorkeudelle
+   ja jätetään pois viimeisestä vaiheesta. */
+.lp-flow__step::before {
+  content: ""; position: absolute; left: 2.9rem; right: calc(-1 * clamp(1.5rem, 3vw, 2.5rem));
+  top: 1.4rem; height: 1px; background: var(--line-2);
+}
+.lp-flow__step:last-child::before { display: none; }
+.lp-flow__icon {
+  width: 2.8rem; height: 2.8rem; display: grid; place-items: center;
+  background: var(--forest); color: #fff; border-radius: 50%;
+  margin-bottom: 1.1rem; position: relative; z-index: 1;
+}
+.lp-flow__icon svg { width: 1.2rem; height: 1.2rem; }
+.lp-flow__num { display: block; font-family: var(--font-display); color: var(--moss); margin-bottom: .3rem; }
+.lp-flow__step h3 { font-size: var(--t-h4); font-family: var(--font-sans); font-weight: 600; margin-bottom: .4rem; }
+.lp-flow__step p { color: var(--muted); font-size: .95rem; margin-bottom: 0; }
+
+/* --- Referenssikortit ---------------------------------------------------- */
+.lp-refs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(1.5rem, 3vw, 2.25rem); }
+.lp-ref {
+  display: flex; flex-direction: column;
+  background: #fff; border: 1px solid var(--line); border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: transform .5s var(--ease), box-shadow .5s var(--ease);
+}
+.lp-ref:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.lp-ref__media { aspect-ratio: 3 / 2; overflow: hidden; background: var(--paper-3); }
+.lp-ref__media img { width: 100%; height: 100%; object-fit: cover; transition: transform .7s var(--ease); }
+.lp-ref:hover .lp-ref__media img { transform: scale(1.05); }
+.lp-ref__body { padding: 1.4rem 1.5rem 1.6rem; display: flex; flex-direction: column; flex: 1; }
+.lp-ref__body h3 { font-size: var(--t-h4); font-family: var(--font-sans); font-weight: 600; margin-bottom: .25rem; }
+.lp-ref__place { font-size: var(--t-small); color: var(--muted-2); margin-bottom: .75rem; }
+.lp-ref__body p { color: var(--muted); font-size: .95rem; margin-bottom: 1.25rem; }
+.lp-ref__body .link-arrow { margin-top: auto; align-self: flex-start; }
+
+/* --- Loppukehotus Martinin kuvalla --------------------------------------- */
+.lp-outro {
+  position: relative; background: var(--forest-deep); color: #fff; overflow: hidden;
+  min-height: clamp(22rem, 34vw, 29rem);
+  display: flex; align-items: center;
+}
+.lp-outro__inner { padding-block: clamp(3.5rem, 7vw, 5.5rem); }
+.lp-outro h2 { color: #fff; max-width: 17ch; margin-bottom: 0; }
+.lp-outro__rule { width: 3.5rem; height: 3px; background: var(--sun); margin: 1.5rem 0; }
+.lp-outro__text { color: rgba(255, 255, 255, .78); max-width: 46ch; }
+/* Teksti ei saa mennä kuvapaneelin alle. */
+.lp-outro__copy { position: relative; z-index: 1; max-width: min(54%, 38rem); }
+/* Kuvapaneeli on osion korkuinen ja kiinni näytön oikeassa reunassa, kuten
+   mallissa. Absoluuttinen asemointi pitää pystykuvan oikean kokoisena — grid-
+   sarakkeessa negatiivinen reunus levitti sen liian leveäksi. */
+.lp-outro__media { position: absolute; inset: 0 0 0 auto; width: min(46%, 34rem); }
+.lp-outro__media picture, .lp-outro__media img { display: block; width: 100%; height: 100%; }
+.lp-outro__media img { object-fit: cover; object-position: 50% 0; }
+/* Pehmeä häivytys kuvan vasempaan reunaan, jotta kuva sulautuu tummaan
+   taustaan eikä näytä liimatulta laatikolta. */
+.lp-outro__media::after {
+  content: ""; position: absolute; inset: 0;
+  background:
+    linear-gradient(0deg, rgba(9, 26, 17, .75) 0%, rgba(9, 26, 17, 0) 22%),
+    linear-gradient(90deg, var(--forest-deep) 0%, rgba(13, 43, 27, .55) 30%, rgba(13, 43, 27, 0) 62%);
+}
+.lp-outro__name {
+  position: absolute; right: clamp(1.25rem, 4vw, 3rem); bottom: 1.75rem; z-index: 1;
+  font-size: var(--t-small); color: rgba(255, 255, 255, .9);
+  text-shadow: 0 1px 10px rgba(9, 26, 17, .6);
+}
+.lp-outro .btn--ghost { --btn-bg: transparent; color: #fff; border-color: rgba(255, 255, 255, .45); }
+
+/* --- Kevyt alatunniste --------------------------------------------------- */
+.lp-foot { background: var(--paper-2); border-top: 1px solid var(--line); padding-block: 2.25rem; }
+.lp-foot__inner {
+  display: flex; flex-wrap: wrap; gap: .6rem clamp(1.5rem, 4vw, 3rem);
+  align-items: center; justify-content: space-between;
+  font-size: var(--t-small); color: var(--muted);
+}
+.lp-foot a { color: var(--muted); text-decoration: underline; text-underline-offset: 3px; }
+.lp-foot a:hover { color: var(--forest); }
+
+/* --- Kapeat näytöt -------------------------------------------------------- */
+@media (max-width: 1000px) {
+  .lp-topics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .lp-flow { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  /* Kahdella palstalla vaakaviiva katkeaisi rivin lopussa väärään kohtaan */
+  .lp-flow__step:nth-child(2n)::before { display: none; }
+  .lp-refs { grid-template-columns: 1fr; max-width: 34rem; margin-inline: auto; }
+}
+@media (max-width: 760px) {
+  .lp-hero__inner { grid-template-columns: 1fr; }
+  .lp-hero__media { margin-right: 0; border-radius: var(--radius-lg); }
+  .lp-hero__media img { min-height: 0; aspect-ratio: 3 / 2; }
+  .lp-feats { grid-template-columns: 1fr; }
+  .lp-topics { grid-template-columns: 1fr; max-width: 30rem; margin-inline: auto; }
+  .lp-flow { grid-template-columns: 1fr; }
+  .lp-flow__step::before { display: none; }
+  /* Kapealla naytolla kuva siirtyy tekstin alle omaksi kaistakseen. */
+  .lp-outro { display: block; min-height: 0; }
+  .lp-outro__inner { padding-bottom: clamp(2.5rem, 6vw, 3.5rem); }
+  .lp-outro__copy { max-width: none; }
+  .lp-outro__media { position: relative; inset: auto; width: auto; height: 18rem; margin-inline: calc(50% - 50vw); }
+  .lp-outro__media img { object-position: 50% 18%; }
+  .lp-outro__media::after { background: linear-gradient(0deg, rgba(13, 43, 27, .55) 0%, rgba(13, 43, 27, 0) 45%); }
+}
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Siirry sisältöön</a>
+
+<!-- ==================== YLÄTUNNISTE ==================== -->
+<header class="lp-topbar">
+  <div class="wrap">
+    <a class="logo" href="index.html" aria-label="FinDera Consulting — etusivu">
+      <img class="logo__mark" src="assets/img/findera-logo.svg" alt="" width="40" height="40">
+      <span class="logo__text">
+        <span class="logo__name">FinDera</span>
+        <span class="logo__tag">Access · Insight · Impact</span>
+      </span>
+    </a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ==================== PÄÄKUVA ==================== -->
+  <section class="lp-hero">
+    <div class="wrap lp-hero__inner">
+      <div>
+        <h1 class="lp-hero__title">
+          Ideat muuttuvat <em class="hl serif-accent">arvokkaammiksi</em>,
+          kun ne näkee käytännössä.
+        </h1>
+        <div class="lp-hero__rule"></div>
+        <p class="lp-hero__lead">
+          FinDera suunnittelee ja toteuttaa asiantuntija- ja benchmarking-matkoja
+          organisaatioille, hankkeille ja ammattilaisryhmille Suomessa ja Euroopassa.
+        </p>
+        <div class="btn-group">
+          <a class="btn" href="minusta.html">
+            <span>Tutustu FinDeraan</span>
+            <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn--ghost" href="projektit.html">
+            <span>Katso referenssit</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="lp-hero__media">
+        <picture>
+          <source srcset="assets/img/lp-hero-1600.webp 1600w, assets/img/lp-hero-1200.webp 1200w, assets/img/lp-hero-800.webp 800w"
+                  sizes="(max-width: 760px) 100vw, 70vw" type="image/webp">
+          <img class="img-load" src="assets/img/lp-hero.jpg"
+               alt="Ryhmä kuuntelee opastusta biokaasulaitoksen kupolien edessä iltapäivän auringossa."
+               width="1600" height="800" fetchpriority="high" decoding="async">
+        </picture>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== KOLME ARGUMENTTIA ==================== -->
+  <section class="section section--tight section--paper2">
+    <div class="wrap">
+      <div class="lp-feats">
+
+        <div class="lp-feat" data-reveal>
+          <div class="lp-feat__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <h3>Oikeat kohteet</h3>
+          <p>Löydämme juuri ryhmän tavoitteisiin sopivat vierailukohteet ja asiantuntijat.</p>
+        </div>
+
+        <div class="lp-feat" data-reveal>
+          <div class="lp-feat__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18M9 15.5l2 2 4-4"/></svg>
+          </div>
+          <h3>Valmis kokonaisuus</h3>
+          <p>Vierailut, aikataulut, ravintolat ja tarvittaessa koko matkalogistiikka.</p>
+        </div>
+
+        <div class="lp-feat" data-reveal>
+          <div class="lp-feat__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>Enemmän irti matkasta</h3>
+          <p>Voitte keskittyä olennaiseen: oppimiseen, keskusteluun ja uusiin ajatuksiin.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== KUVAKAISTA ==================== -->
+  <section class="lp-strip">
+    <picture>
+      <source srcset="assets/img/lp-band-1600.webp 1600w, assets/img/lp-band-1200.webp 1200w, assets/img/lp-band-800.webp 800w"
+              sizes="100vw" type="image/webp">
+      <img src="assets/img/lp-band.jpg"
+           alt="Ryhmä katselee kukkuloiden yli kohti tuulivoimaloita auringonlaskun aikaan."
+           width="1600" height="186" loading="lazy" decoding="async">
+    </picture>
+    <div class="wrap lp-strip__inner">
+      <div class="lp-strip__rule"></div>
+      <h2>Pois kokoushuoneesta. Sinne, missä asioita jo tehdään.</h2>
+    </div>
+  </section>
+
+  <!-- ==================== AIHEET ==================== -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head" style="text-align:center">
+        <h2>Mihin haluaisitte tutustua?</h2>
+      </div>
+
+      <div class="lp-topics">
+
+        <a class="lp-topic" href="palvelut.html#matkat" data-reveal>
+          <div class="lp-topic__media">
+            <picture>
+              <source srcset="assets/img/lp-aihe-kierto-430.webp 430w, assets/img/lp-aihe-kierto-300.webp 300w"
+                      sizes="(max-width: 760px) 100vw, (max-width: 1000px) 45vw, 23vw" type="image/webp">
+              <img class="img-load" src="assets/img/lp-aihe-kierto.jpg"
+                   alt="Kierrätysmateriaalista rakennettu lasikupoli ylhäältä kuvattuna." width="430" height="181" loading="lazy" decoding="async">
+            </picture>
+          </div>
+          <div class="lp-topic__body">
+            <h3>Kiertotalous &amp; materiaalit</h3>
+            <span class="lp-topic__arrow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </span>
+          </div>
+        </a>
+
+        <a class="lp-topic" href="palvelut.html#matkat" data-reveal>
+          <div class="lp-topic__media">
+            <picture>
+              <source srcset="assets/img/lp-aihe-energia-430.webp 430w, assets/img/lp-aihe-energia-300.webp 300w"
+                      sizes="(max-width: 760px) 100vw, (max-width: 1000px) 45vw, 23vw" type="image/webp">
+              <img class="img-load" src="assets/img/lp-aihe-energia.jpg"
+                   alt="Tuulivoimaloita ja aurinkopaneelikenttä kirkkaassa päivänvalossa." width="430" height="181" loading="lazy" decoding="async">
+            </picture>
+          </div>
+          <div class="lp-topic__body">
+            <h3>Energia &amp; vihreä siirtymä</h3>
+            <span class="lp-topic__arrow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </span>
+          </div>
+        </a>
+
+        <a class="lp-topic" href="palvelut.html#matkat" data-reveal>
+          <div class="lp-topic__media">
+            <picture>
+              <source srcset="assets/img/lp-aihe-rakennus-430.webp 430w, assets/img/lp-aihe-rakennus-300.webp 300w"
+                      sizes="(max-width: 760px) 100vw, (max-width: 1000px) 45vw, 23vw" type="image/webp">
+              <img class="img-load" src="assets/img/lp-aihe-rakennus.jpg"
+                   alt="Puurakenteinen asuinkortteli, jonka parvekkeilla kasvaa vehreyttä." width="430" height="181" loading="lazy" decoding="async">
+            </picture>
+          </div>
+          <div class="lp-topic__body">
+            <h3>Rakennettu ympäristö</h3>
+            <span class="lp-topic__arrow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </span>
+          </div>
+        </a>
+
+        <a class="lp-topic" href="palvelut.html#matkat" data-reveal>
+          <div class="lp-topic__media">
+            <picture>
+              <source srcset="assets/img/lp-aihe-teknologia-430.webp 430w, assets/img/lp-aihe-teknologia-300.webp 300w"
+                      sizes="(max-width: 760px) 100vw, (max-width: 1000px) 45vw, 23vw" type="image/webp">
+              <img class="img-load" src="assets/img/lp-aihe-teknologia.jpg"
+                   alt="Vertikaaliviljelylaitoksen valaistuja kasvatushyllyjä rivissä." width="430" height="181" loading="lazy" decoding="async">
+            </picture>
+          </div>
+          <div class="lp-topic__body">
+            <h3>Uudet teknologiat &amp; toimintamallit</h3>
+            <span class="lp-topic__arrow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </span>
+          </div>
+        </a>
+
+      </div>
+
+      <p class="text-muted measure-sm" style="text-align:center;margin:2.5rem auto 0">
+        Jokainen matka rakennetaan ryhmän tavoitteiden ympärille. FinDera etsii
+        kiinnostavat kohteet ja ihmiset niiden takana — myös silloin, kun ei
+        vielä tiedä tarkalleen, minne kannattaisi lähteä.
+      </p>
+    </div>
+  </section>
+
+  <!-- ==================== PROSESSI ==================== -->
+  <section class="section section--paper2">
+    <div class="wrap">
+      <div class="section-head" style="text-align:center">
+        <h2>Matka alkaa tavoitteesta, ei lentolipusta.</h2>
+      </div>
+
+      <ol class="lp-flow">
+
+        <li class="lp-flow__step" data-reveal>
+          <div class="lp-flow__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.9 8.9 0 0 1-3.8-.9L3 21l1.9-5.1A8.4 8.4 0 0 1 12 3.1a8.4 8.4 0 0 1 9 8.4Z"/></svg>
+          </div>
+          <span class="lp-flow__num">01.</span>
+          <h3>Kerro, mitä haluatte oppia</h3>
+          <p>Aihe, tavoite, ryhmä ja alustavat ajatukset riittävät alkuun.</p>
+        </li>
+
+        <li class="lp-flow__step" data-reveal>
+          <div class="lp-flow__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+          </div>
+          <span class="lp-flow__num">02.</span>
+          <h3>FinDera etsii oikeat kohteet</h3>
+          <p>Sopivat yritykset, organisaatiot, asiantuntijat ja vierailukohteet kartoitetaan.</p>
+        </li>
+
+        <li class="lp-flow__step" data-reveal>
+          <div class="lp-flow__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></svg>
+          </div>
+          <span class="lp-flow__num">03.</span>
+          <h3>Kokonaisuus rakennetaan valmiiksi</h3>
+          <p>Ohjelma, vierailut ja tarvittaessa myös matkalogistiikka.</p>
+        </li>
+
+        <li class="lp-flow__step" data-reveal>
+          <div class="lp-flow__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <span class="lp-flow__num">04.</span>
+          <h3>Te keskitytte olennaiseen</h3>
+          <p>FinDera huolehtii siitä, että kokonaisuus toimii myös käytännössä.</p>
+        </li>
+
+      </ol>
+    </div>
+  </section>
+
+  <!-- ==================== REFERENSSIT ====================
+       Kortit ovat sivuston oikeita referenssejä. Tekstit ja kuvat vastaavat
+       projektit.html-sivun casejä — jos niitä muutetaan siellä, päivitä
+       myös tähän. -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head" style="text-align:center">
+        <h2>Toteutettuja matkoja</h2>
+      </div>
+
+      <div class="lp-refs">
+
+        <article class="lp-ref" data-reveal>
+          <div class="lp-ref__media">
+            <picture>
+              <source srcset="assets/img/case-salpakierto-1000.webp 1000w, assets/img/case-salpakierto-600.webp 600w"
+                      sizes="(max-width: 1000px) 100vw, 33vw" type="image/webp">
+              <img class="img-load" src="assets/img/case-salpakierto.jpg"
+                   alt="Ryhmä opastuksella värikkään laitosrakennuksen edustalla."
+                   width="1000" height="667" loading="lazy" decoding="async">
+            </picture>
+          </div>
+          <div class="lp-ref__body">
+            <h3>Salpakierto Oy</h3>
+            <p class="lp-ref__place">Alankomaat &middot; 2023</p>
+            <p>Muovin kierrätyksen arvoketju hallitus- ja johtoryhmätasolla — tietopohjaa investointipäätösten tueksi.</p>
+            <a class="link-arrow" href="projektit.html">
+              Lue lisää
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="lp-ref" data-reveal>
+          <div class="lp-ref__media">
+            <picture>
+              <source srcset="assets/img/case-muhos-1000.webp 1000w, assets/img/case-muhos-600.webp 600w"
+                      sizes="(max-width: 1000px) 100vw, 33vw" type="image/webp">
+              <img class="img-load" src="assets/img/case-muhos.jpg"
+                   alt="Ryhmä kuuntelee opastusta aurinkovoimalan paneelirivien äärellä."
+                   width="1000" height="667" loading="lazy" decoding="async">
+            </picture>
+          </div>
+          <div class="lp-ref__body">
+            <h3>Muhoksen kunta</h3>
+            <p class="lp-ref__place">Saksa, NRW &middot; 2024</p>
+            <p>Kiertotalousekosysteemit, kunnallisen vihreän siirtymän ekosysteemit ja uusi energiateknologia.</p>
+            <a class="link-arrow" href="projektit.html">
+              Lue lisää
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="lp-ref" data-reveal>
+          <div class="lp-ref__media">
+            <picture>
+              <source srcset="assets/img/case-rosknroll-1000.webp 1000w, assets/img/case-rosknroll-600.webp 600w"
+                      sizes="(max-width: 1000px) 100vw, 33vw" type="image/webp">
+              <img class="img-load" src="assets/img/case-rosknroll.jpg"
+                   alt="Ryhmä opastuksella vertikaaliviljelylaitoksen kasvatushyllyjen edessä."
+                   width="1000" height="667" loading="lazy" decoding="async">
+            </picture>
+          </div>
+          <div class="lp-ref__body">
+            <h3>Rosk&rsquo;n Roll Oy Ab</h3>
+            <p class="lp-ref__place">Belgia &middot; 2023</p>
+            <p>Täyden mittakaavan vertikaaliviljelyn benchmarkkauskohde yrityksen kehityshankkeeseen liittyen.</p>
+            <a class="link-arrow" href="projektit.html">
+              Lue lisää
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </article>
+
+      </div>
+
+      <div style="text-align:center;margin-top:clamp(2.25rem,4vw,3rem)">
+        <a class="btn btn--ghost" href="projektit.html">
+          <span>Katso kaikki referenssit</span>
+          <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== LOPPUKEHOTUS ==================== -->
+  <section class="lp-outro">
+    <div class="wrap lp-outro__inner">
+      <div class="lp-outro__copy">
+        <h2>Onko mielessä aihe, mutta ei vielä kohdetta?</h2>
+        <div class="lp-outro__rule"></div>
+        <p class="lp-outro__text">
+          Se on hyvä lähtökohta. Kerro minulle, mitä haluaisitte nähdä, oppia tai
+          selvittää. Mietitään yhdessä, missä päin Suomea tai Eurooppaa
+          kiinnostavimmat esimerkit löytyvät.
+        </p>
+        <div class="btn-group" style="margin-top:2rem">
+          <a class="btn btn--light" href="yhteystiedot.html">
+            <span>Ota yhteyttä</span>
+            <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn--ghost" href="https://www.linkedin.com/in/martin-brandt-a9153577/" target="_blank" rel="noopener">
+            <span>Katso LinkedIn-profiili</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="lp-outro__media">
+        <picture>
+          <source srcset="assets/img/lp-martin-900.webp 900w, assets/img/lp-martin-560.webp 560w"
+                  sizes="(max-width: 760px) 100vw, 40vw" type="image/webp">
+          <img src="assets/img/lp-martin.jpg" alt="Martin Brandt" width="900" height="1200" loading="lazy" decoding="async">
+        </picture>
+        <span class="lp-outro__name">Martin Brandt &mdash; FinDera</span>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ==================== ALATUNNISTE ==================== -->
+<footer class="lp-foot">
+  <div class="wrap lp-foot__inner">
+    <span>&copy; <span id="vuosi">2026</span> FinDera Consulting. Kaikki oikeudet pidätetään.</span>
+    <span><a href="index.html">findera.fi</a></span>
+    <span>Suunnittelu ja toteutus: <a href="https://www.studiotitta.fi" target="_blank" rel="noopener">Studio&nbsp;Titta</a></span>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script>document.getElementById("vuosi").textContent = new Date().getFullYear();</script>
+</body>
+</html>
