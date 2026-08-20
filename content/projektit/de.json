@@ -172,6 +172,10 @@
   "footer.nav.description": "Fußzeile — Überschrift. Auf allen Seiten gleich — wenn Sie das ändern, ändern Sie denselben Text auch in den Dateien der anderen Seiten.",
   "footer.contact": "Kontakt",
   "footer.contact.description": "Fußzeile — Überschrift. Auf allen Seiten gleich — wenn Sie das ändern, ändern Sie denselben Text auch in den Dateien der anderen Seiten.",
+  "footer.rights": "Alle Rechte vorbehalten.",
+  "footer.rights.description": "Fußzeile — Text. Auf allen Seiten gleich — wenn Sie das ändern, ändern Sie denselben Text auch in den Dateien der anderen Seiten.",
   "footer.langs": "Ich arbeite auf Finnisch, Deutsch und Englisch.",
-  "footer.langs.description": "Fußzeile — Arbeitssprachen. Auf allen Seiten gleich — wenn Sie das ändern, ändern Sie denselben Text auch in den Dateien der anderen Seiten."
+  "footer.langs.description": "Fußzeile — Arbeitssprachen. Auf allen Seiten gleich — wenn Sie das ändern, ändern Sie denselben Text auch in den Dateien der anderen Seiten.",
+  "footer.credit": "Umsetzung: <a href=\"https://www.studiotitta.fi\" target=\"_blank\" rel=\"noopener\">Studio&nbsp;Titta</a>",
+  "footer.credit.description": "Fußzeile — Text. Auf allen Seiten gleich — wenn Sie das ändern, ändern Sie denselben Text auch in den Dateien der anderen Seiten. Enthält HTML-Auszeichnung (z. B. <em> oder <strong>). Lassen Sie die Tags unverändert und ändern Sie nur den Text dazwischen."
 }

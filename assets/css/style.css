@@ -1087,6 +1087,14 @@ p:last-child { margin-bottom: 0; }
   padding-top: 1.75rem; border-top: 1px solid rgba(255, 255, 255, .13);
   font-size: var(--t-small); color: rgba(255, 255, 255, .5);
 }
+/* Tekijämerkintä — hillitty, mutta linkki erottuu alleviivauksesta */
+.footer__credit a {
+  color: rgba(255, 255, 255, .68);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: .22em;
+}
+.footer__credit a:hover { color: var(--leaf); }
 
 /* 11. ANIMAATIOT -------------------------------------------------------- */
 /* Sisääntuloanimaatiot ajetaan vain, jos JavaScript on käytettävissä.

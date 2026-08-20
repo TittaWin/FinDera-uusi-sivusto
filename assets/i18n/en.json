@@ -36,7 +36,9 @@
     "footer.nav": "Pages",
     "footer.contact": "Contact",
     "footer.tagline": "Circular economy and sustainability consulting, and organised study and benchmarking trips across Europe.",
-    "footer.langs": "I work in Finnish, German and English."
+    "footer.langs": "I work in Finnish, German and English.",
+    "footer.rights": "All rights reserved.",
+    "footer.credit": "Site by <a href=\"https://www.studiotitta.fi\" target=\"_blank\" rel=\"noopener\">Studio&nbsp;Titta</a>"
   },
   "pages": {
     "index.html": {
