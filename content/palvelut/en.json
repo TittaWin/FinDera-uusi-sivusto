@@ -230,6 +230,6 @@
   "footer.rights.description": "Footer — text. Shared across all pages — if you change this, change the same text in the other page files too.",
   "footer.langs": "I work in Finnish, German and English.",
   "footer.langs.description": "Footer — working languages. Shared across all pages — if you change this, change the same text in the other page files too.",
-  "footer.credit": "Site by <a href=\"https://www.studiotitta.fi\" target=\"_blank\" rel=\"noopener\">Studio&nbsp;Titta</a>",
+  "footer.credit": "Designed &amp; built by <a href=\"https://www.studiotitta.fi\" target=\"_blank\" rel=\"noopener\">Studio&nbsp;Titta</a>",
   "footer.credit.description": "Footer — text. Shared across all pages — if you change this, change the same text in the other page files too. Contains HTML markup (e.g. <em> or <strong>). Keep the tags as they are and change only the text between them."
 }

@@ -230,6 +230,6 @@
   "footer.rights.description": "Alatunniste — teksti. Yhteinen kaikille sivuille — jos muutat tätä, muuta sama teksti myös muiden sivujen tiedostoihin.",
   "footer.langs": "Palvelen suomeksi, saksaksi ja englanniksi.",
   "footer.langs.description": "Alatunniste — palvelukielet. Yhteinen kaikille sivuille — jos muutat tätä, muuta sama teksti myös muiden sivujen tiedostoihin.",
-  "footer.credit": "Toteutus: <a href=\"https://www.studiotitta.fi\" target=\"_blank\" rel=\"noopener\">Studio&nbsp;Titta</a>",
+  "footer.credit": "Suunnittelu ja toteutus: <a href=\"https://www.studiotitta.fi\" target=\"_blank\" rel=\"noopener\">Studio&nbsp;Titta</a>",
   "footer.credit.description": "Alatunniste — teksti. Yhteinen kaikille sivuille — jos muutat tätä, muuta sama teksti myös muiden sivujen tiedostoihin. Sisältää HTML-merkintää (esim. <em> tai <strong>). Säilytä tagit ennallaan ja muuta vain niiden välissä oleva teksti."
 }
