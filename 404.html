@@ -1,34 +1,29 @@
 <!DOCTYPE html>
-<!-- ÄLÄ MUOKKAA TEKSTEJÄ TÄSSÄ TIEDOSTOSSA.
-     Tekstit ylikirjoitetaan julkaisun yhteydessä content/-kansiosta.
-     Muokkaa tekstit kansiossa content/yhteystiedot/ — fi.json, en.json, de.json. -->
-<html lang="fi">
+<!-- FinDera — virhesivu (404).
+     Netlify tarjoilee tämän tiedoston automaattisesti oikealla 404-statuskoodilla,
+     kun pyydettyä osoitetta ei löydy. Sivu käyttää samaa assets/css/style.css
+     -tiedostoa kuin muu sivusto, joten ilme pysyy yhtenäisenä.
+
+     Sivu on vain suomeksi ja merkitty data-no-i18n-attribuutilla, joten
+     ylätunnisteesta on jätetty kielivalitsin pois: main.js ohittaa kielenvaihdon
+     tällaisilla sivuilla, jolloin valitsin olisi kuollut painike. Samaa ratkaisua
+     käyttää landing1.html. -->
+<html lang="fi" data-no-i18n>
 <head>
 <script>document.documentElement.classList.add("js");</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title data-i18n="meta.title">Ota yhteyttä — FinDera Consulting</title>
-<meta name="description" data-i18n-attr="content:meta.desc" content="Kerro lyhyesti tavoitteestasi, niin ehdotan konkreettisen tavan edetä. Martin Brandt, FinDera Consulting — martin.brandt@findera.fi, +358 50 336 3233.">
+<title>Sivua ei löytynyt — FinDera Consulting</title>
+<meta name="description" content="Etsimääsi sivua ei löytynyt. Palaa etusivulle tai ota yhteyttä.">
+<meta name="robots" content="noindex">
 <meta name="theme-color" content="#16402a">
-<link rel="canonical" href="https://www.findera.fi/yhteystiedot.html">
-
-<meta property="og:type" content="website">
-<meta property="og:locale" content="fi_FI">
-<meta property="og:site_name" content="FinDera Consulting">
-<meta property="og:url" content="https://www.findera.fi/yhteystiedot.html">
-<meta property="og:title" content="Ota yhteyttä — FinDera Consulting">
-<meta property="og:description" content="Kerro lyhyesti tavoitteestasi, niin ehdotan konkreettisen tavan edetä. Martin Brandt, FinDera Consulting — martin.brandt@findera.fi, +358 50 336 3233.">
-<meta property="og:image" content="https://www.findera.fi/assets/img/hero-rotterdam.jpg">
-<meta property="og:image:width" content="1920">
-<meta property="og:image:height" content="1080">
-<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-<a class="skip-link" href="#main" data-i18n="a11y.skip">Siirry sisältöön</a>
+<a class="skip-link" href="#main">Siirry sisältöön</a>
 
 <header class="site-header">
   <div class="wrap site-header__inner">
@@ -49,28 +44,17 @@
     </a>
 
     <nav class="nav" aria-label="Päävalikko">
-      <a class="nav__link" href="palvelut.html" data-i18n="nav.services">Palvelut</a>
-      <a class="nav__link" href="projektit.html" data-i18n="nav.projects">Projektit</a>
-      <a class="nav__link" href="minusta.html" data-i18n="nav.about">Minusta</a>
-      <a class="nav__link" href="yhteystiedot.html" aria-current="page" data-i18n="nav.contact">Yhteystiedot</a>
-      <a class="btn" href="#lomake">
-        <span data-i18n="cta.form">Lomakkeeseen</span>
+      <a class="nav__link" href="palvelut.html">Palvelut</a>
+      <a class="nav__link" href="projektit.html">Projektit</a>
+      <a class="nav__link" href="minusta.html">Minusta</a>
+      <a class="nav__link" href="yhteystiedot.html">Yhteystiedot</a>
+      <a class="btn" href="index.html">
+        <span>Etusivulle</span>
         <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </a>
     </nav>
 
     <div class="nav__actions">
-      <div class="lang">
-        <button class="lang__toggle" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Vaihda kieli">
-          <span class="lang__current">FI</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
-        </button>
-        <ul class="lang__menu" role="listbox">
-          <li><button type="button" data-lang="fi" role="option" aria-selected="true">Suomi <span class="lang__code">FI</span></button></li>
-          <li><button type="button" data-lang="en" role="option" aria-selected="false">English <span class="lang__code">EN</span></button></li>
-          <li><button type="button" data-lang="de" role="option" aria-selected="false">Deutsch <span class="lang__code">DE</span></button></li>
-        </ul>
-      </div>
       <button class="burger" type="button" aria-expanded="false" aria-label="Avaa valikko">
         <span></span><span></span><span></span>
       </button>
@@ -82,175 +66,22 @@
 
 <section class="page-head">
   <div class="wrap">
-    <p class="eyebrow fade-up" data-i18n="ph.eyebrow">Yhteystiedot</p>
-    <h1 class="fade-up" style="animation-delay:.1s" data-i18n="ph.title">
-      Aloitetaan <em class="hl serif-accent">keskustelulla</em>.
+    <p class="eyebrow fade-up">Virhe 404</p>
+    <h1 class="fade-up" style="animation-delay:.1s">
+      Sivua ei <em class="hl serif-accent">löytynyt</em>.
     </h1>
-    <p class="lead fade-up" style="animation-delay:.2s" data-i18n="ph.lead">
-      Ensimmäinen keskustelu on maksuton eikä sido mihinkään. Kerro lyhyesti, mitä olette
-      tavoittelemassa — ehdotan konkreettisen tavan edetä. Vastaan yleensä saman
-      arkipäivän aikana.
+    <p class="lead fade-up" style="animation-delay:.2s">
+      Etsimääsi sivua ei ole olemassa tai sen osoite on muuttunut.
+      Alta pääset takaisin liikkeelle.
     </p>
-  </div>
-</section>
-
-<section class="section" id="lomake" style="scroll-margin-top:5rem">
-  <div class="wrap">
-    <div class="split" style="align-items:start">
-
-      <!-- ===== LOMAKE ===== -->
-      <div data-reveal>
-        <h2 data-i18n="form.title">Lähetä viesti</h2>
-        <p class="text-muted measure-sm" style="margin-bottom:2rem" data-i18n="form.intro">
-          Mitä enemmän kerrot tavoitteestanne, sitä tarkemman ehdotuksen voin tehdä.
-        </p>
-
-        <!--
-          LÄHETYS: Netlify Forms.
-          Netlify tunnistaa lomakkeen julkaisun yhteydessä attribuutista
-          data-netlify="true". Viestit tallentuvat Netlifyn Forms-välilehdelle
-          ja ohjautuvat sähköpostilla osoitteeseen martin.brandt@findera.fi
-          (ilmoitus määritetään kerran Netlifyn hallinnasta — ks. README).
-
-          Kentän name="form-name" on pakollinen eikä sitä saa poistaa.
-          Jos lomakkeen nimeä "yhteydenotto" muuttaa, se on muutettava
-          molempiin kohtiin (form name ja piilokenttä).
-        -->
-        <form class="form" data-contact
-              name="yhteydenotto"
-              method="POST"
-              action="/kiitos.html"
-              data-netlify="true"
-              netlify-honeypot="bot-field"
-              novalidate
-              data-msg-ok="Kiitos viestistäsi! Olen yhteydessä pian."
-              data-msg-err="Lähetys ei onnistunut. Lähetäthän viestin osoitteeseen martin.brandt@findera.fi."
-              data-msg-invalid="Tarkista merkityt kentät."
-              data-msg-sending="Lähetetään…"
-              data-msg-mail="Avataan sähköpostiohjelmasi…">
-
-          <input type="hidden" name="form-name" value="yhteydenotto">
-
-          <div class="form__row">
-            <div class="field">
-              <label for="nimi" data-i18n="form.name">Nimi <span class="req">*</span></label>
-              <input type="text" id="nimi" name="nimi" required autocomplete="name">
-              <span class="field__error" data-i18n="form.err.name">Kerro nimesi.</span>
-            </div>
-            <div class="field">
-              <label for="organisaatio" data-i18n="form.org">Organisaatio</label>
-              <input type="text" id="organisaatio" name="organisaatio" autocomplete="organization">
-            </div>
-          </div>
-
-          <div class="form__row">
-            <div class="field">
-              <label for="sahkoposti" data-i18n="form.email">Sähköposti <span class="req">*</span></label>
-              <input type="email" id="sahkoposti" name="sahkoposti" required autocomplete="email">
-              <span class="field__error" data-i18n="form.err.email">Tarkista sähköpostiosoite.</span>
-            </div>
-            <div class="field">
-              <label for="puhelin" data-i18n="form.phone">Puhelin</label>
-              <input type="tel" id="puhelin" name="puhelin" autocomplete="tel">
-            </div>
-          </div>
-
-          <div class="field">
-            <label for="aihe" data-i18n="form.topic">Mistä on kyse?</label>
-            <select id="aihe" name="aihe">
-              <option value="Kohdekäynnit ja ryhmämatkat" data-i18n="form.topic.1">Kohdekäynnit ja ryhmämatkat</option>
-              <option value="Ovien avaus ja tapaamiset" data-i18n="form.topic.2">Ovien avaus ja tapaamiset</option>
-              <option value="Kartoitus ja kontaktien välitys" data-i18n="form.topic.3">Kartoitus ja kontaktien välitys</option>
-              <option value="En osaa vielä sanoa" data-i18n="form.topic.4">En osaa vielä sanoa</option>
-            </select>
-          </div>
-
-          <div class="field">
-            <label for="viesti" data-i18n="form.msg">Viesti <span class="req">*</span></label>
-            <textarea id="viesti" name="viesti" required
-                      data-i18n-attr="placeholder:form.msg.ph"
-                      placeholder="Esimerkiksi: tavoite, kohderyhmä, alustava ajankohta ja mahdollinen kohdemaa."></textarea>
-            <span class="field__error" data-i18n="form.err.msg">Kirjoita lyhyt viesti.</span>
-          </div>
-
-          <label class="check">
-            <input type="checkbox" name="lupa" required>
-            <span data-i18n="form.consent">
-              Saat ottaa minuun yhteyttä tämän viestin tiimoilta. Tietoja käytetään vain
-              yhteydenottoon eikä niitä luovuteta eteenpäin. <span class="req">*</span>
-            </span>
-          </label>
-
-          <!-- Hunajapurkki: piilokenttä roskapostia vastaan (Netlify: netlify-honeypot) -->
-          <p style="position:absolute;left:-9999px;opacity:0;height:0;width:0" aria-hidden="true">
-            <label>Jätä tämä kenttä tyhjäksi
-              <input type="text" name="bot-field" tabindex="-1" autocomplete="off">
-            </label>
-          </p>
-
-          <div class="btn-group">
-            <button class="btn btn--lg" type="submit">
-              <span data-i18n="form.send">Lähetä viesti</span>
-              <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            </button>
-          </div>
-
-          <p class="form__status" role="status" aria-live="polite"></p>
-        </form>
-      </div>
-
-      <!-- ===== SUORAT YHTEYSTIEDOT ===== -->
-      <div data-reveal="right">
-        <div class="card" style="padding:clamp(1.75rem,3vw,2.5rem)">
-          <h2 style="font-size:var(--t-h3)" data-i18n="contact.title">Tai ole suoraan yhteydessä</h2>
-          <p class="text-muted" style="margin-bottom:2rem" data-i18n="contact.intro">
-            Soita tai laita sähköpostia — usein lyhyt puhelu on nopein tapa selvittää,
-            onko tästä teille hyötyä.
-          </p>
-
-          <dl class="contact-list">
-            <div>
-              <dt data-i18n="contact.person">Yhteyshenkilö</dt>
-              <dd style="margin:0"><strong>Martin Brandt</strong><br>
-                <span class="text-muted" style="font-size:.93rem" data-i18n="contact.role">Konsultti, FinDera Consulting</span>
-              </dd>
-            </div>
-            <div>
-              <dt data-i18n="contact.email">Sähköposti</dt>
-              <dd style="margin:0"><a href="mailto:martin.brandt@findera.fi">martin.brandt@findera.fi</a></dd>
-            </div>
-            <div>
-              <dt data-i18n="contact.phone">Puhelin</dt>
-              <dd style="margin:0"><a href="tel:+358503363233">+358 50 336 3233</a></dd>
-            </div>
-            <div>
-              <dt>LinkedIn</dt>
-              <dd style="margin:0"><a class="link-icon" href="https://www.linkedin.com/in/martin-brandt-a9153577/" target="_blank"
-                 rel="noopener"><svg class="icon-li" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.59 0 4.26 2.36 4.26 5.44v6.3zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zm1.78 13.02H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg><span>Martin Brandt</span></a></dd>
-            </div>
-            <div>
-              <dt data-i18n="contact.langs">Palvelukielet</dt>
-              <dd style="margin:0" class="text-muted" data-i18n="contact.langs.v">Suomi · Saksa · Englanti</dd>
-            </div>
-          </dl>
-
-          <hr class="rule" style="margin-block:2rem">
-
-          <p class="footer__title" style="color:var(--muted-2)" data-i18n="contact.next">Mitä seuraavaksi tapahtuu</p>
-          <ol class="steps" style="gap:1.25rem">
-            <li class="step" data-step="1" style="padding-left:3.25rem">
-              <p style="font-size:.95rem" data-i18n="contact.n1">Vastaan viestiisi yleensä saman arkipäivän aikana.</p>
-            </li>
-            <li class="step" data-step="2" style="padding-left:3.25rem">
-              <p style="font-size:.95rem" data-i18n="contact.n2">Käymme lyhyen keskustelun tavoitteestanne — maksutta ja sitoumuksetta.</p>
-            </li>
-            <li class="step" data-step="3" style="padding-left:3.25rem">
-              <p style="font-size:.95rem" data-i18n="contact.n3">Saatte ehdotuksen etenemisestä ja tarjouksen, jos jatkaminen tuntuu järkevältä.</p>
-            </li>
-          </ol>
-        </div>
-      </div>
-
+    <div class="btn-group fade-up" style="animation-delay:.3s;margin-top:2.5rem">
+      <a class="btn" href="index.html">
+        <span>Takaisin etusivulle</span>
+        <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <a class="btn btn--ghost" href="yhteystiedot.html">
+        <span>Ota yhteyttä</span>
+      </a>
     </div>
   </div>
 </section>
@@ -276,22 +107,22 @@
             <span class="logo__tag">Access · Insight · Impact</span>
           </span>
         </a>
-        <p style="max-width:34ch;font-size:.95rem" data-i18n="footer.tagline">
-          Kestävän kehityksen konsultointia sekä
+        <p style="max-width:34ch;font-size:.95rem">
+          Kiertotalouden ja kestävän kehityksen konsultointia sekä järjestettyjä
           opinto- ja benchmarkkausmatkoja Eurooppaan.
         </p>
       </div>
       <div class="footer__nav">
-        <p class="footer__title" data-i18n="footer.nav">Sivut</p>
+        <p class="footer__title">Sivut</p>
         <ul class="footer__list">
-          <li><a href="palvelut.html" data-i18n="nav.services">Palvelut</a></li>
-          <li><a href="projektit.html" data-i18n="nav.projects">Projektit</a></li>
-          <li><a href="minusta.html" data-i18n="nav.about">Minusta</a></li>
-          <li><a href="yhteystiedot.html" data-i18n="nav.contact">Yhteystiedot</a></li>
+          <li><a href="palvelut.html">Palvelut</a></li>
+          <li><a href="projektit.html">Projektit</a></li>
+          <li><a href="minusta.html">Minusta</a></li>
+          <li><a href="yhteystiedot.html">Yhteystiedot</a></li>
         </ul>
       </div>
       <div class="footer__contact">
-        <p class="footer__title" data-i18n="footer.contact">Yhteystiedot</p>
+        <p class="footer__title">Yhteystiedot</p>
         <ul class="footer__list">
           <li>Martin Brandt</li>
           <li><a href="mailto:martin.brandt@findera.fi">martin.brandt@findera.fi</a></li>
@@ -301,9 +132,9 @@
       </div>
     </div>
     <div class="footer__bottom">
-      <span>&copy; <span id="vuosi">2026</span> FinDera Consulting. <span data-i18n="footer.rights">Kaikki oikeudet pidätetään.</span></span>
-      <span data-i18n="footer.langs">Palvelen suomeksi, saksaksi ja englanniksi.</span>
-      <span class="footer__credit" data-i18n="footer.credit">Suunnittelu ja toteutus: <a href="https://www.studiotitta.fi" target="_blank" rel="noopener">Studio&nbsp;Titta</a></span>
+      <span>&copy; <span id="vuosi">2026</span> FinDera Consulting. <span>Kaikki oikeudet pidätetään.</span></span>
+      <span>Palvelen suomeksi, saksaksi ja englanniksi.</span>
+      <span class="footer__credit">Suunnittelu ja toteutus: <a href="https://www.studiotitta.fi" target="_blank" rel="noopener">Studio&nbsp;Titta</a></span>
     </div>
   </div>
 </footer>

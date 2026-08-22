@@ -48,6 +48,7 @@ minusta.html          Martin Brandt
 yhteystiedot.html     Yhteystiedot ja lomake
 kiitos.html           Kiitossivu lomakkeen lähetyksen jälkeen
 landing1.html         Kampanjan laskeutumissivu (findera.fi/landing1)
+404.html              Virhesivu — Netlify tarjoilee tämän tuntemattomille osoitteille
 
 assets/
   css/style.css       Kaikki tyylit (värit, typografia, animaatiot)
@@ -58,6 +59,7 @@ assets/
   img/                Optimoidut kuvat (WebP + JPG-varmistus)
   img/findera-logo.svg  Logo erillisenä tiedostona (esim. sähköpostiallekirjoitus)
   img/favicon.svg     Selaimen välilehden kuvake
+  img/apple-touch-icon.png  iOS-kotinäytön kuvake (renderöity favicon.svg:stä)
   fonts/              Itse isännöidyt fontit
 
 assets/logos/
@@ -265,10 +267,19 @@ sama koodi lähettää lomakkeen sinne ilman muita muutoksia.
 
 ---
 
-## Esikatselu asiakkaalle (ennen varsinaista julkaisua)
+## Esikatselu asiakkaalle
 
-Kun haluat näyttää sivuston Martinille tai muille kommentoitavaksi ennen kuin
-findera.fi-osoite siirretään:
+> **Sivusto on julkaistu.** `findera.fi` osoittaa jo tähän sivustoon, joten alla
+> olevaa esikatselutapaa tarvitaan vain, jos haluat näyttää jonkin ison muutoksen
+> erikseen ennen kuin se menee tuotantoon. Tavalliset päivitykset menevät suoraan
+> tuotantoon, kun muutos työnnetään GitHubiin.
+>
+> **Älä tee esikatselusta uutta Netlify-sivustoa saman sisällön kanssa.** Se olisi
+> hakukoneelle koko sivuston kaksoiskappale. Nykyinen `findera-esikatselu.netlify.app`
+> on sama Netlify-sivusto kuin tuotanto, ja se ohjautuu `netlify.toml`-tiedoston
+> asetuksella pysyvästi osoitteeseen `www.findera.fi`.
+
+Jos haluat silti näyttää version erikseen kommentoitavaksi:
 
 1. Kirjaudu <https://app.netlify.com/drop> (ilmainen tili, esim. Google-tunnuksilla)
 2. Raahaa **koko tämä kansio** selainikkunaan
@@ -277,11 +288,6 @@ findera.fi-osoite siirretään:
 
 Sivuston nimen voi vaihtaa selkeämmäksi: **Site configuration → Change site name**
 (esim. `findera-esikatselu.netlify.app`).
-
-> **Hakukoneesto on päällä.** Tiedostossa `netlify.toml` on osio, joka estää
-> Googlea löytämästä keskeneräistä versiota. **Muista poistaa se ennen varsinaista
-> julkaisua** — muuten valmis sivusto ei koskaan näy hakutuloksissa. Osio on
-> merkitty tiedostoon isolla kommentilla, eikä sitä voi vahingossa ohittaa.
 
 > **Linkki on julkinen mutta listaamaton.** Kuka tahansa, jolla on osoite, näkee
 > sivuston. Salasanasuojaus on Netlifyn maksullinen ominaisuus. Esikatseluun tämä

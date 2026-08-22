@@ -72,6 +72,20 @@
   [headers.values]
     X-Robots-Tag = "noindex, nofollow"
 
+# Netlifyn oma osoite findera-esikatselu.netlify.app tarjoili aiemmin saman
+# sivuston kuin www.findera.fi (sama sisältö, sama etag) ilman hakukoneestoa.
+# Hakukoneelle se on koko sivuston kaksoiskappale, joten se ohjataan pysyvästi
+# oikeaan osoitteeseen. Sääntö on ensimmäisenä, koska säännöt luetaan ylhäältä
+# alas ja tämä koskee koko osoitetta.
+#
+# Netlifyn omat deploy previewit (deploy-preview-N--...netlify.app) eivät osu
+# tähän sääntöön, ja Netlify merkitsee ne itse noindex-otsakkeella.
+[[redirects]]
+  from = "https://findera-esikatselu.netlify.app/*"
+  to = "https://www.findera.fi/:splat"
+  status = 301
+  force = true
+
 # Siistit osoitteet ilman .html-päätettä (vanhat osoitteet ohjautuvat uusiin)
 [[redirects]]
   from = "/palvelut"
@@ -91,6 +105,14 @@
 [[redirects]]
   from = "/yhteystiedot"
   to = "/yhteystiedot.html"
+  status = 200
+
+# Kampanjoissa käytetty osoite findera.fi/landing1. Sivu on noindex, joten
+# tämä ei koske hakukoneita — kyse on siitä, että mainoslinkki pysyy vakaana
+# eikä nojaa Netlifyn oletuskäyttäytymiseen.
+[[redirects]]
+  from = "/landing1"
+  to = "/landing1.html"
   status = 200
 
 # Google Sites -aikaiset osoitteet ohjataan uusiin, jotta hakukoneiden
