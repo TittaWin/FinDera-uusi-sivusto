@@ -2,16 +2,21 @@
 """
 FinDera - laskeutumissivun (landing1.html) kuvaputki.
 
-Lahde: kansio "Landing Pages". Paakuva ja Martinin kuva ovat omina
-tiedostoinaan; loput on irrotettu kuvakollaasista skriptin alussa maaritellyilla
-pikselirajoilla (kollaasin valkoiset erotinviivat).
+Lahde: kansio "Landing Pages" - ala lue tasta skriptista muita kansioita.
+Kaistan ja aihekorttien kuvat irrotetaan kuvakollaasista skriptin alussa
+maaritellyilla pikselirajoilla (kollaasin valkoiset erotinviivat). Martinin
+kuva on omana tiedostonaan.
+
+Aidot matkakuvat ovat alikansiossa "reissukuvat/". Ne on kopioitu sinne
+tarkoituksella, jotta sivuston muiden sivujen kuvien vaihtaminen ei muuta
+laskeutumissivua eika painvastoin.
 
 Ajo:  python3 tools/build_landing_images.py
 
 Tulos: assets/img/lp-*.webp (+ jpg-varmistus). Tiedostot ovat valmiiksi
 oikean kokoisia, joten selain ei lataa turhaa dataa.
 """
-from PIL import Image, ImageOps
+from PIL import Image, ImageFilter, ImageOps
 import os
 
 SRC = "/Users/titta/Documents/FinDera/Landing Pages"
@@ -37,22 +42,26 @@ OMAT = {
     "lp-martin": ("Martin.JPG", 3 / 4, 0.30),
 }
 
-# --- Muista kansioista poimitut kuvat ---------------------------------------
+# --- Aidot matkakuvat, alikansio "reissukuvat/" -----------------------------
+# Samat kentat kuin OMAT.
+#
+# Paakuvasta huomioitava: alkuperaista kokonaista valokuvaa ei ole tallessa,
+# vaan se on irrotettu kollaasista "Findera kuvat/FinDera opintomatkat_2.jpg".
+# Siksi lahde on vain 1328 px levea ja suurin julkaistava koko on 1200 px.
+# Jos alkuperainen loytyy, korvaa paakuva-aurinkokukka.jpg silla ja lisaa
+# 1600 takaisin seka LEVEYDET-listaan etta landing1.html:n srcset- ja
+# preload-riveille.
+#
 # Ryhman oppimisymparistoa kasitteleva osio kayttaa samaa ravintolakuvaa kuin
 # etusivun galleria (illat-3), mutta omana, leveampana rajauksenaan.
-# slug -> (koko polku, kuvasuhde tai None, rajauksen painopiste pystysuunnassa)
-MUUALTA = {
-    # Paakuva: aito vierailukuva, ryhma turvaliiveissa laitoksen hallissa.
-    # Rajaus painottuu alas, koska ryhma on kuvan alaosassa.
-    "lp-hero":  ("/Users/titta/Documents/FinDera/Findera kuvat/good pictures/"
-                 "20180525_110429.jpg", 2 / 1, 0.95),
-    "lp-ryhma": ("/Users/titta/Documents/FinDera/Ravintolaillat/"
-                 "20240410_122743.jpg", 4 / 3, 0.50),
+REISSUKUVAT = {
+    "lp-hero":  ("paakuva-aurinkokukka.jpg", 2 / 1, 0.50),
+    "lp-ryhma": ("ryhma-ravintolassa.jpg",   4 / 3, 0.50),
 }
 
 # --- Leveydet rooleittain ---------------------------------------------------
 LEVEYDET = {
-    "lp-hero":   [1600, 1200, 800],
+    "lp-hero":   [1200, 800],
     "lp-band":   [1600, 1200, 800],
     "lp-martin": [900, 560],
     "lp-ryhma":  [1000, 600],
@@ -74,19 +83,25 @@ def crop_to(im, ratio, focus_y=0.42):
     return im.crop((0, top, w, top + nh))
 
 
+def teravoi(im, suurennettu):
+    """Suurennos pehmentaa kuvaa - kevyt teravointi palauttaa ryhdin."""
+    if not suurennettu:
+        return im
+    return im.filter(ImageFilter.UnsharpMask(radius=1.2, percent=70,
+                                             threshold=3))
+
+
 def tallenna(im, slug, leveydet):
     """Kirjoittaa WebP-versiot ja yhden jpg-varmistuksen."""
     tehdyt = []
     for w in leveydet:
-        if w > im.width:                    # ei suurenneta koskaan
-            w = im.width
         h = int(round(im.height * w / im.width))
-        out = im.resize((w, h), Image.LANCZOS)
+        out = teravoi(im.resize((w, h), Image.LANCZOS), w > im.width)
         polku = os.path.join(DST, f"{slug}-{w}.webp")
         out.save(polku, "WEBP", quality=82, method=6)
         tehdyt.append((w, h))
     fb_w, fb_h = tehdyt[0]
-    im.resize((fb_w, fb_h), Image.LANCZOS).save(
+    teravoi(im.resize((fb_w, fb_h), Image.LANCZOS), fb_w > im.width).save(
         os.path.join(DST, f"{slug}.jpg"), "JPEG", quality=80,
         optimize=True, progressive=True)
     print(f"  {slug:<20} {' '.join(f'{w}x{h}' for w, h in tehdyt)}")
@@ -108,9 +123,10 @@ def main():
             im = crop_to(im, suhde, focus)
         tallenna(im, slug, LEVEYDET[slug])
 
-    print("Muista kansioista:")
-    for slug, (polku, suhde, focus) in MUUALTA.items():
-        im = ImageOps.exif_transpose(Image.open(polku)).convert("RGB")
+    print("Aidot matkakuvat:")
+    for slug, (tiedosto, suhde, focus) in REISSUKUVAT.items():
+        im = ImageOps.exif_transpose(
+            Image.open(os.path.join(SRC, "reissukuvat", tiedosto))).convert("RGB")
         if suhde:
             im = crop_to(im, suhde, focus)
         tallenna(im, slug, LEVEYDET[slug])
