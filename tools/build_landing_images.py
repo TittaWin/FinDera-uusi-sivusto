@@ -59,6 +59,17 @@ REISSUKUVAT = {
     "lp-ryhma": ("ryhma-ravintolassa.jpg",   4 / 3, 0.50),
 }
 
+# --- Jakokuva (og:image) ----------------------------------------------------
+# Linkin esikatselukuva on omana, versioituna tiedostonaan - ei sama tiedosto
+# kuin sivun paakuva. Syy: WhatsApp, Facebook ja LinkedIn tallentavat
+# esikatselun kuvan OSOITTEEN perusteella. Jos kuva vaihdetaan saman nimen
+# alle, ne nayttavat vanhaa kuvaa viikkoja eika sita voi itse tyhjentaa.
+#
+# KUN JAKOKUVA VAIHTUU: nosta paivamaaraa nimessa JA landing1.html:n
+# og:image-tagissa. Vanhan tiedoston voi poistaa vasta kun kukaan ei enaa jaa
+# vanhaa linkkia - se ei haittaa vaikka jaa paikalleen.
+JAKOKUVA = ("lp-hero", "lp-jako-202608", 1200)
+
 # --- Leveydet rooleittain ---------------------------------------------------
 LEVEYDET = {
     "lp-hero":   [1200, 800],
@@ -124,12 +135,23 @@ def main():
         tallenna(im, slug, LEVEYDET[slug])
 
     print("Aidot matkakuvat:")
+    valmiit = {}
     for slug, (tiedosto, suhde, focus) in REISSUKUVAT.items():
         im = ImageOps.exif_transpose(
             Image.open(os.path.join(SRC, "reissukuvat", tiedosto))).convert("RGB")
         if suhde:
             im = crop_to(im, suhde, focus)
         tallenna(im, slug, LEVEYDET[slug])
+        valmiit[slug] = im
+
+    print("Jakokuva:")
+    lahde, nimi, leveys = JAKOKUVA
+    im = valmiit[lahde]
+    h = int(round(im.height * leveys / im.width))
+    teravoi(im.resize((leveys, h), Image.LANCZOS), leveys > im.width).save(
+        os.path.join(DST, f"{nimi}.jpg"), "JPEG", quality=82,
+        optimize=True, progressive=True)
+    print(f"  {nimi:<20} {leveys}x{h}")
 
 
 if __name__ == "__main__":
