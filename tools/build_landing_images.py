@@ -38,11 +38,21 @@ OMAT = {
     "lp-martin": ("Martin.JPG",                                3 / 4, 0.30),
 }
 
+# --- Muista kansioista poimitut kuvat ---------------------------------------
+# Ryhman oppimisymparistoa kasitteleva osio kayttaa samaa ravintolakuvaa kuin
+# etusivun galleria (illat-3), mutta omana, leveampana rajauksenaan.
+# slug -> (koko polku, kuvasuhde tai None, rajauksen painopiste pystysuunnassa)
+MUUALTA = {
+    "lp-ryhma": ("/Users/titta/Documents/FinDera/Ravintolaillat/"
+                 "20240410_122743.jpg", 4 / 3, 0.50),
+}
+
 # --- Leveydet rooleittain ---------------------------------------------------
 LEVEYDET = {
     "lp-hero":   [1600, 1200, 800],
     "lp-band":   [1600, 1200, 800],
     "lp-martin": [900, 560],
+    "lp-ryhma":  [1000, 600],
     "aihe":      [430, 300],
 }
 
@@ -91,6 +101,13 @@ def main():
     for slug, (tiedosto, suhde, focus) in OMAT.items():
         im = ImageOps.exif_transpose(
             Image.open(os.path.join(SRC, tiedosto))).convert("RGB")
+        if suhde:
+            im = crop_to(im, suhde, focus)
+        tallenna(im, slug, LEVEYDET[slug])
+
+    print("Muista kansioista:")
+    for slug, (polku, suhde, focus) in MUUALTA.items():
+        im = ImageOps.exif_transpose(Image.open(polku)).convert("RGB")
         if suhde:
             im = crop_to(im, suhde, focus)
         tallenna(im, slug, LEVEYDET[slug])

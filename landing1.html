@@ -11,8 +11,8 @@
 <script>document.documentElement.classList.add("js");</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Benchmarking-matkat ammattilaisryhmille — FinDera Consulting</title>
-<meta name="description" content="FinDera suunnittelee ja toteuttaa asiantuntija- ja benchmarking-matkoja organisaatioille, hankkeille ja ammattilaisryhmille Suomessa ja Euroopassa. Yli 70 toteutusta.">
+<title>Asiantuntija- ja benchmarking-matkat organisaatioille | FinDera</title>
+<meta name="description" content="FinDera suunnittelee ja toteuttaa tavoitteellisia, sujuvia ja mieleenpainuvia asiantuntijamatkoja ammattilaisryhmille Suomessa ja Euroopassa.">
 <meta name="robots" content="noindex, follow">
 <meta name="theme-color" content="#16402a">
 
@@ -21,7 +21,7 @@
 <meta property="og:site_name" content="FinDera Consulting">
 <meta property="og:url" content="https://www.findera.fi/landing1">
 <meta property="og:title" content="Ideat muuttuvat arvokkaammiksi, kun ne näkee käytännössä.">
-<meta property="og:description" content="Asiantuntija- ja benchmarking-matkat organisaatioille, hankkeille ja ammattilaisryhmille Suomessa ja Euroopassa.">
+<meta property="og:description" content="Tavoitteellisia, sujuvia ja mieleenpainuvia asiantuntijamatkoja organisaatioiden kokoamille ammattilaisryhmille Suomessa ja Euroopassa.">
 <meta property="og:image" content="https://www.findera.fi/assets/img/lp-hero.jpg">
 <meta property="og:image:width" content="1600">
 <meta property="og:image:height" content="800">
@@ -148,6 +148,12 @@
 .lp-flow__step h3 { font-size: var(--t-h4); font-family: var(--font-sans); font-weight: 600; margin-bottom: .4rem; }
 .lp-flow__step p { color: var(--muted); font-size: .95rem; margin-bottom: 0; }
 
+/* --- Kohderyhmän rajaus prosessin jälkeen ---------------------------------
+   Käyttää sivuston jaettua .note-laatikkoa. Laatikossa on otsikko ja kaksi
+   kappaletta, joten .note p:n nollattu marginaali palautetaan tässä. */
+.lp-note h3 { font-size: var(--t-h4); font-family: var(--font-sans); font-weight: 600; margin-bottom: .8rem; }
+.lp-note p + p { margin-top: 1.15em; }
+
 /* --- Referenssikortit ---------------------------------------------------- */
 .lp-refs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(1.5rem, 3vw, 2.25rem); }
 .lp-ref {
@@ -264,16 +270,18 @@
         </h1>
         <div class="lp-hero__rule"></div>
         <p class="lp-hero__lead">
-          FinDera suunnittelee ja toteuttaa asiantuntija- ja benchmarking-matkoja
-          organisaatioille, hankkeille ja ammattilaisryhmille Suomessa ja Euroopassa.
+          FinDera suunnittelee ja toteuttaa tavoitteellisia, sujuvia ja
+          mieleenpainuvia asiantuntija- ja benchmarking-matkoja organisaatioiden,
+          hankkeiden ja verkostojen kokoamille ammattilaisryhmille Suomessa ja
+          Euroopassa.
         </p>
         <div class="btn-group">
-          <a class="btn" href="minusta.html">
-            <span>Tutustu FinDeraan</span>
+          <a class="btn" href="yhteystiedot.html">
+            <span>Kerro, mitä haluaisitte nähdä tai oppia</span>
             <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </a>
           <a class="btn btn--ghost" href="projektit.html">
-            <span>Katso referenssit</span>
+            <span>Katso toteutettuja matkoja</span>
           </a>
         </div>
       </div>
@@ -299,24 +307,35 @@
           <div class="lp-feat__icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
           </div>
-          <h3>Oikeat kohteet</h3>
-          <p>Löydämme juuri ryhmän tavoitteisiin sopivat vierailukohteet ja asiantuntijat.</p>
+          <h3>Oikeat kohteet ja ihmiset</h3>
+          <p>
+            Etsin juuri ryhmänne tavoitteisiin sopivat vierailukohteet, ratkaisut ja
+            niiden takana olevat asiantuntijat &mdash; myös silloin, kun ette vielä
+            tiedä, minne kannattaisi lähteä.
+          </p>
         </div>
 
         <div class="lp-feat" data-reveal>
           <div class="lp-feat__icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18M9 15.5l2 2 4-4"/></svg>
           </div>
-          <h3>Valmis kokonaisuus</h3>
-          <p>Vierailut, aikataulut, ravintolat ja tarvittaessa koko matkalogistiikka.</p>
+          <h3>Sujuva ja huoleton kokonaisuus</h3>
+          <p>
+            Rakennan ohjelman, varmistan vierailut ja huolehdin aikataulujen,
+            ruokailujen ja sovitusti myös muun matkalogistiikan toimivuudesta.
+          </p>
         </div>
 
         <div class="lp-feat" data-reveal>
           <div class="lp-feat__icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
           </div>
-          <h3>Enemmän irti matkasta</h3>
-          <p>Voitte keskittyä olennaiseen: oppimiseen, keskusteluun ja uusiin ajatuksiin.</p>
+          <h3>Yhteinen ymmärrys ja mieleenpainuva kokemus</h3>
+          <p>
+            Ammatillinen oppiminen, ryhmän sisäiset keskustelut, paikallinen kulttuuri
+            ja yhteiset kokemukset synnyttävät uusia näkökulmia, yhteistyötä ja
+            hyviä muistoja.
+          </p>
         </div>
 
       </div>
@@ -425,6 +444,50 @@
     </div>
   </section>
 
+  <!-- ==================== RYHMÄ OPPIMISYMPÄRISTÖNÄ ====================
+       Kuva on sama ravintolatilanne kuin etusivun gallerian illat-3, mutta
+       omana leveämpänä rajauksenaan (tools/build_landing_images.py). -->
+  <section class="section section--tight">
+    <div class="wrap">
+      <div class="split">
+        <div>
+          <h2 data-reveal>Matkan toinen oppimisympäristö kulkee mukana</h2>
+          <p class="lead" data-reveal>
+            Vierailukohteet ja niiden asiantuntijat tarjoavat tietoa, jota ei yleensä
+            löydä raporteista. Yhtä arvokas oppimisympäristö voi kuitenkin olla
+            matkalle lähtevä ryhmä.
+          </p>
+          <p data-reveal>
+            Kun mukana on eri organisaatioiden ja sidosryhmien edustajia, jokainen
+            tarkastelee nähtyä omasta näkökulmastaan. Yksi huomaa teknisen ratkaisun,
+            toinen pohtii rahoitusta tai sääntelyä ja kolmas tunnistaa käytännön
+            toteutuksen mahdollisuudet.
+          </p>
+          <p data-reveal>
+            Vierailujen välissä, yhteisillä aterioilla ja päivän päätteeksi syntyy
+            keskusteluja, joille tavallisessa kokouspäivässä ei olisi aikaa. Samalla
+            siirtyy ryhmän sisäistä hiljaista tietoa ja rakentuu yhteistä ymmärrystä.
+          </p>
+          <p data-reveal>
+            Uusi ympäristö, paikallinen kulttuuri ja yhdessä koetut tilanteet auttavat
+            ihmisiä tutustumaan toisiinsa eri tavalla. Parhaimmillaan matkalta jää
+            uusien ajatusten ja kontaktien lisäksi yhteistyösuhteita ja muistoja,
+            jotka kantavat pitkälle kotiinpaluun jälkeen.
+          </p>
+        </div>
+        <div class="split__media" data-reveal="scale">
+          <picture>
+            <source srcset="assets/img/lp-ryhma-1000.webp 1000w, assets/img/lp-ryhma-600.webp 600w"
+                    sizes="(max-width: 900px) 100vw, 45vw" type="image/webp">
+            <img class="img-load" src="assets/img/lp-ryhma.jpg"
+                 alt="Matkaryhmä keskustelee illallispöydissä värikkäästi sisustetussa ravintolassa."
+                 width="1000" height="750" loading="lazy" decoding="async">
+          </picture>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ==================== PROSESSI ==================== -->
   <section class="section section--paper2">
     <div class="wrap">
@@ -466,11 +529,29 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
           </div>
           <span class="lp-flow__num">04.</span>
-          <h3>Te keskitytte olennaiseen</h3>
-          <p>FinDera huolehtii siitä, että kokonaisuus toimii myös käytännössä.</p>
+          <h3>Koette ja opitte yhdessä</h3>
+          <p>
+            Te voitte keskittyä oppimiseen, keskusteluihin, paikalliseen kulttuuriin ja
+            yhteiseen kokemukseen. Minä huolehdin siitä, että kokonaisuus toimii
+            sujuvasti myös käytännössä.
+          </p>
         </li>
 
       </ol>
+
+      <div class="note lp-note" data-reveal>
+        <h3>Kenelle matkat on tarkoitettu?</h3>
+        <p>
+          Matkat suunnitellaan organisaation, hankkeen, yhdistyksen tai muun verkoston
+          kokoamalle ammattilaisryhmälle. FinDera ei järjestä avoimia yleisömatkoja tai
+          vastaa yksittäisten osallistujien hankkimisesta.
+        </p>
+        <p>
+          Toimeksiantaja kokoaa ryhmän, ja minä rakennan sen tavoitteisiin sopivan
+          sisällön, varmistan kohteet ja tapaamiset sekä koordinoin sovitun
+          toteutuskokonaisuuden.
+        </p>
+      </div>
     </div>
   </section>
 
@@ -566,18 +647,23 @@
       <div class="lp-outro__copy">
         <h2>Onko mielessä aihe, mutta ei vielä kohdetta?</h2>
         <div class="lp-outro__rule"></div>
+        <p class="lp-outro__text">Se on hyvä lähtökohta.</p>
         <p class="lp-outro__text">
-          Se on hyvä lähtökohta. Kerro minulle, mitä haluaisitte nähdä, oppia tai
-          selvittää. Mietitään yhdessä, missä päin Suomea tai Eurooppaa
-          kiinnostavimmat esimerkit löytyvät.
+          Kerro minulle, mitä haluaisitte nähdä, oppia tai selvittää ja millaiselle
+          ryhmälle kokonaisuutta suunnittelette. Ehdotan tavoitteenne perusteella
+          sopivaa toteutustapaa ja sitä, missä kiinnostavimmat esimerkit,
+          asiantuntijat ja vertailukohteet voisivat sijaita.
+        </p>
+        <p class="lp-outro__text">
+          Ensimmäinen keskustelu on maksuton eikä sido mihinkään.
         </p>
         <div class="btn-group" style="margin-top:2rem">
           <a class="btn btn--light" href="yhteystiedot.html">
-            <span>Ota yhteyttä</span>
+            <span>Kerro ajatuksestasi</span>
             <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </a>
-          <a class="btn btn--ghost" href="https://www.linkedin.com/in/martin-brandt-a9153577/" target="_blank" rel="noopener">
-            <span>Katso LinkedIn-profiili</span>
+          <a class="btn btn--ghost" href="projektit.html">
+            <span>Katso referenssit</span>
           </a>
         </div>
       </div>
