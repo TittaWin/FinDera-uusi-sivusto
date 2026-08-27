@@ -45,17 +45,16 @@ OMAT = {
 # --- Aidot matkakuvat, alikansio "reissukuvat/" -----------------------------
 # Samat kentat kuin OMAT.
 #
-# Paakuvasta huomioitava: alkuperaista kokonaista valokuvaa ei ole tallessa,
-# vaan se on irrotettu kollaasista "Findera kuvat/FinDera opintomatkat_2.jpg".
-# Siksi lahde on vain 1328 px levea ja suurin julkaistava koko on 1200 px.
-# Jos alkuperainen loytyy, korvaa paakuva-aurinkokukka.jpg silla ja lisaa
-# 1600 takaisin seka LEVEYDET-listaan etta landing1.html:n srcset- ja
-# preload-riveille.
+# Paakuvan lahde on 1365x1023 (Titta toimitti 27.8.2026 aiemman,
+# kollaasista irrotetun ruudun tilalle). 2:1-rajaus antaa 1365x682, joten
+# 1200 px on suurin koko joka syntyy pienentamalla - 1600 olisi suurennos,
+# eika sita siksi tuoteta. Painopiste 0.65 pitaa aurinkokukan kokonaan
+# kuvassa ja ryhman alareunassa mukana.
 #
 # Ryhman oppimisymparistoa kasitteleva osio kayttaa samaa ravintolakuvaa kuin
 # etusivun galleria (illat-3), mutta omana, leveampana rajauksenaan.
 REISSUKUVAT = {
-    "lp-hero":  ("paakuva-aurinkokukka.jpg", 2 / 1, 0.50),
+    "lp-hero":  ("paakuva-aurinkokukka.jpg", 2 / 1, 0.65),
     "lp-ryhma": ("ryhma-ravintolassa.jpg",   4 / 3, 0.50),
 }
 
@@ -65,10 +64,10 @@ REISSUKUVAT = {
 # esikatselun kuvan OSOITTEEN perusteella. Jos kuva vaihdetaan saman nimen
 # alle, ne nayttavat vanhaa kuvaa viikkoja eika sita voi itse tyhjentaa.
 #
-# KUN JAKOKUVA VAIHTUU: nosta paivamaaraa nimessa JA landing1.html:n
-# og:image-tagissa. Vanhan tiedoston voi poistaa vasta kun kukaan ei enaa jaa
-# vanhaa linkkia - se ei haittaa vaikka jaa paikalleen.
-JAKOKUVA = ("lp-hero", "lp-jako-202608", 1200)
+# KUN JAKOKUVA VAIHTUU: nosta nimen perassa olevaa juoksevaa numeroa JA
+# landing1.html:n og:image-tagia. Vanhan tiedoston voi jattaa paikalleen -
+# se pitaa jo jaettujen linkkien esikatselut ehjina.
+JAKOKUVA = ("lp-hero", "lp-jako-202608-2", 1200)
 
 # --- Leveydet rooleittain ---------------------------------------------------
 LEVEYDET = {
