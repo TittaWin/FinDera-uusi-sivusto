@@ -34,8 +34,7 @@ RUUDUT = {
 # --- Omat tiedostot ---------------------------------------------------------
 # slug -> (tiedosto, kuvasuhde tai None, rajauksen painopiste pystysuunnassa)
 OMAT = {
-    "lp-hero":   ("ensimmäinen kuva_bechmarking vierailu.png", None, 0.5),
-    "lp-martin": ("Martin.JPG",                                3 / 4, 0.30),
+    "lp-martin": ("Martin.JPG", 3 / 4, 0.30),
 }
 
 # --- Muista kansioista poimitut kuvat ---------------------------------------
@@ -43,6 +42,10 @@ OMAT = {
 # etusivun galleria (illat-3), mutta omana, leveampana rajauksenaan.
 # slug -> (koko polku, kuvasuhde tai None, rajauksen painopiste pystysuunnassa)
 MUUALTA = {
+    # Paakuva: aito vierailukuva, ryhma turvaliiveissa laitoksen hallissa.
+    # Rajaus painottuu alas, koska ryhma on kuvan alaosassa.
+    "lp-hero":  ("/Users/titta/Documents/FinDera/Findera kuvat/good pictures/"
+                 "20180525_110429.jpg", 2 / 1, 0.95),
     "lp-ryhma": ("/Users/titta/Documents/FinDera/Ravintolaillat/"
                  "20240410_122743.jpg", 4 / 3, 0.50),
 }
