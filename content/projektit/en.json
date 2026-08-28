@@ -4,7 +4,7 @@
   "_ohje": "The texts in this file appear on the website. Change only the text inside the quotation marks. Lines whose key ends in .description are guidance for you — they are not shown on the site and do not need to be changed.",
   "meta.title": "Projects and references — FinDera Consulting",
   "meta.title.description": "Browser tab and search engine description — heading.",
-  "meta.desc": "Examples of study and benchmarking trips delivered by FinDera: Turku UAS, the Municipality of Muhos, Rosk'n Roll, OSAO, Seinäjoen Energia, LADEC, Salpakierto, Salaojayhdistys, the ELY Centre and Lounais-Suomen Jätehuolto.",
+  "meta.desc": "Over 70 study and benchmarking trips delivered. Examples include Turku UAS, Lounais-Suomen Jätehuolto, Salaojayhdistys, Seinäjoen Energia and ELY Centre.",
   "meta.desc.description": "Browser tab and search engine description — body text.",
   "a11y.skip": "Skip to content",
   "a11y.skip.description": "Accessibility — skip link for keyboard users. Shared across all pages — if you change this, change the same text in the other page files too.",

@@ -43,7 +43,7 @@
   "pages": {
     "index.html": {
       "meta.title": "FinDera Consulting — Your connection to sustainable solutions in Europe",
-      "meta.desc": "FinDera connects Finnish projects and organisations with the right sites, people and practical lessons across Europe. Site visits, group trips, door opening and mapping — with special expertise in Germany and the DACH region.",
+      "meta.desc": "FinDera connects Finnish projects with the right sites in Europe. Site visits, group trips and door opening — special expertise in Germany and DACH.",
       "hero.title": "<span class=\"line-mask\"><span style=\"animation-delay:.25s\">Your connection to</span></span><span class=\"line-mask\"><span style=\"animation-delay:.36s\">sustainable <em class=\"hl serif-accent\">Europe</em>.</span></span>",
       "hero.lead": "FinDera connects projects and organisations with the best best-practices, expertise and practical lessons in Europe. What you see, hear and experience for yourself, you understand more deeply.",
       "hero.scroll": "Scroll",
@@ -217,7 +217,7 @@
     },
     "projektit.html": {
       "meta.title": "Projects and references — FinDera Consulting",
-      "meta.desc": "Examples of study and benchmarking trips delivered by FinDera: Turku UAS, the Municipality of Muhos, Rosk'n Roll, OSAO, Seinäjoen Energia, LADEC, Salpakierto, Salaojayhdistys, the ELY Centre and Lounais-Suomen Jätehuolto.",
+      "meta.desc": "Over 70 study and benchmarking trips delivered. Examples include Turku UAS, Lounais-Suomen Jätehuolto, Salaojayhdistys, Seinäjoen Energia and ELY Centre.",
       "ph.eyebrow": "Projects",
       "ph.title": "Examples of <em class=\"hl serif-accent\">deliveries</em>.",
       "ph.lead": "More than 70 study and benchmarking trips on sustainability across Europe, with some 1,300 Finnish experts taking part in total. Here are a few examples from recent years.",

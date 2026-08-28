@@ -43,7 +43,7 @@
   "pages": {
     "index.html": {
       "meta.title": "FinDera Consulting — Ihre Verbindung zu nachhaltigen Lösungen in Europa",
-      "meta.desc": "FinDera verbindet Projekte und Organisationen mit den richtigen Referenzen, Kontakten und praktischen Erkenntnissen in Europa. Besichtigungen, Gruppenreisen, Türöffnung und Recherche — mit besonderer Expertise für Deutschland und den DACH-Raum.",
+      "meta.desc": "FinDera verbindet finnische Projekte mit den richtigen Referenzen in Europa. Besichtigungen, Gruppenreisen, Türöffnung — Schwerpunkt Deutschland und DACH.",
       "hero.title": "<span class=\"line-mask\"><span style=\"animation-delay:.25s\">Ihre Verbindung zum</span></span><span class=\"line-mask\"><span style=\"animation-delay:.36s\">nachhaltigen <em class=\"hl serif-accent\">Europa</em>.</span></span>",
       "hero.lead": "FinDera verbindet Projekte und Organisationen mit den richtigen Referenzen, Kontakten und praktischen Erkenntnissen im europäischen Raum. Was man selbst sieht, hört und erlebt, versteht man tiefer.",
       "hero.scroll": "Scrollen",
@@ -217,7 +217,7 @@
     },
     "projektit.html": {
       "meta.title": "Projekte und Referenzen — FinDera Consulting",
-      "meta.desc": "Beispiele für von FinDera durchgeführte Studien- und Benchmarking-Reisen: Fachhochschule Turku, Gemeinde Muhos, Rosk'n Roll, OSAO, Seinäjoen Energia, LADEC, Salpakierto, Salaojayhdistys, ELY-Zentrum und Lounais-Suomen Jätehuolto.",
+      "meta.desc": "Über 70 durchgeführte Studien- und Benchmarking-Reisen. Beispiele: Fachhochschule Turku, Lounais-Suomen Jätehuolto, Seinäjoen Energia und ELY-Zentrum.",
       "ph.eyebrow": "Projekte",
       "ph.title": "Beispiele für <em class=\"hl serif-accent\">Umsetzungen</em>.",
       "ph.lead": "Über 70 Studien- und Benchmarking-Reisen zum Thema Nachhaltigkeit in ganz Europa, an denen insgesamt rund 1.300 finnische Fachleute teilgenommen haben. Hier einige Beispiele aus den letzten Jahren.",

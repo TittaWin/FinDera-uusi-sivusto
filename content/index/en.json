@@ -4,7 +4,7 @@
   "_ohje": "The texts in this file appear on the website. Change only the text inside the quotation marks. Lines whose key ends in .description are guidance for you — they are not shown on the site and do not need to be changed.",
   "meta.title": "FinDera Consulting — Your connection to sustainable solutions in Europe",
   "meta.title.description": "Browser tab and search engine description — heading.",
-  "meta.desc": "FinDera connects Finnish projects and organisations with the right sites, people and practical lessons across Europe. Site visits, group trips, door opening and mapping — with special expertise in Germany and the DACH region.",
+  "meta.desc": "FinDera connects Finnish projects with the right sites in Europe. Site visits, group trips and door opening — special expertise in Germany and DACH.",
   "meta.desc.description": "Browser tab and search engine description — body text.",
   "a11y.skip": "Skip to content",
   "a11y.skip.description": "Accessibility — skip link for keyboard users. Shared across all pages — if you change this, change the same text in the other page files too.",
