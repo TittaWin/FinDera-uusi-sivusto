@@ -224,6 +224,8 @@
   "footer.tagline.description": "Alatunniste — kuvausteksti. Yhteinen kaikille sivuille — jos muutat tätä, muuta sama teksti myös muiden sivujen tiedostoihin.",
   "footer.nav": "Sivut",
   "footer.nav.description": "Alatunniste — otsikko. Yhteinen kaikille sivuille — jos muutat tätä, muuta sama teksti myös muiden sivujen tiedostoihin.",
+  "footer.privacy": "Tietosuojaseloste",
+  "footer.privacy.description": "Alatunniste — valikon linkki. Yhteinen kaikille sivuille — jos muutat tätä, muuta sama teksti myös muiden sivujen tiedostoihin.",
   "footer.contact": "Yhteystiedot",
   "footer.contact.description": "Alatunniste — otsikko. Yhteinen kaikille sivuille — jos muutat tätä, muuta sama teksti myös muiden sivujen tiedostoihin.",
   "footer.rights": "Kaikki oikeudet pidätetään.",

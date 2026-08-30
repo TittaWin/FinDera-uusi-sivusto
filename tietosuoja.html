@@ -1,20 +1,23 @@
 <!DOCTYPE html>
+<!-- ÄLÄ MUOKKAA TEKSTEJÄ TÄSSÄ TIEDOSTOSSA.
+     Tekstit ylikirjoitetaan julkaisun yhteydessä content/-kansiosta.
+     Muokkaa tekstit kansiossa content/tietosuoja/ — fi.json, en.json, de.json. -->
 <html lang="fi">
 <head>
 <script>document.documentElement.classList.add("js");</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Kiitos viestistäsi — FinDera Consulting</title>
-<meta name="description" content="Kiitos yhteydenotostasi. Martin Brandt on yhteydessä pian.">
-<meta name="robots" content="noindex">
+<title data-i18n="meta.title">Tietosuojaseloste — FinDera Consulting</title>
+<meta name="description" data-i18n-attr="content:meta.desc" content="Miten FinDera Consulting käsittelee yhteydenottolomakkeen henkilötietoja: mitä tietoja, mihin tarkoitukseen, kuinka kauan ja mitkä ovat oikeutesi.">
 <meta name="theme-color" content="#16402a">
+<link rel="canonical" href="https://www.findera.fi/tietosuoja.html">
 
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fi_FI">
 <meta property="og:site_name" content="FinDera Consulting">
-<meta property="og:url" content="https://www.findera.fi/kiitos.html">
-<meta property="og:title" content="Kiitos viestistäsi — FinDera Consulting">
-<meta property="og:description" content="Kiitos yhteydenotostasi. Martin Brandt on yhteydessä pian.">
+<meta property="og:url" content="https://www.findera.fi/tietosuoja.html">
+<meta property="og:title" content="Tietosuojaseloste — FinDera Consulting">
+<meta property="og:description" content="Mitä henkilötietoja FinDera Consulting käsittelee, mihin tarkoitukseen ja mitkä oikeudet sinulla on.">
 <meta property="og:image" content="https://www.findera.fi/assets/img/hero-rotterdam.jpg">
 <meta property="og:image:width" content="1920">
 <meta property="og:image:height" content="1080">
@@ -23,6 +26,36 @@
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <link rel="stylesheet" href="assets/css/style.css">
+
+<style>
+  /* Sivun omat tyylit. Etuliite ts- kuten laskeutumissivulla lp-.
+     Sivustolla ei ole muualla pitkää asiatekstiä, jossa on leipätekstin
+     sisäisiä linkkejä ja luettelo, joten säännöt ovat vain täällä. */
+  .ts-doc { max-width: 68ch; }
+  .ts-doc h2 {
+    font-size: var(--t-h4);
+    font-family: var(--font-sans);
+    font-weight: 600;
+    margin: clamp(2.25rem, 4vw, 3rem) 0 .75rem;
+  }
+  .ts-doc h2:first-of-type { margin-top: 0; }
+  .ts-doc p { color: var(--ink-2); }
+  .ts-doc ul { margin: 0 0 1.15em; padding-left: 1.35rem; color: var(--ink-2); }
+  .ts-doc li { margin-bottom: .35rem; }
+  .ts-doc a {
+    text-decoration: underline;
+    text-decoration-color: var(--line);
+    text-underline-offset: .18em;
+    transition: color var(--dur-fast) var(--ease);
+  }
+  .ts-doc a:hover { color: var(--moss); text-decoration-color: currentColor; }
+  .ts-updated {
+    font-size: var(--t-small);
+    color: var(--muted);
+    letter-spacing: .01em;
+    margin-bottom: 0;
+  }
+</style>
 </head>
 <body>
 
@@ -51,8 +84,8 @@
       <a class="nav__link" href="projektit.html" data-i18n="nav.projects">Projektit</a>
       <a class="nav__link" href="minusta.html" data-i18n="nav.about">Minusta</a>
       <a class="nav__link" href="yhteystiedot.html" data-i18n="nav.contact">Yhteystiedot</a>
-      <a class="btn" href="index.html">
-        <span>Etusivulle</span>
+      <a class="btn" href="yhteystiedot.html">
+        <span data-i18n="cta.book">Ota yhteyttä</span>
         <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </a>
     </nav>
@@ -80,23 +113,112 @@
 
 <section class="page-head">
   <div class="wrap">
-    <p class="eyebrow fade-up">Kiitos</p>
-    <h1 class="fade-up" style="animation-delay:.1s">
-      Viestisi on <em class="hl serif-accent">perillä</em>.
+    <p class="eyebrow fade-up" data-i18n="ph.eyebrow">FinDera Consulting</p>
+    <h1 class="fade-up" style="animation-delay:.1s" data-i18n="ph.title">
+      Tietosuoja<em class="hl serif-accent">seloste</em>
     </h1>
-    <p class="lead fade-up" style="animation-delay:.2s">
-      Kiitos yhteydenotostasi. Luen viestin henkilökohtaisesti ja vastaan yleensä
-      saman arkipäivän aikana. Jos asia on kiireellinen, soita suoraan numeroon
-      <a href="tel:+358503363233">+358 50 336 3233</a>.
+    <p class="lead fade-up" style="animation-delay:.2s" data-i18n="ph.lead">
+      Tämä seloste kertoo, mitä henkilötietoja FinDera Consulting käsittelee, mihin
+      tarkoitukseen ja mitkä oikeudet sinulla on.
     </p>
-    <div class="btn-group fade-up" style="animation-delay:.3s;margin-top:2.5rem">
-      <a class="btn" href="index.html">
-        <span>Takaisin etusivulle</span>
-        <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </a>
-      <a class="btn btn--ghost" href="projektit.html">
-        <span>Katso toteutuneita matkoja</span>
-      </a>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap wrap-narrow">
+    <p class="ts-updated" data-i18n="ts.updated">Päivitetty 7.8.2026</p>
+
+    <hr class="rule" style="margin-block:clamp(1.5rem,3vw,2.25rem)">
+
+    <!-- Ei data-reveal-animaatiota: seloste on yksi pitkä lohko, jolloin
+         IntersectionObserverin 12 %:n kynnys jää rajalle eikä teksti aina
+         tule näkyviin. Juridinen teksti ei saa riippua animaatiosta. -->
+    <div class="ts-doc">
+
+      <h2 data-i18n="ts.1.title">1. Rekisterinpitäjä</h2>
+      <p data-i18n="ts.1.body1">
+        FinDera Consulting (Y-tunnus 2669233-2)<br> Turku, Suomi
+      </p>
+      <p data-i18n="ts.1.body2">
+        <strong>Yhteyshenkilö tietosuoja-asioissa:</strong><br> Martin Brandt<br> Sähköposti: <a
+        href="mailto:martin.brandt@findera.fi">martin.brandt@findera.fi</a><br> Puhelin: <a
+        href="tel:+358503363233">+358 50 336 3233</a>
+      </p>
+
+      <h2 data-i18n="ts.2.title">2. Mitä tietoja käsittelemme</h2>
+      <p data-i18n="ts.2.body">
+        Käsittelemme yhteydenottolomakkeen kautta saatavia tietoja. Pakollisia tietoja ovat
+        nimi ja sähköpostiosoite. Lisäksi voit halutessasi ilmoittaa organisaation nimen ja
+        puhelinnumeron — nämä ovat vapaaehtoisia eikä niitä ole pakko täyttää. Lomakkeella
+        voi myös valita, mistä palvelusta on kyse, sekä kirjoittaa vapaamuotoisen viestin.
+      </p>
+
+      <h2 data-i18n="ts.3.title">3. Mihin tarkoitukseen ja millä perusteella tietoja käsitellään</h2>
+      <p data-i18n="ts.3.body1">
+        Tietoja käytetään yksinomaan yhteydenottopyyntöön vastaamiseen — esimerkiksi
+        tarjouksen, hinta-arvion tai muun tiedustelun käsittelyyn ja siihen vastaamiseen.
+      </p>
+      <p data-i18n="ts.3.body2">
+        Käsittelyn oikeusperusteena on oikeutettu etu (EU:n yleinen tietosuoja-asetus,
+        6 artikla 1 kohta f alakohta): meillä on perusteltu tarve käsitellä yhteydenottajan
+        tietoja, jotta voimme vastata saatuun yhteydenottoon. Käsittely rajoittuu tähän
+        tarkoitukseen.
+      </p>
+
+      <h2 data-i18n="ts.4.title">4. Kuinka kauan tietoja säilytetään</h2>
+      <p data-i18n="ts.4.body">
+        Säilytämme tietoja enintään 24 kuukautta viimeisimmästä yhteydenotosta, minkä jälkeen
+        tiedot poistetaan, ellei niiden säilyttämiselle ole muuta perustetta (esimerkiksi
+        käynnissä oleva asiakassuhde tai lakisääteinen velvoite, kuten kirjanpitolainsäädäntö
+        mahdollisen laskutuksen osalta).
+      </p>
+
+      <h2 data-i18n="ts.5.title">5. Luovutetaanko tietoja kolmansille osapuolille</h2>
+      <p data-i18n="ts.5.body1">
+        Emme luovuta tietoja kolmansille osapuolille markkinointi- tai muihin tarkoituksiin.
+      </p>
+      <p data-i18n="ts.5.body2">
+        Käytämme yhteydenottolomakkeen tekniseen toteutukseen Netlify-palvelua (Netlify, Inc.,
+        Yhdysvallat), joka toimii henkilötietojen käsittelijänä. Tämä tarkoittaa, että
+        lomakkeen kautta lähetetyt tiedot kulkevat Netlifyn infrastruktuurin kautta, mikä voi
+        sisältää tietojen siirtoa Euroopan talousalueen ulkopuolelle. Siirto perustuu EU:n
+        komission hyväksymiin suojatoimiin (kuten vakiosopimuslausekkeisiin tai EU–US Data
+        Privacy Framework -järjestelyyn, mikäli palveluntarjoaja on siihen sertifioitunut).
+        Emme käytä muita kolmansien osapuolten palveluja tietojen käsittelyyn.
+      </p>
+
+      <h2 data-i18n="ts.6.title">6. Evästeet</h2>
+      <p data-i18n="ts.6.body">
+        Sivustomme ei käytä analytiikka-, markkinointi- tai muita ei-välttämättömiä evästeitä.
+        Sivustolla oleva LinkedIn-linkki on tavallinen hyperlinkki, joka ei aseta evästeitä
+        ennen kuin klikkaat sitä ja siirryt LinkedIniin.
+      </p>
+
+      <h2 data-i18n="ts.7.title">7. Rekisteröidyn oikeudet</h2>
+      <p data-i18n="ts.7.intro">Sinulla on oikeus:</p>
+      <ul>
+        <li data-i18n="ts.7.li1">pyytää pääsy itseäsi koskeviin tietoihin</li>
+        <li data-i18n="ts.7.li2">pyytää virheellisten tietojen oikaisua</li>
+        <li data-i18n="ts.7.li3">pyytää tietojesi poistamista</li>
+        <li data-i18n="ts.7.li4">vastustaa käsittelyä tai pyytää sen rajoittamista</li>
+      </ul>
+      <p data-i18n="ts.7.body1">
+        Voit käyttää näitä oikeuksia lähettämällä sähköpostia osoitteeseen
+        <a href="mailto:martin.brandt@findera.fi">martin.brandt@findera.fi</a>. Vastaamme
+        pyyntöihin kohtuullisessa ajassa.
+      </p>
+      <p data-i18n="ts.7.body2">
+        Jos koet, että tietojasi on käsitelty lainvastaisesti, sinulla on oikeus tehdä valitus
+        tietosuojavaltuutetun toimistolle
+        (<a href="https://tietosuoja.fi" target="_blank" rel="noopener">tietosuoja.fi</a>).
+      </p>
+
+      <h2 data-i18n="ts.8.title">8. Muutokset tähän selosteeseen</h2>
+      <p data-i18n="ts.8.body">
+        Voimme päivittää tätä selostetta tarvittaessa. Selosteen viimeisin päivityspäivä näkyy
+        sivun alussa.
+      </p>
+
     </div>
   </div>
 </section>
@@ -123,7 +245,7 @@
           </span>
         </a>
         <p style="max-width:34ch;font-size:.95rem" data-i18n="footer.tagline">
-          Kiertotalouden ja kestävän kehityksen konsultointia sekä järjestettyjä
+          Kestävän kehityksen konsultointia sekä
           opinto- ja benchmarkkausmatkoja Eurooppaan.
         </p>
       </div>

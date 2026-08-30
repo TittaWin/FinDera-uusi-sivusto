@@ -46,6 +46,7 @@ palvelut.html         Palvelut
 projektit.html        Projektit ja referenssit
 minusta.html          Martin Brandt
 yhteystiedot.html     Yhteystiedot ja lomake
+tietosuoja.html       Tietosuojaseloste (findera.fi/tietosuoja)
 kiitos.html           Kiitossivu lomakkeen lähetyksen jälkeen
 landing1.html         Kampanjan laskeutumissivu (findera.fi/landing1)
 404.html              Virhesivu — Netlify tarjoilee tämän tuntemattomille osoitteille
@@ -426,6 +427,11 @@ Saksassa, missä Google Fontsin suora käyttö on todettu ongelmalliseksi.
 **Ei evästeitä eikä seurantaa.** Sivusto ei aseta evästeitä, joten evästebanneria
 ei tarvita. Kielivalinta tallennetaan selaimen omaan muistiin (localStorage),
 mikä ei ole eväste eikä vaadi suostumusta.
+
+**Tietosuojaseloste** on omalla sivullaan `tietosuoja.html` kolmella kielellä ja
+kuuluu `content/`-käännösputkeen kuten muutkin sivut. Linkki on jokaisen sivun
+alatunnisteessa. Selosteen luku 6 kertoo, ettei sivustolla ole analytiikkaa —
+**jos kävijämittaus joskus otetaan käyttöön, tämä luku on päivitettävä samalla.**
 
 **Saavutettavuus.** Sivusto kunnioittaa käyttöjärjestelmän *vähennä liikettä*
 -asetusta: jos se on päällä, kaikki animaatiot poistuvat käytöstä. Sivustoa voi

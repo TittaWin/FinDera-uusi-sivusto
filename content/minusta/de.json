@@ -116,6 +116,8 @@
   "footer.tagline.description": "Fußzeile — Beschreibungstext. Auf allen Seiten gleich — wenn Sie das ändern, ändern Sie denselben Text auch in den Dateien der anderen Seiten.",
   "footer.nav": "Seiten",
   "footer.nav.description": "Fußzeile — Überschrift. Auf allen Seiten gleich — wenn Sie das ändern, ändern Sie denselben Text auch in den Dateien der anderen Seiten.",
+  "footer.privacy": "Datenschutzerklärung",
+  "footer.privacy.description": "Fußzeile — Navigationslink. Auf allen Seiten gleich — wenn Sie das ändern, ändern Sie denselben Text auch in den Dateien der anderen Seiten.",
   "footer.contact": "Kontakt",
   "footer.contact.description": "Fußzeile — Überschrift. Auf allen Seiten gleich — wenn Sie das ändern, ändern Sie denselben Text auch in den Dateien der anderen Seiten.",
   "footer.rights": "Alle Rechte vorbehalten.",

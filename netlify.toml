@@ -107,6 +107,11 @@
   to = "/yhteystiedot.html"
   status = 200
 
+[[redirects]]
+  from = "/tietosuoja"
+  to = "/tietosuoja.html"
+  status = 200
+
 # Kampanjoissa käytetty osoite findera.fi/landing1. Sivu on noindex, joten
 # tämä ei koske hakukoneita — kyse on siitä, että mainoslinkki pysyy vakaana
 # eikä nojaa Netlifyn oletuskäyttäytymiseen.

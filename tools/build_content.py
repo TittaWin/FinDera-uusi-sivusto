@@ -21,6 +21,7 @@ PAGES = [
     ("projektit.html",    "projektit"),
     ("minusta.html",      "minusta"),
     ("yhteystiedot.html", "yhteystiedot"),
+    ("tietosuoja.html",   "tietosuoja"),
 ]
 LANGS = ("fi", "en", "de")
 
@@ -137,6 +138,7 @@ SECTION = {
     "form":    ("Yhteydenottolomake", "Contact form", "Kontaktformular"),
     "contact": ("Suorat yhteystiedot", "Direct contact details", "Direkte Kontaktdaten"),
     "next":    ("Mitä seuraavaksi tapahtuu", "What happens next", "Wie es weitergeht"),
+    "ts":      ("Tietosuojaseloste", "Privacy policy", "Datenschutzerklärung"),
 }
 
 FIELD = {
@@ -193,6 +195,11 @@ FIELD = {
                 "Bezeichnung in der Faktenzeile: Teilnehmende"),
     "sites":   ("tietorivin otsake: kohteiden määrä", "fact row label: number of sites",
                 "Bezeichnung in der Faktenzeile: Anzahl der Ziele"),
+    "body":    ("leipäteksti", "body text", "Fließtext"),
+    "body1":   ("leipäteksti, 1. kappale", "body text, 1st paragraph", "Fließtext, 1. Absatz"),
+    "body2":   ("leipäteksti, 2. kappale", "body text, 2nd paragraph", "Fließtext, 2. Absatz"),
+    "updated": ("päivityspäivä", "date of last update", "Datum der letzten Aktualisierung"),
+    "privacy": ("valikon linkki", "navigation link", "Navigationslink"),
 }
 
 # Avaimet, jotka eivat noudata yleista kaavaa
@@ -310,6 +317,7 @@ PAGE_NAME = {
     "projektit":    ("Projektit ja referenssit", "Projects and references", "Projekte und Referenzen"),
     "minusta":      ("Minusta", "About", "Über mich"),
     "yhteystiedot": ("Yhteystiedot", "Contact", "Kontakt"),
+    "tietosuoja":   ("Tietosuojaseloste", "Privacy policy", "Datenschutzerklärung"),
 }
 
 

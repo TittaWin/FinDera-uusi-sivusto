@@ -88,6 +88,8 @@
   "footer.tagline.description": "Footer — body text. Shared across all pages — if you change this, change the same text in the other page files too.",
   "footer.nav": "Pages",
   "footer.nav.description": "Footer — heading. Shared across all pages — if you change this, change the same text in the other page files too.",
+  "footer.privacy": "Privacy Policy",
+  "footer.privacy.description": "Footer — navigation link. Shared across all pages — if you change this, change the same text in the other page files too.",
   "footer.contact": "Contact",
   "footer.contact.description": "Footer — heading. Shared across all pages — if you change this, change the same text in the other page files too.",
   "footer.rights": "All rights reserved.",
