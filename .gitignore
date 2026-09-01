@@ -16,3 +16,6 @@ _*.html
 # Pythonin välimuisti
 __pycache__/
 *.pyc
+
+# Local Netlify folder
+.netlify

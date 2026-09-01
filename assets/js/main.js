@@ -205,8 +205,12 @@
   var I18N = (function () {
     var LANGS = { fi: "Suomi", en: "English", de: "Deutsch" };
     var cache = {};   // kieli -> sanakirja
-    var baseFi = null;    // alkuperäinen suomenkielinen sisältö
-    var current = "fi";
+    var baseFi = null;    // sivun oma, valmiiksi kirjoitettu sisältö
+    // Sivun oma kieli. Suomenkieliset sivut ovat "fi", kansiossa en/ olevat
+    // valmiiksi englanniksi kirjoitetut sivut "en". Tämä kieli on aina
+    // sivulla itsellään, joten sitä ei haeta käännöstiedostosta.
+    var PAGE_LANG = document.documentElement.lang || "fi";
+    var current = PAGE_LANG;
 
     function snapshotFi() {
       if (baseFi) return;
@@ -225,14 +229,14 @@
     function apply(dict, lang) {
       document.querySelectorAll("[data-i18n]").forEach(function (el) {
         var key = el.getAttribute("data-i18n");
-        var val = lang === "fi" ? baseFi[key] : dict[key];
+        var val = lang === PAGE_LANG ? baseFi[key] : dict[key];
         if (typeof val === "string") el.innerHTML = val;
       });
       document.querySelectorAll("[data-i18n-attr]").forEach(function (el) {
         el.getAttribute("data-i18n-attr").split(",").forEach(function (pair) {
           var p = pair.trim(), idx = p.indexOf(":");
           var attr = p.slice(0, idx).trim(), key = p.slice(idx + 1).trim();
-          var val = lang === "fi"
+          var val = lang === PAGE_LANG
             ? (baseFi["@" + key] ? baseFi["@" + key].val : null)
             : dict[key];
           if (typeof val === "string") el.setAttribute(attr, val);
@@ -255,6 +259,10 @@
     // Netlify tarjoilee sivut myos ilman .html-paatetta (esim. /palvelut),
     // joten pelkka tiedostonimen tarkistus ei riita sivun tunnistamiseen.
     function pageName() {
+      // Kansion en/ sivut kertovat lahtosivunsa, koska kaannosavaimet on
+      // ryhmitelty suomenkielisen tiedostonimen mukaan.
+      var named = document.documentElement.getAttribute("data-page");
+      if (named) return named;
       var f = location.pathname.split("/").pop();
       if (!f) return "index.html";              // "/" tai "/alihakemisto/"
       if (/\.html?$/i.test(f)) return f;        // "/palvelut.html"
@@ -274,7 +282,7 @@
     function set(lang) {
       if (!LANGS[lang] || lang === current) return;
       snapshotFi();
-      if (lang === "fi") { apply(null, "fi"); return; }
+      if (lang === PAGE_LANG) { apply(null, PAGE_LANG); return; }
       if (cache[lang]) { apply(cache[lang], lang); return; }
 
       document.body.classList.add("is-translating");
@@ -309,6 +317,15 @@
         });
         wrap.querySelectorAll(".lang__menu button").forEach(function (b) {
           b.addEventListener("click", function () {
+            // Kielilla, joilla on oma sivunsa, siirrytaan sivulle. Muut
+            // vaihdetaan paikallaan kaannostiedostosta. Valinta talletetaan
+            // ennen siirtymaa, jotta seuraava sivu ei vaihda kielta takaisin
+            // aiemmin muistettuun.
+            if (b.dataset.href) {
+              try { localStorage.setItem("findera-lang", b.dataset.lang); } catch (e) {}
+              location.href = b.dataset.href;
+              return;
+            }
             set(b.dataset.lang);
             wrap.classList.remove("is-open");
             toggle.setAttribute("aria-expanded", "false");
@@ -325,7 +342,17 @@
       var saved = null;
       try { saved = localStorage.getItem("findera-lang"); } catch (e) {}
       var want = q || saved;
-      if (want && want !== "fi") set(want);
+      if (!want || want === PAGE_LANG) return;
+
+      // Kielilla, joilla on oma sivunsa, ei vaihdeta tekstia paikallaan:
+      // muuten englanti nakyisi suomenkielisessa osoitteessa. Osoitteessa
+      // annettu ?lang= on tietoinen pyynto, joten se vie oikealle sivulle.
+      var target = wrap && wrap.querySelector('.lang__menu button[data-lang="' + want + '"]');
+      if (target && target.dataset.href) {
+        if (q) location.replace(target.dataset.href);
+        return;
+      }
+      set(want);
     }
 
     return { init: init, set: set };

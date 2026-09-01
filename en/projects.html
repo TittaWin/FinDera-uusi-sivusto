@@ -1,26 +1,27 @@
 <!DOCTYPE html>
-<!-- ÄLÄ MUOKKAA TEKSTEJÄ TÄSSÄ TIEDOSTOSSA.
-     Tekstit ylikirjoitetaan julkaisun yhteydessä content/-kansiosta.
-     Muokkaa tekstit kansiossa content/projektit/ — fi.json, en.json, de.json. -->
-<html lang="fi">
+<!-- GENEROITU TIEDOSTO — ÄLÄ MUOKKAA.
+     Luodaan komennolla python3 tools/build_lang.py suomenkielisestä
+     sivusta projektit.html ja tiedostosta assets/i18n/en.json.
+     Muokkaa tekstit kansiossa content/projektit/en.json. -->
+<html lang="en" data-page="projektit.html">
 <head>
 <script>document.documentElement.classList.add("js");</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title data-i18n="meta.title">Projektit ja referenssit — FinDera Consulting</title>
-<meta name="description" data-i18n-attr="content:meta.desc" content="Yli 70 toteutettua opinto- ja benchmarkkausmatkaa. Esimerkkeinä Turun AMK, Lounais-Suomen Jätehuolto, Salaojayhdistys, Seinäjoen Energia ja ELY-keskus.">
+<title data-i18n="meta.title">Projects and references — FinDera Consulting</title>
+<meta name="description" data-i18n-attr="content:meta.desc" content="Over 70 study and benchmarking trips delivered. Examples include Turku UAS, Lounais-Suomen Jätehuolto, Salaojayhdistys, Seinäjoen Energia and ELY Centre.">
 <meta name="theme-color" content="#16402a">
-<link rel="canonical" href="https://www.findera.fi/projektit">
+<link rel="canonical" href="https://www.findera.fi/en/projects">
 <link rel="alternate" hreflang="fi" href="https://www.findera.fi/projektit">
 <link rel="alternate" hreflang="en" href="https://www.findera.fi/en/projects">
 <link rel="alternate" hreflang="x-default" href="https://www.findera.fi/projektit">
 
 <meta property="og:type" content="website">
-<meta property="og:locale" content="fi_FI">
+<meta property="og:locale" content="en_GB">
 <meta property="og:site_name" content="FinDera Consulting">
-<meta property="og:url" content="https://www.findera.fi/projektit">
-<meta property="og:title" content="Projektit ja referenssit — FinDera Consulting">
-<meta property="og:description" content="Yli 70 toteutettua opinto- ja benchmarkkausmatkaa. Esimerkkeinä Turun AMK, Lounais-Suomen Jätehuolto, Salaojayhdistys, Seinäjoen Energia ja ELY-keskus.">
+<meta property="og:url" content="https://www.findera.fi/en/projects">
+<meta property="og:title" content="Projects and references — FinDera Consulting">
+<meta property="og:description" content="Over 70 study and benchmarking trips delivered. Examples include Turku UAS, Lounais-Suomen Jätehuolto, Salaojayhdistys, Seinäjoen Energia and ELY Centre.">
 <meta property="og:image" content="https://www.findera.fi/assets/img/hero-rotterdam.jpg">
 <meta property="og:image:width" content="1920">
 <meta property="og:image:height" content="1080">
@@ -32,11 +33,11 @@
 </head>
 <body>
 
-<a class="skip-link" href="#main" data-i18n="a11y.skip">Siirry sisältöön</a>
+<a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to content</a>
 
 <header class="site-header">
   <div class="wrap site-header__inner">
-    <a data-i18n-attr="aria-label:a11y.home" class="logo" href="/" aria-label="FinDera Consulting — etusivu">
+    <a data-i18n-attr="aria-label:a11y.home" class="logo" href="/en/" aria-label="FinDera Consulting — home">
         <svg class="logo__mark" viewBox="0 0 200 200" aria-hidden="true" focusable="false">
           <g class="logo__spin">
           <path fill="#FECF1F" d="M89.9 24.9C88.4 25.0 86.9 25.5 85.5 25.9C84.0 26.4 82.6 27.0 81.3 27.6C79.9 28.2 78.6 28.9 77.3 29.7C76.0 30.5 74.7 31.5 73.5 32.5C72.3 33.5 71.1 34.5 70.0 35.7C68.8 36.8 67.8 38.0 66.8 39.3C65.9 40.5 65.0 41.7 64.2 43.0C63.4 44.3 62.7 45.7 62.0 47.0C61.4 48.4 60.8 49.8 60.3 51.2C59.8 52.6 59.4 54.1 59.0 55.5C58.6 57.0 58.2 58.5 57.9 60.0C57.6 61.5 57.3 63.0 57.1 64.5C57.0 66.1 57.1 67.8 57.1 69.4C57.2 71.0 57.0 72.7 57.2 74.3C57.4 75.8 57.9 77.2 58.2 78.7C58.6 80.2 59.0 81.7 59.4 83.1C59.9 84.5 60.4 86.0 61.0 87.3C61.6 88.7 62.3 90.0 63.1 91.3C63.9 92.6 64.8 93.9 65.8 95.1C66.7 96.4 67.7 97.6 68.8 98.8C69.9 99.9 71.1 101.0 72.4 101.9C73.6 102.9 74.9 103.7 76.2 104.5C77.5 105.3 78.7 106.2 80.1 106.7C81.5 107.2 83.3 107.9 84.6 107.5C85.8 107.1 87.3 105.5 87.7 104.2C88.1 102.9 87.6 101.0 86.9 99.7C86.3 98.4 84.5 97.6 83.5 96.5C82.4 95.3 81.6 94.0 80.7 92.8C79.8 91.5 79.0 90.2 78.2 88.9C77.5 87.6 76.9 86.2 76.4 84.8C76.0 83.3 75.6 81.9 75.3 80.4C75.0 78.8 74.9 77.2 74.9 75.7C74.8 74.1 75.0 72.5 75.2 70.9C75.5 69.4 75.9 68.0 76.4 66.5C76.9 65.1 77.5 63.7 78.2 62.4C78.9 61.1 79.8 59.8 80.7 58.6C81.7 57.3 82.8 56.1 83.9 55.0C85.0 53.8 86.1 52.6 87.3 51.6C88.5 50.6 89.8 49.9 91.1 49.1C92.4 48.3 93.7 47.6 95.1 46.8C96.4 46.1 97.9 45.5 99.0 44.6C100.1 43.6 101.2 42.3 101.7 40.9C102.3 39.6 102.5 37.9 102.4 36.4C102.3 35.0 101.7 33.5 101.0 32.1C100.3 30.8 99.4 29.4 98.3 28.4C97.2 27.3 95.9 26.3 94.5 25.8C93.1 25.2 91.4 24.9 89.9 24.9ZM40.3 34.3C38.8 34.6 37.4 35.2 36.0 36.0C34.7 36.8 33.3 38.0 32.3 39.2C31.4 40.4 30.6 41.8 30.1 43.3C29.6 44.8 29.4 46.5 29.5 48.1C29.6 49.6 30.1 51.2 30.7 52.6C31.4 54.0 32.3 55.4 33.4 56.5C34.5 57.6 35.9 58.6 37.3 59.1C38.7 59.7 40.4 60.0 42.0 60.0C43.5 60.0 45.2 59.9 46.7 59.4C48.2 58.9 49.6 58.1 50.8 57.1C52.0 56.1 53.2 54.7 53.9 53.3C54.6 52.0 55.0 50.4 55.2 48.9C55.3 47.3 55.2 45.5 54.8 44.0C54.5 42.5 53.8 41.0 52.9 39.8C52.0 38.5 50.8 37.3 49.5 36.4C48.2 35.6 46.8 35.0 45.2 34.6C43.7 34.3 41.9 34.1 40.3 34.3Z"/>
@@ -52,30 +53,30 @@
       </span>
     </a>
 
-    <nav data-i18n-attr="aria-label:a11y.nav" class="nav" aria-label="Päävalikko">
-      <a class="nav__link" href="/palvelut" data-i18n="nav.services">Palvelut</a>
-      <a class="nav__link" href="/projektit" aria-current="page" data-i18n="nav.projects">Projektit</a>
-      <a class="nav__link" href="/minusta" data-i18n="nav.about">Minusta</a>
-      <a class="nav__link" href="/yhteystiedot" data-i18n="nav.contact">Yhteystiedot</a>
-      <a class="btn" href="/yhteystiedot">
-        <span data-i18n="cta.book">Ota yhteyttä</span>
+    <nav data-i18n-attr="aria-label:a11y.nav" class="nav" aria-label="Main menu">
+      <a class="nav__link" href="/en/services" data-i18n="nav.services">Services</a>
+      <a class="nav__link" href="/en/projects" aria-current="page" data-i18n="nav.projects">Projects</a>
+      <a class="nav__link" href="/en/about" data-i18n="nav.about">About</a>
+      <a class="nav__link" href="/en/contact" data-i18n="nav.contact">Contact</a>
+      <a class="btn" href="/en/contact">
+        <span data-i18n="cta.book">Get in touch</span>
         <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </a>
     </nav>
 
     <div class="nav__actions">
       <div class="lang">
-        <button data-i18n-attr="aria-label:a11y.lang" class="lang__toggle" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Vaihda kieli">
-          <span class="lang__current">FI</span>
+        <button data-i18n-attr="aria-label:a11y.lang" class="lang__toggle" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Change language">
+          <span class="lang__current">EN</span>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
         </button>
         <ul class="lang__menu" role="listbox">
-          <li><button type="button" data-lang="fi" role="option" aria-selected="true">Suomi <span class="lang__code">FI</span></button></li>
-          <li><button type="button" data-lang="en" data-href="/en/projects" role="option" aria-selected="false">English <span class="lang__code">EN</span></button></li>
+          <li><button type="button" data-lang="fi" data-href="/projektit" role="option" aria-selected="false">Suomi <span class="lang__code">FI</span></button></li>
+          <li><button type="button" data-lang="en" role="option" aria-selected="true">English <span class="lang__code">EN</span></button></li>
           <li><button type="button" data-lang="de" role="option" aria-selected="false">Deutsch <span class="lang__code">DE</span></button></li>
         </ul>
       </div>
-      <button data-i18n-attr="aria-label:a11y.menu" class="burger" type="button" aria-expanded="false" aria-label="Avaa valikko">
+      <button data-i18n-attr="aria-label:a11y.menu" class="burger" type="button" aria-expanded="false" aria-label="Open menu">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -86,15 +87,9 @@
 
 <section class="page-head">
   <div class="wrap">
-    <p class="eyebrow fade-up" data-i18n="ph.eyebrow">Projektit</p>
-    <h1 class="fade-up" style="animation-delay:.1s" data-i18n="ph.title">
-      Esimerkkejä <em class="hl serif-accent">toteutuksista</em>.
-    </h1>
-    <p class="lead fade-up" style="animation-delay:.2s" data-i18n="ph.lead">
-      Yli 70 kestävään kehitykseen liittyvää opinto- ja benchmarkkausmatkaa ympäri Eurooppaa,
-      joihin on osallistunut yhteensä jo noin 1 300 suomalaista asiantuntijaa. Tässä muutama
-      esimerkki viime vuosilta.
-    </p>
+    <p class="eyebrow fade-up" data-i18n="ph.eyebrow">Projects</p>
+    <h1 class="fade-up" style="animation-delay:.1s" data-i18n="ph.title">Examples of <em class="hl serif-accent">deliveries</em>.</h1>
+    <p class="lead fade-up" style="animation-delay:.2s" data-i18n="ph.lead">More than 70 study and benchmarking trips on sustainability across Europe, with some 1,300 experts taking part in total. Here are a few examples from recent years.</p>
   </div>
 </section>
 
@@ -107,42 +102,28 @@
         <div class="case__media">
           <picture>
             <source srcset="/assets/img/case-turkuamk-1000.webp" type="image/webp">
-            <img data-i18n-attr="alt:alt.case-turkuamk" class="img-load" src="/assets/img/case-turkuamk.jpg" alt="Osallistujat seuraavat opastusta hulevesiuoman varrella asuinalueella." loading="lazy" decoding="async" width="1000" height="667">
+            <img data-i18n-attr="alt:alt.case-turkuamk" class="img-load" src="/assets/img/case-turkuamk.jpg" alt="Participants following a guided tour along a stormwater channel in a residential area." loading="lazy" decoding="async" width="1000" height="667">
           </picture>
         </div>
         <div class="case__body">
           <img class="case__logo" src="/assets/logos/vari/turkuamk.png" alt="" width="118" height="30" loading="lazy" decoding="async">
           <div class="case__meta">
             <span class="tag">2026</span>
-            <span class="tag tag--muted" data-i18n="case.type.research">Tutkimus- ja koulutuslaitos</span>
-            <span class="tag tag--muted" data-i18n="case.type.project">Hankesidonnainen opintomatka</span>
+            <span class="tag tag--muted" data-i18n="case.type.research">Research and educational institution</span>
+            <span class="tag tag--muted" data-i18n="case.type.project">Project-linked study trip</span>
           </div>
           <h3>Turun ammattikorkeakoulu</h3>
-          <p class="text-muted" data-i18n="case.turkuamk.desc">
-            Innovatiiviset hule- ja harmaavesiratkaisut sekä niiden toteutukset
-            Suomessa.
-          </p>
-          <p style="font-size:.93rem;margin-top:.9rem" data-i18n="case.turkuamk.role">
-            <strong>FinDeran osuus:</strong> matkaohjelman suunnittelu ja
-            aikataulutus, kohteiden tunnistaminen sekä vierailujen ja ruokapaikkojen
-            vahvistaminen, matkalogistiikan koordinointi ja avustus järjestelyissä
-            sekä etätukena toimiminen matkan aikana.
-          </p>
+          <p class="text-muted" data-i18n="case.turkuamk.desc">Innovative stormwater and greywater solutions and how they are implemented in Finland.</p>
+          <p style="font-size:.93rem;margin-top:.9rem" data-i18n="case.turkuamk.role"><strong>FinDera's role:</strong> designing and scheduling the programme, identifying the sites and confirming the visits and restaurants, coordinating and assisting with travel logistics, and providing remote support during the trip.</p>
           <dl class="case__facts">
-            <div><dt data-i18n="case.f.dest">Kohde</dt><dd class="v" style="margin:0" data-i18n="case.turkuamk.destv">Suomi</dd></div>
-            <div><dt data-i18n="case.f.len">Kesto</dt><dd class="v" style="margin:0" data-i18n="case.turkuamk.lenv">2 pv</dd></div>
-            <div><dt data-i18n="case.f.sites">Kohteita</dt><dd class="v" style="margin:0">4</dd></div>
-            <div><dt data-i18n="case.f.pax">Osallistujat</dt><dd class="v" style="margin:0">8</dd></div>
+            <div><dt data-i18n="case.f.dest">Destination</dt><dd class="v" style="margin:0" data-i18n="case.turkuamk.destv">Finland</dd></div>
+            <div><dt data-i18n="case.f.len">Duration</dt><dd class="v" style="margin:0" data-i18n="case.turkuamk.lenv">2 days</dd></div>
+            <div><dt data-i18n="case.f.sites">Sites</dt><dd class="v" style="margin:0">4</dd></div>
+            <div><dt data-i18n="case.f.pax">Participants</dt><dd class="v" style="margin:0">8</dd></div>
           </dl>
           <details class="case__more">
-            <summary data-i18n="case.more">Matkan tiedot</summary>
-            <div class="case__more-body" data-i18n="case.turkuamk.more">
-              <p><strong>Osallistujat:</strong> ammattikorkeakoulun asiantuntijoita,
-              yhteensä 8 henkilöä.</p>
-              <p><strong>Sisältö:</strong> innovatiiviset hule- ja harmaavesiratkaisut
-              sekä niiden toteutukset Suomessa. Neljä vierailukohdetta kahden päivän
-              aikana.</p>
-            </div>
+            <summary data-i18n="case.more">Trip details</summary>
+            <div class="case__more-body" data-i18n="case.turkuamk.more"><p><strong>Participants:</strong> specialists from the university of applied sciences, eight people in all.</p> <p><strong>Content:</strong> innovative stormwater and greywater solutions and their implementations in Finland. Four sites over two days.</p></div>
           </details>
         </div>
       </article>
@@ -152,54 +133,32 @@
         <div class="case__media">
           <picture>
             <source srcset="/assets/img/case-lsjh-1000.webp" type="image/webp">
-            <img data-i18n-attr="alt:alt.case-lsjh" class="img-load" src="/assets/img/case-lsjh.jpg" alt="Osallistujat turvaliiveissä uudelleenkäyttökeskuksen hallissa Alankomaissa." loading="lazy" decoding="async" width="1000" height="750">
+            <img data-i18n-attr="alt:alt.case-lsjh" class="img-load" src="/assets/img/case-lsjh.jpg" alt="Participants in high-visibility vests in a reuse centre hall in the Netherlands." loading="lazy" decoding="async" width="1000" height="750">
           </picture>
         </div>
         <div class="case__body">
           <img class="case__logo" src="/assets/logos/vari/lsjh.png" alt="" width="118" height="30" loading="lazy" decoding="async">
           <div class="case__meta">
             <span class="tag">2025</span>
-            <span class="tag tag--muted" data-i18n="case.type.waste">Jätehuoltoyhtiö</span>
-            <span class="tag tag--muted" data-i18n="case.type.project">Hankesidonnainen opintomatka</span>
+            <span class="tag tag--muted" data-i18n="case.type.waste">Waste management company</span>
+            <span class="tag tag--muted" data-i18n="case.type.project">Project-linked study trip</span>
           </div>
           <h3>Lounais-Suomen Jätehuolto Oy</h3>
-          <p class="text-muted" data-i18n="case.lsjh.desc">
-            Uudelleenkäyttö keskeisenä osana tulevaisuuden taloutta ja kestävää
-            liiketoimintaa. Kohteina mm. UpcycleCentrum Almere, Upcycle Mall Rotterdam,
-            SCRAP, Buurman Rotterdam ja BlueCity. Osa Ohituskaista uudelleenkäyttöön -hanketta.
-          </p>
-          <p style="font-size:.93rem;margin-top:.9rem" data-i18n="case.lsjh.role">
-            <strong>FinDeran osuus:</strong> matkaohjelman suunnittelu,
-            kohteiden tunnistaminen, vierailujen ja ruokapaikkojen vahvistaminen,
-            matkalogistiikan koordinointi sekä matkanjohtajana ja tulkkina toimiminen.
-          </p>
+          <p class="text-muted" data-i18n="case.lsjh.desc">Reuse as a central part of the future economy and sustainable business. Sites included UpcycleCentrum Almere, Upcycle Mall Rotterdam, SCRAP, Buurman Rotterdam and BlueCity. Part of the "Ohituskaista uudelleenkäyttöön" project.</p>
+          <p style="font-size:.93rem;margin-top:.9rem" data-i18n="case.lsjh.role"><strong>FinDera's role:</strong> designing the programme, identifying the sites, confirming visits and restaurants, coordinating logistics, and acting as tour leader and interpreter.</p>
           <dl class="case__facts">
-            <div><dt data-i18n="case.f.dest">Kohde</dt><dd class="v" style="margin:0" data-i18n="case.lsjh.destv">Alankomaat</dd></div>
-            <div><dt data-i18n="case.f.len">Kesto</dt><dd class="v" style="margin:0" data-i18n="case.lsjh.lenv">3 pv</dd></div>
-            <div><dt data-i18n="case.f.sites">Kohteita</dt><dd class="v" style="margin:0">5</dd></div>
-            <div><dt data-i18n="case.f.pax">Osallistujat</dt><dd class="v" style="margin:0">18</dd></div>
+            <div><dt data-i18n="case.f.dest">Destination</dt><dd class="v" style="margin:0" data-i18n="case.lsjh.destv">Netherlands</dd></div>
+            <div><dt data-i18n="case.f.len">Duration</dt><dd class="v" style="margin:0" data-i18n="case.lsjh.lenv">3 days</dd></div>
+            <div><dt data-i18n="case.f.sites">Sites</dt><dd class="v" style="margin:0">5</dd></div>
+            <div><dt data-i18n="case.f.pax">Participants</dt><dd class="v" style="margin:0">18</dd></div>
           </dl>
           <details class="case__more">
-            <summary data-i18n="case.more">Matkan tiedot</summary>
+            <summary data-i18n="case.more">Trip details</summary>
             <div class="case__more-body" data-i18n="case.lsjh.more">
-              <p><strong>Osallistujat:</strong> matkan järjesti Lounais-Suomen Jätehuolto (LSJH)
-              osana Ohituskaista uudelleenkäyttöön -hanketta. LSJH:n ja hankekumppani Kestävän
-              Kehityksen Yhdistys / Turun Ekotorin lisäksi mukana oli väkeä Turun
-              ammattikorkeakoulun Baltic2Hand- ja Circular Tiedepuisto -hankkeista, Raision ja
-              Turun kaupungeilta, Pääkaupunkiseudun Kierrätyskeskuksesta sekä kaupan alan
-              yrityksistä.</p>
-              <p>Osallistujia yhdisti halu etsiä ideoita ja inspiraatiota siihen, miten
-              uudelleenkäyttö saadaan entistä vahvemmin osaksi oman organisaation hankkeita
-              ja käytännön toimintaa.</p>
-              <p><strong>Kohteet:</strong> UpcycleCentrum Almere, De HER – Upcycle Mall
-              Rotterdam, SCRAP, Buurman Rotterdam ja BlueCity. Yhteistä kaikille oli
-              toimintaa pyörittävien ihmisten ja yritysten vahva sitoutuminen
-              kiertotaloustavoitteisiin.</p>
-              <p><a class="link-arrow" href="https://circhubs.fi/wp-content/uploads/2025/04/matkaraportti-hollanti-2025.pdf" target="_blank" rel="noopener">
-                Lue matkaraportti (PDF)
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-              </a></p>
-            </div>
+<p><strong>Participants:</strong> the trip was organised by Southwest Finland Waste Management (LSJH) as part of the Ohituskaista uudelleenkäyttöön reuse project. Alongside LSJH and its project partner the Sustainable Development Association / Turku Ekotori, the group included people from Turku University of Applied Sciences' Baltic2Hand and Circular Tiedepuisto projects, the cities of Raisio and Turku, the Helsinki Region Reuse Centre and retail companies.</p>
+<p>What united the participants was a wish to find ideas and inspiration for building reuse more firmly into their own organisations' projects and everyday work.</p>
+<p><strong>Sites:</strong> UpcycleCentrum Almere, De HER – Upcycle Mall Rotterdam, SCRAP, Buurman Rotterdam and BlueCity. What they had in common was the strong commitment of the people and companies running them to circular economy goals.</p>
+<p><a class="link-arrow" href="https://circhubs.fi/wp-content/uploads/2025/04/matkaraportti-hollanti-2025.pdf" target="_blank" rel="noopener">Read the trip report (PDF, in Finnish)<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></p></div>
           </details>
         </div>
       </article>
@@ -209,39 +168,29 @@
         <div class="case__media">
           <picture>
             <source srcset="/assets/img/case-salaoja-1000.webp" type="image/webp">
-            <img data-i18n-attr="alt:alt.case-salaoja" class="img-load" src="/assets/img/case-salaoja.jpg" alt="Ryhmä salaojakoneiden edustalla valmistajan tehtaalla Saksassa." loading="lazy" decoding="async" width="1000" height="750">
+            <img data-i18n-attr="alt:alt.case-salaoja" class="img-load" src="/assets/img/case-salaoja.jpg" alt="A group in front of drainage machinery at the manufacturer's factory in Germany." loading="lazy" decoding="async" width="1000" height="750">
           </picture>
         </div>
         <div class="case__body">
           <img class="case__logo" src="/assets/logos/vari/salaoja.png" alt="" width="118" height="30" loading="lazy" decoding="async">
           <div class="case__meta">
             <span class="tag">2025</span>
-            <span class="tag tag--muted" data-i18n="case.type.assoc">Yhdistys</span>
-            <span class="tag tag--muted" data-i18n="case.type.member">Jäsenmatka</span>
+            <span class="tag tag--muted" data-i18n="case.type.assoc">Association</span>
+            <span class="tag tag--muted" data-i18n="case.type.member">Member trip</span>
           </div>
           <h3>Salaojayhdistys ry</h3>
-          <p class="text-muted" data-i18n="case.salaoja.desc">
-            Tutustuminen salaojitusalan yrityksiin ja asiantuntijoihin: salaojakonetehtaat,
-            tutkimuslaitokset, työmaat ja suunnitteluun liittyvät kohteet.
-          </p>
-          <p style="font-size:.93rem;margin-top:.9rem" data-i18n="case.salaoja.role">
-            <strong>FinDeran osuus:</strong> matkaohjelman suunnittelu,
-            kohteiden tunnistaminen, vierailujen ja ruokapaikkojen vahvistaminen,
-            matkalogistiikan koordinointi sekä matkanjohtajana ja tulkkina toimiminen.
-          </p>
+          <p class="text-muted" data-i18n="case.salaoja.desc">Getting to know companies and experts in the subsurface drainage field: drainage machine factories, research institutes, work sites and design-related locations.</p>
+          <p style="font-size:.93rem;margin-top:.9rem" data-i18n="case.salaoja.role"><strong>FinDera's role:</strong> designing the programme, identifying the sites, confirming visits and restaurants, coordinating logistics, and acting as tour leader and interpreter.</p>
           <dl class="case__facts">
-            <div><dt data-i18n="case.f.dest">Kohde</dt><dd class="v" style="margin:0" data-i18n="case.salaoja.destv">Saksa, Hampuri–Düsseldorf</dd></div>
-            <div><dt data-i18n="case.f.sites">Kohteita</dt><dd class="v" style="margin:0">6</dd></div>
-            <div><dt data-i18n="case.f.pax">Osallistujat</dt><dd class="v" style="margin:0">16</dd></div>
+            <div><dt data-i18n="case.f.dest">Destination</dt><dd class="v" style="margin:0" data-i18n="case.salaoja.destv">Germany, Hamburg–Düsseldorf</dd></div>
+            <div><dt data-i18n="case.f.sites">Sites</dt><dd class="v" style="margin:0">6</dd></div>
+            <div><dt data-i18n="case.f.pax">Participants</dt><dd class="v" style="margin:0">16</dd></div>
           </dl>
           <details class="case__more">
-            <summary data-i18n="case.more">Matkan tiedot</summary>
+            <summary data-i18n="case.more">Trip details</summary>
             <div class="case__more-body" data-i18n="case.salaoja.more">
-              <p><strong>Osallistujat:</strong> yhdistyksen toiminnanjohtaja sekä
-              jäsenyritysten edustajia, yhteensä 16 henkilöä.</p>
-              <p><strong>Kohteet:</strong> salaojakonetehtaat, alan tutkimuslaitokset sekä
-              työmaa- ja suunnittelukohteet.</p>
-            </div>
+<p><strong>Participants:</strong> the association's executive director and representatives of member companies, 16 people in all.</p>
+<p><strong>Sites:</strong> subsurface drainage machinery plants, research institutes, and construction and design sites.</p></div>
           </details>
         </div>
       </article>
@@ -251,42 +200,28 @@
         <div class="case__media">
           <picture>
             <source srcset="/assets/img/case-muhos-1000.webp" type="image/webp">
-            <img data-i18n-attr="alt:alt.case-muhos" class="img-load" src="/assets/img/case-muhos.jpg" alt="Ryhmä kuuntelee opastusta aurinkovoimalan paneelirivien äärellä." loading="lazy" decoding="async" width="1000" height="667">
+            <img data-i18n-attr="alt:alt.case-muhos" class="img-load" src="/assets/img/case-muhos.jpg" alt="A group listening to a guide beside the panel rows of a solar power plant." loading="lazy" decoding="async" width="1000" height="667">
           </picture>
         </div>
         <div class="case__body">
           <img class="case__logo" src="/assets/logos/vari/muhos.png" alt="" width="118" height="30" loading="lazy" decoding="async">
           <div class="case__meta">
             <span class="tag">2024</span>
-            <span class="tag tag--muted" data-i18n="case.type.muni">Kunta / aluekehitysorganisaatio</span>
-            <span class="tag tag--muted" data-i18n="case.type.decision">Päättäjien benchmarkkausmatka</span>
+            <span class="tag tag--muted" data-i18n="case.type.muni">Municipality / regional development</span>
+            <span class="tag tag--muted" data-i18n="case.type.decision">Benchmarking trip for decision-makers</span>
           </div>
           <h3>Muhoksen kunta</h3>
-          <p class="text-muted" data-i18n="case.muhos.desc">
-            Kiertotalousekosysteemit, kunnallisen vihreän siirtymän ekosysteemit ja
-            uusi energiateknologia.
-          </p>
-          <p style="font-size:.93rem;margin-top:.9rem" data-i18n="case.muhos.role">
-            <strong>FinDeran osuus:</strong> matkaohjelman suunnittelu ja
-            aikataulutus, kohteiden tunnistaminen sekä vierailujen ja ruokapaikkojen
-            vahvistaminen, matkalogistiikan koordinointi ja matkapakettien
-            vahvistaminen sekä matkanjohtajana ja tulkkina toimiminen matkan aikana.
-          </p>
+          <p class="text-muted" data-i18n="case.muhos.desc">Circular economy ecosystems, municipal green transition ecosystems and new energy technology.</p>
+          <p style="font-size:.93rem;margin-top:.9rem" data-i18n="case.muhos.role"><strong>FinDera's role:</strong> designing and scheduling the programme, identifying the sites and confirming the visits and restaurants, coordinating travel logistics and confirming the travel packages, and acting as tour leader and interpreter during the trip.</p>
           <dl class="case__facts">
-            <div><dt data-i18n="case.f.dest">Kohde</dt><dd class="v" style="margin:0" data-i18n="case.muhos.destv">Saksa, NRW</dd></div>
-            <div><dt data-i18n="case.f.len">Kesto</dt><dd class="v" style="margin:0" data-i18n="case.muhos.lenv">3 pv</dd></div>
-            <div><dt data-i18n="case.f.sites">Kohteita</dt><dd class="v" style="margin:0">4</dd></div>
-            <div><dt data-i18n="case.f.pax">Osallistujat</dt><dd class="v" style="margin:0">6</dd></div>
+            <div><dt data-i18n="case.f.dest">Destination</dt><dd class="v" style="margin:0" data-i18n="case.muhos.destv">Germany, North Rhine-Westphalia</dd></div>
+            <div><dt data-i18n="case.f.len">Duration</dt><dd class="v" style="margin:0" data-i18n="case.muhos.lenv">3 days</dd></div>
+            <div><dt data-i18n="case.f.sites">Sites</dt><dd class="v" style="margin:0">4</dd></div>
+            <div><dt data-i18n="case.f.pax">Participants</dt><dd class="v" style="margin:0">6</dd></div>
           </dl>
           <details class="case__more">
-            <summary data-i18n="case.more">Matkan tiedot</summary>
-            <div class="case__more-body" data-i18n="case.muhos.more">
-              <p><strong>Osallistujat:</strong> Ilmastoviisas Muhos Biopark -projektin
-              osalliset, muun muassa kuntajohtaja ja elinkeinopäällikkö. Yhteensä 6 henkilöä.</p>
-              <p><strong>Sisältö:</strong> kiertotalousekosysteemit, kunnallisen vihreän
-              siirtymän ekosysteemit ja uusi energiateknologia. Neljä vierailukohdetta
-              kolmen päivän aikana Nordrhein-Westfalenin osavaltiossa.</p>
-            </div>
+            <summary data-i18n="case.more">Trip details</summary>
+            <div class="case__more-body" data-i18n="case.muhos.more"><p><strong>Participants:</strong> those involved in the Ilmastoviisas Muhos Biopark project, including the municipal manager and the head of economic development. Six people in all.</p> <p><strong>Content:</strong> circular economy ecosystems, municipal green transition ecosystems and new energy technology. Four sites over three days in North Rhine-Westphalia.</p></div>
           </details>
         </div>
       </article>
@@ -296,42 +231,30 @@
         <div class="case__media">
           <picture>
             <source srcset="/assets/img/case-seinajoki-1000.webp" type="image/webp">
-            <img data-i18n-attr="alt:alt.case-seinajoki" class="img-load" src="/assets/img/case-seinajoki.jpg" alt="Ryhmäkuva Nymphenburgin linnan edustalla Münchenissä." loading="lazy" decoding="async" width="1000" height="750">
+            <img data-i18n-attr="alt:alt.case-seinajoki" class="img-load" src="/assets/img/case-seinajoki.jpg" alt="A group photo in front of Nymphenburg Palace in Munich." loading="lazy" decoding="async" width="1000" height="750">
           </picture>
         </div>
         <div class="case__body">
           <img class="case__logo" src="/assets/logos/vari/seinajoki.png" alt="" width="118" height="30" loading="lazy" decoding="async">
           <div class="case__meta">
             <span class="tag">2024</span>
-            <span class="tag tag--muted" data-i18n="case.type.company">Yritys</span>
-            <span class="tag tag--muted" data-i18n="case.type.board">Hallituksen ja johtoryhmän matka</span>
+            <span class="tag tag--muted" data-i18n="case.type.company">Company</span>
+            <span class="tag tag--muted" data-i18n="case.type.board">Board and management team trip</span>
           </div>
           <h3>Seinäjoen Energia Oy</h3>
-          <p class="text-muted" data-i18n="case.se.desc">
-            Energiayhtiöiden transformaatiot: digitalisaatio, organisaatiomuutokset,
-            tulevaisuuden resilienssi ja vastuullisuus. Ohjelmaan sisältyi myös
-            hallituksen kokous.
-          </p>
-          <p style="font-size:.93rem;margin-top:.9rem" data-i18n="case.se.role">
-            <strong>FinDeran osuus:</strong> matkaohjelman suunnittelu
-            ja aikataulutus, kohteiden tunnistaminen, vierailujen ja ruokapaikkojen
-            vahvistaminen, matkalogistiikka sekä matkanjohtajana ja tulkkina toimiminen.
-          </p>
+          <p class="text-muted" data-i18n="case.se.desc">Transformation of energy companies: digitalisation, organisational change, future resilience and sustainability. The programme also included a board meeting.</p>
+          <p style="font-size:.93rem;margin-top:.9rem" data-i18n="case.se.role"><strong>FinDera's role:</strong> designing and scheduling the programme, identifying the sites, confirming visits and restaurants, travel logistics, and acting as tour leader and interpreter.</p>
           <dl class="case__facts">
-            <div><dt data-i18n="case.f.dest">Kohde</dt><dd class="v" style="margin:0" data-i18n="case.se.destv">Saksa, München</dd></div>
-            <div><dt data-i18n="case.f.len">Kesto</dt><dd class="v" style="margin:0" data-i18n="case.se.lenv">3 pv</dd></div>
-            <div><dt data-i18n="case.f.sites">Kohteita</dt><dd class="v" style="margin:0">2</dd></div>
-            <div><dt data-i18n="case.f.pax">Osallistujat</dt><dd class="v" style="margin:0">15</dd></div>
+            <div><dt data-i18n="case.f.dest">Destination</dt><dd class="v" style="margin:0" data-i18n="case.se.destv">Germany, Munich</dd></div>
+            <div><dt data-i18n="case.f.len">Duration</dt><dd class="v" style="margin:0" data-i18n="case.se.lenv">3 days</dd></div>
+            <div><dt data-i18n="case.f.sites">Sites</dt><dd class="v" style="margin:0">2</dd></div>
+            <div><dt data-i18n="case.f.pax">Participants</dt><dd class="v" style="margin:0">15</dd></div>
           </dl>
           <details class="case__more">
-            <summary data-i18n="case.more">Matkan tiedot</summary>
+            <summary data-i18n="case.more">Trip details</summary>
             <div class="case__more-body" data-i18n="case.seinajoki.more">
-              <p><strong>Osallistujat:</strong> hallituksen ja johtoryhmän jäsenet,
-              yhteensä 15 henkilöä.</p>
-              <p><strong>Pääaiheet:</strong> digitalisaatio, organisaatiomuutokset ja
-              -murrokset, tulevaisuuden resilienssi sekä vastuullisuus. Ohjelmaan sisältyi
-              myös hallituksen kokous.</p>
-            </div>
+<p><strong>Participants:</strong> members of the board and the leadership team, 15 people in all.</p>
+<p><strong>Main themes:</strong> digitalisation, organisational change and disruption, future resilience and sustainability. The programme also included a board meeting.</p></div>
           </details>
         </div>
       </article>
@@ -341,40 +264,30 @@
         <div class="case__media">
           <picture>
             <source srcset="/assets/img/case-ladec-1000.webp" type="image/webp">
-            <img data-i18n-attr="alt:alt.case-ladec" class="img-load" src="/assets/img/case-ladec.jpg" alt="Osallistujat kuuntelevat opastusta patjapaalien ja lajittelulinjan äärellä." loading="lazy" decoding="async" width="1000" height="667">
+            <img data-i18n-attr="alt:alt.case-ladec" class="img-load" src="/assets/img/case-ladec.jpg" alt="Participants listening to a guide beside mattress bales and a sorting line." loading="lazy" decoding="async" width="1000" height="667">
           </picture>
         </div>
         <div class="case__body">
           <img class="case__logo" src="/assets/logos/vari/ladec.png" alt="" width="118" height="30" loading="lazy" decoding="async">
           <div class="case__meta">
             <span class="tag">2024 &times; 2</span>
-            <span class="tag tag--muted" data-i18n="case.type.region">Aluekehitysorganisaatio</span>
-            <span class="tag tag--muted" data-i18n="case.type.project">Hankesidonnainen opintomatka</span>
+            <span class="tag tag--muted" data-i18n="case.type.region">Regional development agency</span>
+            <span class="tag tag--muted" data-i18n="case.type.project">Project-linked study trip</span>
           </div>
           <h3>Lahden Seudun Kehitys LADEC Oy</h3>
-          <p class="text-muted" data-i18n="case.ladec.desc">
-            Patjojen kierrätyksen arvoketju kahdella matkalla saman vuoden aikana:
-            keväällä Alankomaat, syksyllä Belgia ja Saksa.
-          </p>
-          <p style="font-size:.93rem;margin-top:.9rem" data-i18n="case.ladec.role">
-            <strong>FinDeran osuus:</strong> matkaohjelman suunnittelu,
-            kohteiden tunnistaminen, vierailujen ja ruokapaikkojen vahvistaminen,
-            matkalogistiikan koordinointi ja etätuki matkan aikana.
-          </p>
+          <p class="text-muted" data-i18n="case.ladec.desc">The mattress recycling value chain across two trips in the same year: the Netherlands in spring, Belgium and Germany in autumn.</p>
+          <p style="font-size:.93rem;margin-top:.9rem" data-i18n="case.ladec.role"><strong>FinDera's role:</strong> designing the programme, identifying the sites, confirming visits and restaurants, coordinating logistics and providing remote support during the trip.</p>
           <dl class="case__facts">
-            <div><dt data-i18n="case.f.dest">Kohteet</dt><dd class="v" style="margin:0" data-i18n="case.ladec.destv">Alankomaat, Belgia, Saksa</dd></div>
-            <div><dt data-i18n="case.f.len">Kesto</dt><dd class="v" style="margin:0" data-i18n="case.ladec.lenv">2 + 2 pv</dd></div>
-            <div><dt data-i18n="case.f.sites">Kohteita</dt><dd class="v" style="margin:0">3</dd></div>
-            <div><dt data-i18n="case.f.pax">Osallistujat</dt><dd class="v" style="margin:0">8</dd></div>
+            <div><dt data-i18n="case.f.dest">Destination</dt><dd class="v" style="margin:0" data-i18n="case.ladec.destv">Netherlands, Belgium, Germany</dd></div>
+            <div><dt data-i18n="case.f.len">Duration</dt><dd class="v" style="margin:0" data-i18n="case.ladec.lenv">2 + 2 days</dd></div>
+            <div><dt data-i18n="case.f.sites">Sites</dt><dd class="v" style="margin:0">3</dd></div>
+            <div><dt data-i18n="case.f.pax">Participants</dt><dd class="v" style="margin:0">8</dd></div>
           </dl>
           <details class="case__more">
-            <summary data-i18n="case.more">Matkan tiedot</summary>
+            <summary data-i18n="case.more">Trip details</summary>
             <div class="case__more-body" data-i18n="case.ladec.more">
-              <p><strong>Osallistujat:</strong> hankevastaavat ja -jäsenet sekä mukaan kutsutut
-              toimijat, muun muassa Salpakierto, LAB ja Muovipoli. Yhteensä 8 henkilöä.</p>
-              <p><strong>Kaksi matkaa saman vuoden aikana:</strong> Alankomaat keväällä 2024
-              sekä Belgia ja Saksa syksyllä 2024, molemmat kaksipäiväisiä.</p>
-            </div>
+<p><strong>Participants:</strong> project leads and members together with invited organisations, among them Salpakierto, LAB and Muovipoli. Eight people in all.</p>
+<p><strong>Two trips in one year:</strong> the Netherlands in spring 2024, and Belgium and Germany in autumn 2024, both of two days.</p></div>
           </details>
         </div>
       </article>
@@ -384,37 +297,28 @@
         <div class="case__media">
           <picture>
             <source srcset="/assets/img/case-rosknroll-1000.webp" type="image/webp">
-            <img data-i18n-attr="alt:alt.case-rosknroll" class="img-load" src="/assets/img/case-rosknroll.jpg" alt="Ryhmä opastuksella vertikaaliviljelylaitoksen kasvatushyllyjen edessä." loading="lazy" decoding="async" width="1000" height="667">
+            <img data-i18n-attr="alt:alt.case-rosknroll" class="img-load" src="/assets/img/case-rosknroll.jpg" alt="A group on a guided tour in front of the growing racks of a vertical farming facility." loading="lazy" decoding="async" width="1000" height="667">
           </picture>
         </div>
         <div class="case__body">
           <img class="case__logo" src="/assets/logos/vari/rosknroll.png" alt="" width="118" height="30" loading="lazy" decoding="async">
           <div class="case__meta">
             <span class="tag">2023</span>
-            <span class="tag tag--muted" data-i18n="case.type.company">Yritys</span>
-            <span class="tag tag--muted" data-i18n="case.type.board">Hallituksen ja johtoryhmän matka</span>
+            <span class="tag tag--muted" data-i18n="case.type.company">Company</span>
+            <span class="tag tag--muted" data-i18n="case.type.board">Board and management team trip</span>
           </div>
           <h3>Rosk&rsquo;n Roll Oy Ab</h3>
-          <p class="text-muted" data-i18n="case.rr.desc">
-            Täyden mittakaavan vertikaaliviljelyn benchmarkkauskohde yrityksen
-            kehityshankkeeseen liittyen.
-          </p>
-          <p style="font-size:.93rem;margin-top:.9rem" data-i18n="case.rr.role">
-            <strong>FinDeran osuus:</strong> kohteen tunnistaminen sekä
-            kohdevierailun vahvistaminen ja sovittaminen matkaohjelmaan, ml. matkalogistiikan
-            koordinointi.
-          </p>
+          <p class="text-muted" data-i18n="case.rr.desc">A full-scale vertical farming benchmark site linked to the company's development project.</p>
+          <p style="font-size:.93rem;margin-top:.9rem" data-i18n="case.rr.role"><strong>FinDera's role:</strong> identifying the site, confirming the visit and fitting it into the travel programme, including coordination of logistics.</p>
           <dl class="case__facts">
-            <div><dt data-i18n="case.f.dest">Kohde</dt><dd class="v" style="margin:0" data-i18n="case.rr.destv">Belgia</dd></div>
-            <div><dt data-i18n="case.f.len">Kesto</dt><dd class="v" style="margin:0" data-i18n="case.rr.lenv">2 pv</dd></div>
-            <div><dt data-i18n="case.f.pax">Osallistujat</dt><dd class="v" style="margin:0">49</dd></div>
+            <div><dt data-i18n="case.f.dest">Destination</dt><dd class="v" style="margin:0" data-i18n="case.rr.destv">Belgium</dd></div>
+            <div><dt data-i18n="case.f.len">Duration</dt><dd class="v" style="margin:0" data-i18n="case.rr.lenv">2 days</dd></div>
+            <div><dt data-i18n="case.f.pax">Participants</dt><dd class="v" style="margin:0">49</dd></div>
           </dl>
           <details class="case__more">
-            <summary data-i18n="case.more">Matkan tiedot</summary>
+            <summary data-i18n="case.more">Trip details</summary>
             <div class="case__more-body" data-i18n="case.rr.more">
-              <p><strong>Osallistujat:</strong> hallitus ja johtoryhmä sekä yhteistyökumppanit,
-              yhteensä 49 henkilöä.</p>
-            </div>
+<p><strong>Participants:</strong> the board and leadership team together with partner organisations, 49 people in all.</p></div>
           </details>
         </div>
       </article>
@@ -424,38 +328,29 @@
         <div class="case__media">
           <picture>
             <source srcset="/assets/img/case-salpakierto-1000.webp" type="image/webp">
-            <img data-i18n-attr="alt:alt.case-salpakierto" class="img-load" src="/assets/img/case-salpakierto.jpg" alt="Ryhmä opastuksella värikkään laitosrakennuksen edustalla." loading="lazy" decoding="async" width="1000" height="667">
+            <img data-i18n-attr="alt:alt.case-salpakierto" class="img-load" src="/assets/img/case-salpakierto.jpg" alt="A group on a guided tour in front of a brightly coloured plant building." loading="lazy" decoding="async" width="1000" height="667">
           </picture>
         </div>
         <div class="case__body">
           <img class="case__logo" src="/assets/logos/vari/salpakierto.png" alt="" width="118" height="30" loading="lazy" decoding="async">
           <div class="case__meta">
             <span class="tag">2023</span>
-            <span class="tag tag--muted" data-i18n="case.type.company">Yritys</span>
-            <span class="tag tag--muted" data-i18n="case.type.board">Hallituksen ja johtoryhmän matka</span>
+            <span class="tag tag--muted" data-i18n="case.type.company">Company</span>
+            <span class="tag tag--muted" data-i18n="case.type.board">Board and management team trip</span>
           </div>
           <h3>Salpakierto Oy</h3>
-          <p class="text-muted" data-i18n="case.salpa.desc">
-            Muovin kierrätyksen arvoketju hallitus- ja johtoryhmätasolla — tietopohjaa
-            investointipäätösten tueksi.
-          </p>
-          <p style="font-size:.93rem;margin-top:.9rem" data-i18n="case.salpa.role">
-            <strong>FinDeran osuus:</strong> matkaohjelman suunnittelu,
-            kohteiden tunnistaminen, vierailujen ja ruokapaikkojen vahvistaminen,
-            matkalogistiikan koordinointi ja etätuki matkan aikana.
-          </p>
+          <p class="text-muted" data-i18n="case.salpa.desc">The plastics recycling value chain at board and management level — a knowledge base to support investment decisions.</p>
+          <p style="font-size:.93rem;margin-top:.9rem" data-i18n="case.salpa.role"><strong>FinDera's role:</strong> designing the programme, identifying the sites, confirming visits and restaurants, coordinating logistics and providing remote support during the trip.</p>
           <dl class="case__facts">
-            <div><dt data-i18n="case.f.dest">Kohde</dt><dd class="v" style="margin:0" data-i18n="case.salpa.destv">Alankomaat</dd></div>
-            <div><dt data-i18n="case.f.len">Kesto</dt><dd class="v" style="margin:0" data-i18n="case.salpa.lenv">2 pv</dd></div>
-            <div><dt data-i18n="case.f.sites">Kohteita</dt><dd class="v" style="margin:0">3</dd></div>
-            <div><dt data-i18n="case.f.pax">Osallistujat</dt><dd class="v" style="margin:0">10</dd></div>
+            <div><dt data-i18n="case.f.dest">Destination</dt><dd class="v" style="margin:0" data-i18n="case.salpa.destv">Netherlands</dd></div>
+            <div><dt data-i18n="case.f.len">Duration</dt><dd class="v" style="margin:0" data-i18n="case.salpa.lenv">2 days</dd></div>
+            <div><dt data-i18n="case.f.sites">Sites</dt><dd class="v" style="margin:0">3</dd></div>
+            <div><dt data-i18n="case.f.pax">Participants</dt><dd class="v" style="margin:0">10</dd></div>
           </dl>
           <details class="case__more">
-            <summary data-i18n="case.more">Matkan tiedot</summary>
+            <summary data-i18n="case.more">Trip details</summary>
             <div class="case__more-body" data-i18n="case.salpakierto.more">
-              <p><strong>Osallistujat:</strong> hallituksen ja johtoryhmän jäsenet,
-              yhteensä 10 henkilöä. Ohjelmaan sisältyi myös hallituksen kokous.</p>
-            </div>
+<p><strong>Participants:</strong> members of the board and the leadership team, 10 people in all. The programme also included a board meeting.</p></div>
           </details>
         </div>
       </article>
@@ -465,42 +360,30 @@
         <div class="case__media">
           <picture>
             <source srcset="/assets/img/case-ely-1000.webp" type="image/webp">
-            <img data-i18n-attr="alt:alt.case-ely" class="img-load" src="/assets/img/case-ely.jpg" alt="Kaupunkiympäristön sopeutumiskohde Pohjois-Saksassa." loading="lazy" decoding="async" width="1000" height="1333">
+            <img data-i18n-attr="alt:alt.case-ely" class="img-load" src="/assets/img/case-ely.jpg" alt="An urban climate adaptation site in northern Germany." loading="lazy" decoding="async" width="1000" height="1333">
           </picture>
         </div>
         <div class="case__body">
           <img class="case__logo" src="/assets/logos/vari/ely.png" alt="" width="118" height="30" loading="lazy" decoding="async">
           <div class="case__meta">
             <span class="tag">2021</span>
-            <span class="tag tag--muted" data-i18n="case.type.public">Julkinen toimija</span>
-            <span class="tag tag--muted" data-i18n="case.type.project">Hankesidonnainen opintomatka</span>
+            <span class="tag tag--muted" data-i18n="case.type.public">Public sector</span>
+            <span class="tag tag--muted" data-i18n="case.type.project">Project-linked study trip</span>
           </div>
           <h3>Varsinais-Suomen ELY-keskus</h3>
-          <p class="text-muted" data-i18n="case.ely.desc">
-            Ilmastonmuutokseen sopeutumisen toimenpiteet: kaupunkien, maatalouden ja
-            vesihuollon ratkaisut, mukaan lukien IBA- ja Lossi-hankkeet.
-          </p>
-          <p style="font-size:.93rem;margin-top:.9rem" data-i18n="case.ely.role">
-            <strong>FinDeran osuus:</strong> matkaohjelman suunnittelu,
-            kohteiden tunnistaminen, vierailujen ja ruokapaikkojen vahvistaminen,
-            matkalogistiikan koordinointi sekä matkanjohtajana ja tulkkina toimiminen.
-          </p>
+          <p class="text-muted" data-i18n="case.ely.desc">Climate change adaptation measures: solutions for cities, agriculture and water management, including the IBA and Lossi projects.</p>
+          <p style="font-size:.93rem;margin-top:.9rem" data-i18n="case.ely.role"><strong>FinDera's role:</strong> designing the programme, identifying the sites, confirming visits and restaurants, coordinating logistics, and acting as tour leader and interpreter.</p>
           <dl class="case__facts">
-            <div><dt data-i18n="case.f.dest">Kohde</dt><dd class="v" style="margin:0" data-i18n="case.ely.destv">Saksa, Hampuri–Berliini</dd></div>
-            <div><dt data-i18n="case.f.len">Kesto</dt><dd class="v" style="margin:0" data-i18n="case.ely.lenv">3 pv</dd></div>
-            <div><dt data-i18n="case.f.sites">Kohteita</dt><dd class="v" style="margin:0">6</dd></div>
-            <div><dt data-i18n="case.f.pax">Osallistujat</dt><dd class="v" style="margin:0">16</dd></div>
+            <div><dt data-i18n="case.f.dest">Destination</dt><dd class="v" style="margin:0" data-i18n="case.ely.destv">Germany, Hamburg–Berlin</dd></div>
+            <div><dt data-i18n="case.f.len">Duration</dt><dd class="v" style="margin:0" data-i18n="case.ely.lenv">3 days</dd></div>
+            <div><dt data-i18n="case.f.sites">Sites</dt><dd class="v" style="margin:0">6</dd></div>
+            <div><dt data-i18n="case.f.pax">Participants</dt><dd class="v" style="margin:0">16</dd></div>
           </dl>
           <details class="case__more">
-            <summary data-i18n="case.more">Matkan tiedot</summary>
+            <summary data-i18n="case.more">Trip details</summary>
             <div class="case__more-body" data-i18n="case.ely.more">
-              <p><strong>Osallistujat:</strong> hankevastaavat ja -jäsenet sekä mukaan kutsutut
-              toimijat, muun muassa MTK, Baltic Sea Action Group, AFRY, Vaisala sekä maa- ja
-              metsätalousministeriö. Yhteensä 16 henkilöä.</p>
-              <p><strong>Sisältö:</strong> käytännön ratkaisut ja yhteistyömallit kaupunkien,
-              maatalouden ja vesihuollon sopeutumistoimenpiteissä. Matka toteutettiin
-              IBA- ja Lossi-hankkeiden puitteissa.</p>
-            </div>
+<p><strong>Participants:</strong> project leads and members together with invited organisations, among them MTK, the Baltic Sea Action Group, AFRY, Vaisala and the Ministry of Agriculture and Forestry. Sixteen people in all.</p>
+<p><strong>Content:</strong> practical solutions and models of cooperation in urban, agricultural and water management adaptation. The trip was delivered within the IBA and Lossi projects.</p></div>
           </details>
         </div>
       </article>
@@ -510,47 +393,31 @@
         <div class="case__media">
           <picture>
             <source srcset="/assets/img/case-osao-1000.webp" type="image/webp">
-            <img data-i18n-attr="alt:alt.case-osao" class="img-load" src="/assets/img/case-osao.jpg" alt="Osallistujat kuuntelevat opastusta aurinkopaneelikattoisen asuinkorttelin pihalla." loading="lazy" decoding="async" width="1000" height="667">
+            <img data-i18n-attr="alt:alt.case-osao" class="img-load" src="/assets/img/case-osao.jpg" alt="Participants listening to a guide in the courtyard of a residential block with solar panel roofs." loading="lazy" decoding="async" width="1000" height="667">
           </picture>
         </div>
         <div class="case__body">
           <img class="case__logo" src="/assets/logos/vari/osao.png" alt="" width="118" height="30" loading="lazy" decoding="async">
           <div class="case__meta">
             <span class="tag">2018</span>
-            <span class="tag tag--muted" data-i18n="case.type.edu">Koulutuslaitos</span>
-            <span class="tag tag--muted" data-i18n="case.type.project">Hankesidonnainen opintomatka</span>
+            <span class="tag tag--muted" data-i18n="case.type.edu">Educational institution</span>
+            <span class="tag tag--muted" data-i18n="case.type.project">Project-linked study trip</span>
           </div>
           <h3>Koulutuskuntayhtymä OSAO</h3>
-          <p class="text-muted" data-i18n="case.osao.desc">
-            Kiinteistöjen energia- ja kierrätysratkaisut: lajittelu työmailla,
-            rakennusjätteiden käsittelyteknologiat, materiaalien kierrätyslaitos, hukkalämmön
-            talteenotto, &rdquo;Ekokortteli&rdquo;, ESCO-hankkeet sekä energianhallinta ja -varastointi.
-          </p>
-          <p style="font-size:.93rem;margin-top:.9rem" data-i18n="case.osao.role">
-            <strong>FinDeran osuus:</strong> matkaohjelman suunnittelu
-            ja aikataulutus, kohteiden tunnistaminen, vierailujen ja ruokapaikkojen
-            vahvistaminen, matkalogistiikka sekä matkanjohtajana ja tulkkina toimiminen.
-          </p>
+          <p class="text-muted" data-i18n="case.osao.desc">Energy and recycling solutions for buildings: sorting on site, construction waste treatment technologies, a materials recycling plant, waste heat recovery, the "Eco-block", ESCO projects, and energy management and storage.</p>
+          <p style="font-size:.93rem;margin-top:.9rem" data-i18n="case.osao.role"><strong>FinDera's role:</strong> designing and scheduling the programme, identifying the sites, confirming visits and restaurants, travel logistics, and acting as tour leader and interpreter.</p>
           <dl class="case__facts">
-            <div><dt data-i18n="case.f.dest">Kohde</dt><dd class="v" style="margin:0" data-i18n="case.osao.destv">Saksa, Köln–Düsseldorf–Ruhr</dd></div>
-            <div><dt data-i18n="case.f.len">Kesto</dt><dd class="v" style="margin:0" data-i18n="case.osao.lenv">3 pv</dd></div>
-            <div><dt data-i18n="case.f.sites">Kohteita</dt><dd class="v" style="margin:0">6</dd></div>
-            <div><dt data-i18n="case.f.pax">Osallistujat</dt><dd class="v" style="margin:0">20</dd></div>
+            <div><dt data-i18n="case.f.dest">Destination</dt><dd class="v" style="margin:0" data-i18n="case.osao.destv">Germany, Cologne–Düsseldorf–Ruhr</dd></div>
+            <div><dt data-i18n="case.f.len">Duration</dt><dd class="v" style="margin:0" data-i18n="case.osao.lenv">3 days</dd></div>
+            <div><dt data-i18n="case.f.sites">Sites</dt><dd class="v" style="margin:0">6</dd></div>
+            <div><dt data-i18n="case.f.pax">Participants</dt><dd class="v" style="margin:0">20</dd></div>
           </dl>
           <details class="case__more">
-            <summary data-i18n="case.more">Matkan tiedot</summary>
+            <summary data-i18n="case.more">Trip details</summary>
             <div class="case__more-body" data-i18n="case.osao.more">
-              <p><strong>Osallistujat:</strong> hankevastaavat ja -jäsenet sekä mukaan kutsutut
-              toimijat, muun muassa Lassila &amp; Tikanoja, VTT, Micropolis, Lapin AMK ja OAMK.
-              Yhteensä 20 henkilöä.</p>
-              <p><strong>Sisältö:</strong> kierrätys ja lajittelu työmailla, rakennusjätteiden
-              käsittelyteknologiat, rakennusmateriaalien kierrätyslaitos, hukkalämmön
-              talteenotto ja hyödyntäminen, ”Ekokortteli” omalla sähkön- ja lämmöntuotannolla
-              ja älykkäällä ohjauksella, ESCO-hankkeet sekä energianhallinta ja -varastointi.</p>
-              <p><strong>Tausta:</strong> matka suunniteltiin EAKR-rahoitteisten Energiaratkaisut
-              2020 ja Teolliset symbioosit Pohjois-Pohjanmaalla -hankkeiden sekä Iin
-              Micropoliksen yhteistyönä.</p>
-            </div>
+<p><strong>Participants:</strong> project leads and members together with invited organisations, among them Lassila &amp; Tikanoja, VTT, Micropolis, Lapland UAS and OAMK. Twenty people in all.</p>
+<p><strong>Content:</strong> sorting and recycling on construction sites, construction waste treatment technologies, a building materials recycling plant, waste heat recovery and use, an ”eco-block” with its own power and heat generation and smart control, ESCO projects, and energy management and storage.</p>
+<p><strong>Background:</strong> the trip was planned jointly with the ERDF-funded Energiaratkaisut 2020 and Teolliset symbioosit Pohjois-Pohjanmaalla projects and Micropolis in Ii.</p></div>
           </details>
         </div>
       </article>
@@ -563,137 +430,89 @@
 <section class="section section--paper2">
   <div class="wrap">
     <div class="section-head">
-      <p class="eyebrow" data-reveal data-i18n="quotes.eyebrow">Suosittelut</p>
-      <h2 data-reveal data-i18n="quotes.title">Mitä asiakkaat sanovat</h2>
+      <p class="eyebrow" data-reveal data-i18n="quotes.eyebrow">Testimonials</p>
+      <h2 data-reveal data-i18n="quotes.title">What clients say</h2>
     </div>
 
     <div class="grid grid-2" data-stagger>
       <figure class="quote" data-reveal>
         <span class="quote__mark" aria-hidden="true">&ldquo;</span>
-        <blockquote data-i18n="q.rr">
-          FinDera löysi kehityshankkeemme tarpeisiin Belgiasta juuri oikean täyden
-          mittakaavan vertikaaliviljelyn kohteen, ja vierailu toi meille arvokasta käytännön
-          kokemustietoa. Olen ollut mukana myös muissa FinDeran järjestämissä jätehuollon
-          kohdevierailuissa, jotka ovat olleet erittäin onnistuneita tilaisuuksia verkostoitua
-          ja tutustua uusiin teknologioihin.
-        </blockquote>
+        <blockquote data-i18n="q.rr">FinDera found exactly the right full-scale vertical farming site in Belgium for the needs of our development project, and the visit gave us valuable hands-on knowledge. I have also taken part in other waste management site visits organised by FinDera, which have been highly successful occasions to network and get to know new technologies.</blockquote>
         <figcaption>
           <strong>Marko Printz</strong>
-          <span data-i18n="q.rr.role">palvelu- ja kehitysjohtaja, Rosk&rsquo;n Roll Oy Ab</span>
+          <span data-i18n="q.rr.role">Service and Development Director, Rosk’n Roll Oy Ab</span>
         </figcaption>
       </figure>
 
       <figure class="quote" data-reveal>
         <span class="quote__mark" aria-hidden="true">&ldquo;</span>
-        <blockquote data-i18n="q.lsjh">
-          Olemme käyttäneet FinDeran palveluita useita kertoja, koska Martinilta on saanut
-          uusia, kiinnostavia ja meille entuudestaan tuntemattomia kohde-ehdotuksia. Parasta
-          on vaivattomuus: sisältösuunnittelun asiantuntemus saadaan käyttöön ja samalla
-          hoituvat kaikki käytännön matkajärjestelyt.
-        </blockquote>
+        <blockquote data-i18n="q.lsjh">We have used FinDera's services several times, because Martin comes up with new, interesting site suggestions that were previously unknown to us. The best part is how effortless it is: we get expert content design and all the practical travel arrangements at the same time.</blockquote>
         <figcaption>
           <strong>Miia Jylhä</strong>
-          <span data-i18n="q.lsjh.role">tutkimus- ja kehityspäällikkö, Lounais-Suomen Jätehuolto Oy</span>
+          <span data-i18n="q.lsjh.role">Research and Development Manager, Lounais-Suomen Jätehuolto Oy</span>
         </figcaption>
       </figure>
 
       <figure class="quote" data-reveal>
         <span class="quote__mark" aria-hidden="true">&ldquo;</span>
-        <blockquote data-i18n="q.osao">
-          Matka tarjosi meille käytännönläheistä tietoa uusista toimintatavoista ja
-          teknologioista sekä laajensi näkemyksiä ja kontakteja. Martin osaa rakentaa
-          kokonaisuuden, jossa asiantunteva sisältö, sujuvat järjestelyt, kulttuurinen
-          ymmärrys ja lämminhenkinen vuorovaikutus tukevat toisiaan.
-        </blockquote>
+        <blockquote data-i18n="q.osao">The trip gave us practical information about new ways of working and new technologies, and broadened our perspectives and contacts. Martin knows how to build a whole in which expert content, smooth arrangements, cultural understanding and warm interaction support one another.</blockquote>
         <figcaption>
           <strong>Johanna Matinmikko</strong>
-          <span data-i18n="q.osao.role">hankekehityspäällikkö, Koulutuskuntayhtymä OSAO</span>
+          <span data-i18n="q.osao.role">Project Development Manager, OSAO Joint Municipal Authority</span>
         </figcaption>
       </figure>
 
       <figure class="quote" data-reveal>
         <span class="quote__mark" aria-hidden="true">&ldquo;</span>
-        <blockquote data-i18n="q.ladec">
-          FinDera löysi meille kiinnostavimmat kohteet koko arvoketjusta ja hoiti järjestelyt
-          avaimet käteen todella sujuvasti. Ensimmäinen matka oli niin onnistunut, että
-          päätimme toteuttaa toisen vielä saman vuoden aikana — ja suosittelemme FinDeraa
-          vastaaviin benchmarkkaustarpeisiin.
-        </blockquote>
+        <blockquote data-i18n="q.ladec">FinDera found us the most interesting sites across the whole value chain and handled the arrangements turnkey, very smoothly. The first trip was such a success that we decided to run a second one in the same year — and we recommend FinDera for similar benchmarking needs.</blockquote>
         <figcaption>
           <strong>Essi Artima-Sulkinoja</strong>
-          <span data-i18n="q.ladec.role">liiketoimintakehittäjä, Lahden Seudun Kehitys LADEC Oy</span>
+          <span data-i18n="q.ladec.role">Business Developer, Lahti Region Development LADEC Oy</span>
         </figcaption>
       </figure>
 
       <figure class="quote" data-reveal>
         <span class="quote__mark" aria-hidden="true">&ldquo;</span>
-        <blockquote data-i18n="q.ely">
-          Yhteistyö Martin Brandtin ja FinDera Consultingin kanssa oli erittäin sujuvaa ja
-          ammattimaista. Martin onnistui kokoamaan korkeatasoisen asiantuntijaohjelman ja
-          kattavan verkoston, joiden avulla osallistujat saivat arvokkaita käytännön oppeja ja
-          kansainvälisiä näkökulmia ilmastonmuutokseen sopeutumisen ratkaisuihin.
-        </blockquote>
+        <blockquote data-i18n="q.ely">Working with Martin Brandt and FinDera Consulting was very smooth and professional. Martin succeeded in assembling a high-calibre expert programme and an extensive network, through which participants gained valuable practical lessons and international perspectives on climate change adaptation solutions.</blockquote>
         <figcaption>
           <strong>Pekka Parkkila</strong>
-          <span data-i18n="q.ely.role">vesitalousasiantuntija, Lounais-Suomen Elinvoimakeskus</span>
+          <span data-i18n="q.ely.role">Water Management Specialist, Southwest Finland Vitality Centre</span>
         </figcaption>
       </figure>
 
       <figure class="quote" data-reveal>
         <span class="quote__mark" aria-hidden="true">&ldquo;</span>
-        <blockquote data-i18n="q.salpa">
-          FinDera rakensi hallitustasolle erinomaisen kokonaisuuden: relevantit kohteet, hyvin
-          valmistellut tapaamiset ja sujuvat järjestelyt. Saimme arvokasta tietopohjaa
-          investointipäätösten tueksi ja vierailut johtivat uusiin yhteistyöavauksiin.
-        </blockquote>
+        <blockquote data-i18n="q.salpa">FinDera built an excellent package at board level: relevant sites, well-prepared meetings and smooth arrangements. We gained a valuable knowledge base to support investment decisions, and the visits led to new openings for collaboration.</blockquote>
         <figcaption>
           <strong>Kimmo Rinne</strong>
-          <span data-i18n="q.salpa.role">toimitusjohtaja, Salpakierto Oy</span>
+          <span data-i18n="q.salpa.role">CEO, Salpakierto Oy</span>
         </figcaption>
       </figure>
 
       <figure class="quote" data-reveal>
         <span class="quote__mark" aria-hidden="true">&ldquo;</span>
-        <blockquote data-i18n="q.turkuamk">
-          FinDera toteutti kohdekäyntikokonaisuuden erittäin sujuvasti — ohjelma oli hyvin
-          rytmitetty ja sisällöllisesti juuri meidän tarpeisiimme osuva. Saimme runsaasti
-          uutta ja käytännönläheistä tietoa hule- ja harmaavesiratkaisuista.
-        </blockquote>
+        <blockquote data-i18n="q.turkuamk">FinDera delivered the set of site visits very smoothly — the programme was well paced and its content matched our needs precisely. We gained a great deal of new, hands-on knowledge about stormwater and greywater solutions.</blockquote>
         <figcaption>
           <strong>Maarit Jaakola</strong>
-          <span data-i18n="q.turkuamk.role">erityisasiantuntija / projektipäällikkö, Kestävä ympäristö, Turun ammattikorkeakoulu</span>
+          <span data-i18n="q.turkuamk.role">Senior Specialist / Project Manager, Sustainable Environment, Turku University of Applied Sciences</span>
         </figcaption>
       </figure>
 
       <figure class="quote" data-reveal>
         <span class="quote__mark" aria-hidden="true">&ldquo;</span>
-        <blockquote data-i18n="q.turkuamk2">
-          FinDera on meille pitkäaikainen ja arvokas kumppani, joka löytää tavoitteisiimme
-          sopivat kohteet ja toimijat useissa hankekonteksteissa: kohteet ja kontaktit on
-          valittu aina tarkoituksenmukaisesti, ja toteutukset ovat olleet poikkeuksetta hyvin
-          valmisteltuja. Yhteistyön ansiosta olemme saaneet uusia verkostoja ja käytännön
-          oppia, jota on voitu hyödyntää suoraan omassa työssä. Suosittelemme FinDeraa
-          organisaatioille, jotka hakevat käytännönläheistä oppia ja verkostoja kestävän
-          kehityksen teemoissa.
-        </blockquote>
+        <blockquote data-i18n="q.turkuamk2">FinDera is a long-standing and valuable partner for us, one that finds the sites and organisations matching our objectives across many project contexts: the sites and contacts have always been chosen purposefully, and the arrangements have without exception been well prepared. The cooperation has given us new networks and practical lessons we have been able to apply directly in our own work. We recommend FinDera to organisations looking for hands-on learning and networks in sustainability themes.</blockquote>
         <figcaption>
           <strong>Piia Nurmi</strong>
-          <span data-i18n="q.turkuamk2.role">lehtori, Kestävä ympäristö, Turun ammattikorkeakoulu</span>
+          <span data-i18n="q.turkuamk2.role">Lecturer, Sustainable Environment, Turku University of Applied Sciences</span>
         </figcaption>
       </figure>
 
       <figure class="quote" data-reveal>
         <span class="quote__mark" aria-hidden="true">&ldquo;</span>
-        <blockquote data-i18n="q.muhos">
-          Martin Brandt suunnitteli ja toteutti Saksaan järjestetyn benchmarking-matkan
-          erittäin ammattitaitoisesti ja asiakaslähtöisesti. Matka sujui meille vaivattomasti
-          alusta loppuun, ja tutustumiskohteet toivat Muhos Bioparkin kehittämiseen useita
-          uusia ideoita erityisesti kiertotalouden, kuntalaisten osallistamisen, uusiutuvan
-          energian sekä vihreän siirtymän uusien liiketoimintamahdollisuuksien näkökulmista.
-        </blockquote>
+        <blockquote data-i18n="q.muhos">Martin Brandt planned and delivered the benchmarking trip to Germany with great professionalism and a strong customer focus. The trip ran effortlessly for us from beginning to end, and the sites we visited brought several new ideas for developing Muhos Biopark, particularly around the circular economy, involving residents, renewable energy and the new business opportunities of the green transition.</blockquote>
         <figcaption>
           <strong>Asseri Pitkälä</strong>
-          <span data-i18n="q.muhos.role">elinkeinopäällikkö, Muhos Biopark / Muhoksen kunta</span>
+          <span data-i18n="q.muhos.role">Head of Economic Development, Muhos Biopark / Municipality of Muhos</span>
         </figcaption>
       </figure>
     </div>
@@ -704,15 +523,12 @@
 <section class="section section--tight">
   <div class="wrap">
     <div class="cta-band" data-reveal="scale">
-      <p class="eyebrow" data-i18n="cta.eyebrow">Otetaan yhteyttä</p>
-      <h2 data-i18n="cta.title2">Millaisen kokonaisuuden rakennetaan teille?</h2>
-      <p data-i18n="cta.desc">
-        Kerro lyhyesti tavoitteestasi, niin ehdotan konkreettisen tavan edetä.
-        Vastaan yleensä saman arkipäivän aikana.
-      </p>
+      <p class="eyebrow" data-i18n="cta.eyebrow">Get in touch</p>
+      <h2 data-i18n="cta.title2">What kind of package shall we build for you?</h2>
+      <p data-i18n="cta.desc">Tell me briefly what you are aiming for and I will suggest a concrete way forward. I usually reply the same working day.</p>
       <div class="btn-group" style="margin-top:2rem">
-        <a class="btn btn--light btn--lg" href="/yhteystiedot">
-          <span data-i18n="cta.bookFree">Varaa maksuton alkukartoitus</span>
+        <a class="btn btn--light btn--lg" href="/en/contact">
+          <span data-i18n="cta.bookFree">Book a free scoping call</span>
           <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
       </div>
@@ -726,7 +542,7 @@
   <div class="wrap">
     <div class="footer__grid">
       <div class="footer__brand">
-        <a class="logo" href="/" style="margin-bottom:1.25rem">
+        <a class="logo" href="/en/" style="margin-bottom:1.25rem">
         <svg class="logo__mark" viewBox="0 0 200 200" aria-hidden="true" focusable="false">
           <g class="logo__spin">
           <path fill="#FECF1F" d="M89.9 24.9C88.4 25.0 86.9 25.5 85.5 25.9C84.0 26.4 82.6 27.0 81.3 27.6C79.9 28.2 78.6 28.9 77.3 29.7C76.0 30.5 74.7 31.5 73.5 32.5C72.3 33.5 71.1 34.5 70.0 35.7C68.8 36.8 67.8 38.0 66.8 39.3C65.9 40.5 65.0 41.7 64.2 43.0C63.4 44.3 62.7 45.7 62.0 47.0C61.4 48.4 60.8 49.8 60.3 51.2C59.8 52.6 59.4 54.1 59.0 55.5C58.6 57.0 58.2 58.5 57.9 60.0C57.6 61.5 57.3 63.0 57.1 64.5C57.0 66.1 57.1 67.8 57.1 69.4C57.2 71.0 57.0 72.7 57.2 74.3C57.4 75.8 57.9 77.2 58.2 78.7C58.6 80.2 59.0 81.7 59.4 83.1C59.9 84.5 60.4 86.0 61.0 87.3C61.6 88.7 62.3 90.0 63.1 91.3C63.9 92.6 64.8 93.9 65.8 95.1C66.7 96.4 67.7 97.6 68.8 98.8C69.9 99.9 71.1 101.0 72.4 101.9C73.6 102.9 74.9 103.7 76.2 104.5C77.5 105.3 78.7 106.2 80.1 106.7C81.5 107.2 83.3 107.9 84.6 107.5C85.8 107.1 87.3 105.5 87.7 104.2C88.1 102.9 87.6 101.0 86.9 99.7C86.3 98.4 84.5 97.6 83.5 96.5C82.4 95.3 81.6 94.0 80.7 92.8C79.8 91.5 79.0 90.2 78.2 88.9C77.5 87.6 76.9 86.2 76.4 84.8C76.0 83.3 75.6 81.9 75.3 80.4C75.0 78.8 74.9 77.2 74.9 75.7C74.8 74.1 75.0 72.5 75.2 70.9C75.5 69.4 75.9 68.0 76.4 66.5C76.9 65.1 77.5 63.7 78.2 62.4C78.9 61.1 79.8 59.8 80.7 58.6C81.7 57.3 82.8 56.1 83.9 55.0C85.0 53.8 86.1 52.6 87.3 51.6C88.5 50.6 89.8 49.9 91.1 49.1C92.4 48.3 93.7 47.6 95.1 46.8C96.4 46.1 97.9 45.5 99.0 44.6C100.1 43.6 101.2 42.3 101.7 40.9C102.3 39.6 102.5 37.9 102.4 36.4C102.3 35.0 101.7 33.5 101.0 32.1C100.3 30.8 99.4 29.4 98.3 28.4C97.2 27.3 95.9 26.3 94.5 25.8C93.1 25.2 91.4 24.9 89.9 24.9ZM40.3 34.3C38.8 34.6 37.4 35.2 36.0 36.0C34.7 36.8 33.3 38.0 32.3 39.2C31.4 40.4 30.6 41.8 30.1 43.3C29.6 44.8 29.4 46.5 29.5 48.1C29.6 49.6 30.1 51.2 30.7 52.6C31.4 54.0 32.3 55.4 33.4 56.5C34.5 57.6 35.9 58.6 37.3 59.1C38.7 59.7 40.4 60.0 42.0 60.0C43.5 60.0 45.2 59.9 46.7 59.4C48.2 58.9 49.6 58.1 50.8 57.1C52.0 56.1 53.2 54.7 53.9 53.3C54.6 52.0 55.0 50.4 55.2 48.9C55.3 47.3 55.2 45.5 54.8 44.0C54.5 42.5 53.8 41.0 52.9 39.8C52.0 38.5 50.8 37.3 49.5 36.4C48.2 35.6 46.8 35.0 45.2 34.6C43.7 34.3 41.9 34.1 40.3 34.3Z"/>
@@ -741,23 +557,20 @@
             <span class="logo__tag">Access · Insight · Impact</span>
           </span>
         </a>
-        <p style="max-width:34ch;font-size:.95rem" data-i18n="footer.tagline">
-          Kestävän kehityksen konsultointia sekä
-          opinto- ja benchmarkkausmatkoja Eurooppaan.
-        </p>
+        <p style="max-width:34ch;font-size:.95rem" data-i18n="footer.tagline">Sustainable development consulting, and study/benchmarking trips across Europe.</p>
       </div>
       <div class="footer__nav">
-        <p class="footer__title" data-i18n="footer.nav">Sivut</p>
+        <p class="footer__title" data-i18n="footer.nav">Pages</p>
         <ul class="footer__list">
-          <li><a href="/palvelut" data-i18n="nav.services">Palvelut</a></li>
-          <li><a href="/projektit" data-i18n="nav.projects">Projektit</a></li>
-          <li><a href="/minusta" data-i18n="nav.about">Minusta</a></li>
-          <li><a href="/yhteystiedot" data-i18n="nav.contact">Yhteystiedot</a></li>
-          <li><a href="/tietosuoja" data-i18n="footer.privacy">Tietosuojaseloste</a></li>
+          <li><a href="/en/services" data-i18n="nav.services">Services</a></li>
+          <li><a href="/en/projects" data-i18n="nav.projects">Projects</a></li>
+          <li><a href="/en/about" data-i18n="nav.about">About</a></li>
+          <li><a href="/en/contact" data-i18n="nav.contact">Contact</a></li>
+          <li><a href="/en/privacy" data-i18n="footer.privacy">Privacy Policy</a></li>
         </ul>
       </div>
       <div class="footer__contact">
-        <p class="footer__title" data-i18n="footer.contact">Yhteystiedot</p>
+        <p class="footer__title" data-i18n="footer.contact">Contact</p>
         <ul class="footer__list">
           <li>Martin Brandt</li>
           <li><a href="mailto:martin.brandt@findera.fi">martin.brandt@findera.fi</a></li>
@@ -767,9 +580,9 @@
       </div>
     </div>
     <div class="footer__bottom">
-      <span>&copy; <span id="vuosi">2026</span> FinDera Consulting. <span data-i18n="footer.rights">Kaikki oikeudet pidätetään.</span></span>
-      <span data-i18n="footer.langs">Palvelen suomeksi, saksaksi ja englanniksi.</span>
-      <span class="footer__credit" data-i18n="footer.credit">Suunnittelu ja toteutus: <a href="https://www.studiotitta.fi" target="_blank" rel="noopener">Studio&nbsp;Titta</a></span>
+      <span>&copy; <span id="vuosi">2026</span> FinDera Consulting. <span data-i18n="footer.rights">All rights reserved.</span></span>
+      <span data-i18n="footer.langs">I work in Finnish, German and English.</span>
+      <span class="footer__credit" data-i18n="footer.credit">Designed &amp; built by <a href="https://www.studiotitta.fi" target="_blank" rel="noopener">Studio&nbsp;Titta</a></span>
     </div>
   </div>
 </footer>

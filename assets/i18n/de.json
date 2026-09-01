@@ -39,7 +39,11 @@
     "footer.langs": "Ich arbeite auf Finnisch, Deutsch und Englisch.",
     "footer.rights": "Alle Rechte vorbehalten.",
     "footer.credit": "Gestaltung und Umsetzung: <a href=\"https://www.studiotitta.fi\" target=\"_blank\" rel=\"noopener\">Studio&nbsp;Titta</a>",
-    "footer.privacy": "Datenschutzerklärung"
+    "footer.privacy": "Datenschutzerklärung",
+    "a11y.home": "FinDera Consulting — Startseite",
+    "a11y.nav": "Hauptmenü",
+    "a11y.lang": "Sprache wechseln",
+    "a11y.menu": "Menü öffnen"
   },
   "pages": {
     "index.html": {
@@ -128,7 +132,26 @@
       "aii.3.desc": "Eine gemeinsame Richtung und konkrete nächste Schritte.",
       "stats.people": "Fachleute haben bisher teilgenommen",
       "footer.tagline": "Beratung zu Kreislaufwirtschaft und Nachhaltigkeit sowie Studien- und Benchmarking-Reisen in ganz Europa.",
-      "stats.since": "seit dem Kontakte aufgebaut werden"
+      "stats.since": "seit dem Kontakte aufgebaut werden",
+      "a11y.clients": "Kunden: Rosk'n Roll Oy Ab, Koulutuskuntayhtymä OSAO, Seinäjoen Energia Oy, Lahden Seudun Kehitys LADEC Oy, Salpakierto Oy, Salaojayhdistys ry, Varsinais-Suomen ELY-keskus, Lounais-Suomen Jätehuolto Oy, Kymenlaakson Jäte Oy, Turun ammattikorkeakoulu, Muhoksen kunta",
+      "alt.hero-rotterdam": "Eine finnische Expertengruppe besichtigt ein Stadtentwicklungsprojekt in Rotterdam an der Erasmusbrücke.",
+      "alt.intro-ryhma": "Eine Gruppe finnischer Fachleute vor einem Besuchsziel in den Niederlanden.",
+      "alt.palvelu-matkat": "Eine Gruppe in Warnwesten und Helmen bei einem Standortbesuch.",
+      "alt.palvelu-tapaamiset": "Eine finnische Delegation bei einem Treffen in den Räumen einer deutschen Gastorganisation.",
+      "alt.palvelu-kartoitus": "Fachleute betrachten Leitwarten-Bildschirme und Verfahrensschemata in einer Anlage.",
+      "alt.illat-1": "Der holzvertäfelte Saal eines traditionellen deutschen Restaurants mit Kronleuchtern.",
+      "alt.illat-2": "Deutsche Steinkrüge stoßen über einem Tisch an.",
+      "alt.illat-3": "Eine Gruppe im Gespräch an den Tischen eines farbenfroh eingerichteten Restaurants.",
+      "alt.illat-4": "Eine Volksmusikgruppe spielt Harfe, Kontrabass und Akkordeon im Restaurantsaal.",
+      "alt.illat-5": "Teilnehmende an einer langen Festtafel mit Tellern und Biergläsern.",
+      "alt.galleria-1": "Eine Expertengruppe in Schutzanzügen bei einem Rundgang auf dem Gelände einer Behandlungsanlage.",
+      "alt.galleria-2": "Teilnehmende mit Helmen betrachten ein Anlagenmodell und ein Verfahrensschema.",
+      "alt.galleria-3": "Eine finnische Delegation vor einer Solaranlage in Deutschland.",
+      "alt.intro-ryhma-2": "Eine Gruppe beim Rundgang im Tanklager einer Biogasanlage.",
+      "alt.galleria-5": "Teilnehmende in Schutzausrüstung an einer im Bau befindlichen Kreislaufwirtschaftsanlage.",
+      "alt.galleria-6": "Fachleute im Gespräch an einem Solarpark.",
+      "alt.galleria-7": "Ein Gruppenfoto in einer Berglandschaft während einer Studienreise.",
+      "alt.galleria-8": "Besuchende in Schutzausrüstung an einer Produktionslinie."
     },
     "palvelut.html": {
       "meta.title": "Leistungen — FinDera Consulting",
@@ -215,7 +238,9 @@
       "pwhy.5.title": "Reiseleitung und gute Atmosphäre",
       "pwhy.5.desc": "Reibungslose Durchführung, gute Stimmung und eine Reise, die in Erinnerung bleibt.",
       "pwhy.note": "Die eigentliche Arbeit und das eigentliche Risiko liegen nicht im Reiseprogramm auf dem Papier. Sie liegen in der Qualität der Ziele, in verbindlich zugesagten Terminen, in einem Rhythmus, der trägt, und darin, ob die Besuche dem gesetzten Ziel wirklich dienen. Stimmt das, bringt die Reise Erkenntnisse, Kontakte und konkrete nächste Schritte.",
-      "p2.desc2": "Wenn Sie Partner finden, Kooperationsmöglichkeiten ausloten oder Lösungen als Entscheidungsgrundlage vergleichen wollen, stelle ich Ihnen ein Terminpaket zusammen, in dem die richtigen Menschen und die richtige Agenda zusammenkommen."
+      "p2.desc2": "Wenn Sie Partner finden, Kooperationsmöglichkeiten ausloten oder Lösungen als Entscheidungsgrundlage vergleichen wollen, stelle ich Ihnen ein Terminpaket zusammen, in dem die richtigen Menschen und die richtige Agenda zusammenkommen.",
+      "alt.palvelu-tapaamiset-2": "Eine finnische Delegation zu Beginn eines Treffens in den Räumen der Gastorganisation.",
+      "alt.palvelu-kartoitus-2": "Fachleute betrachten Prozessbildschirme und Schemata in einer Anlage."
     },
     "projektit.html": {
       "meta.title": "Projekte und Referenzen — FinDera Consulting",
@@ -308,7 +333,17 @@
       "case.salpakierto.more": "\n<p><strong>Teilnehmende:</strong> Mitglieder von Aufsichtsrat und Geschäftsleitung, insgesamt zehn Personen. Zum Programm gehörte auch eine Aufsichtsratssitzung.</p>",
       "case.salaoja.more": "\n<p><strong>Teilnehmende:</strong> die Geschäftsführerin bzw. der Geschäftsführer des Verbands sowie Vertreterinnen und Vertreter der Mitgliedsunternehmen, insgesamt 16 Personen.</p>\n<p><strong>Ziele:</strong> Hersteller von Dränagemaschinen, Forschungsinstitute sowie Baustellen und Planungsobjekte.</p>",
       "case.ely.more": "\n<p><strong>Teilnehmende:</strong> Projektverantwortliche und -mitglieder sowie eingeladene Organisationen, darunter MTK, die Baltic Sea Action Group, AFRY, Vaisala und das Ministerium für Land- und Forstwirtschaft. Insgesamt 16 Personen.</p>\n<p><strong>Inhalt:</strong> praktische Lösungen und Kooperationsmodelle zur Klimaanpassung in Städten, Landwirtschaft und Wasserwirtschaft. Die Reise fand im Rahmen der Projekte IBA und Lossi statt.</p>",
-      "case.osao.more": "\n<p><strong>Teilnehmende:</strong> Projektverantwortliche und -mitglieder sowie eingeladene Organisationen, darunter Lassila &amp; Tikanoja, VTT, Micropolis, Lapland UAS und OAMK. Insgesamt 20 Personen.</p>\n<p><strong>Inhalt:</strong> Trennung und Recycling auf Baustellen, Technologien zur Bauabfallbehandlung, eine Recyclinganlage für Baustoffe, Abwärmerückgewinnung und -nutzung, ein „Öko-Quartier“ mit eigener Strom- und Wärmeerzeugung und intelligenter Steuerung, ESCO-Projekte sowie Energiemanagement und -speicherung.</p>\n<p><strong>Hintergrund:</strong> Die Reise entstand in Zusammenarbeit mit den EFRE-geförderten Projekten Energiaratkaisut 2020 und Teolliset symbioosit Pohjois-Pohjanmaalla sowie Micropolis in Ii.</p>"
+      "case.osao.more": "\n<p><strong>Teilnehmende:</strong> Projektverantwortliche und -mitglieder sowie eingeladene Organisationen, darunter Lassila &amp; Tikanoja, VTT, Micropolis, Lapland UAS und OAMK. Insgesamt 20 Personen.</p>\n<p><strong>Inhalt:</strong> Trennung und Recycling auf Baustellen, Technologien zur Bauabfallbehandlung, eine Recyclinganlage für Baustoffe, Abwärmerückgewinnung und -nutzung, ein „Öko-Quartier“ mit eigener Strom- und Wärmeerzeugung und intelligenter Steuerung, ESCO-Projekte sowie Energiemanagement und -speicherung.</p>\n<p><strong>Hintergrund:</strong> Die Reise entstand in Zusammenarbeit mit den EFRE-geförderten Projekten Energiaratkaisut 2020 und Teolliset symbioosit Pohjois-Pohjanmaalla sowie Micropolis in Ii.</p>",
+      "alt.case-turkuamk": "Teilnehmende bei einer Führung entlang eines Regenwassergrabens in einem Wohngebiet.",
+      "alt.case-lsjh": "Teilnehmende in Warnwesten in einer Wiederverwendungshalle in den Niederlanden.",
+      "alt.case-salaoja": "Eine Gruppe vor Dränagemaschinen im Werk des Herstellers in Deutschland.",
+      "alt.case-muhos": "Eine Gruppe lauscht einer Führung an den Modulreihen eines Solarkraftwerks.",
+      "alt.case-seinajoki": "Ein Gruppenfoto vor dem Schloss Nymphenburg in München.",
+      "alt.case-ladec": "Teilnehmende lauschen einer Führung an Matratzenballen und einer Sortierlinie.",
+      "alt.case-rosknroll": "Eine Gruppe bei einer Führung vor den Anbauregalen einer Vertical-Farming-Anlage.",
+      "alt.case-salpakierto": "Eine Gruppe bei einer Führung vor einem farbenfrohen Anlagengebäude.",
+      "alt.case-ely": "Ein Projekt zur Klimaanpassung im Stadtraum in Norddeutschland.",
+      "alt.case-osao": "Teilnehmende lauschen einer Führung im Innenhof eines Wohnblocks mit Solardächern."
     },
     "minusta.html": {
       "meta.title": "Martin Brandt — FinDera Consulting",
@@ -355,7 +390,9 @@
       "about.p4": "Auf diesem Fundament ruht der Kern von FinDera. Ich finde die richtigen Akteure und wähle die Ziele, von denen Sie tatsächlich profitieren. Ich öffne Türen, sichere die Termine und gestalte die Begegnungen so, dass daraus Erkenntnisse und Zusammenarbeit entstehen.",
       "footer.tagline": "Beratung zu Kreislaufwirtschaft und Nachhaltigkeit sowie Studien- und Benchmarking-Reisen in ganz Europa.",
       "stats.people": "Fachleute haben teilgenommen",
-      "stats.since": "seit dem sind Kontakte aufgebaut worden"
+      "stats.since": "seit dem sind Kontakte aufgebaut worden",
+      "alt.martin": "Martin Brandt bei einem Standortbesuch in der Johan Cruijff ArenA in Amsterdam.",
+      "a11y.linkedin": "Martin Brandt auf LinkedIn"
     },
     "yhteystiedot.html": {
       "meta.title": "Kontakt — FinDera Consulting",
@@ -393,7 +430,8 @@
       "contact.next": "Wie es weitergeht",
       "contact.n1": "Ich antworte auf Ihre Nachricht in der Regel noch am selben Werktag.",
       "contact.n2": "Wir führen ein kurzes Gespräch über Ihr Ziel — kostenlos und unverbindlich.",
-      "contact.n3": "Sie erhalten einen Vorschlag zum Vorgehen und ein Angebot, sofern eine Fortsetzung sinnvoll erscheint."
+      "contact.n3": "Sie erhalten einen Vorschlag zum Vorgehen und ein Angebot, sofern eine Fortsetzung sinnvoll erscheint.",
+      "form.honeypot": "Dieses Feld bitte leer lassen"
     },
     "tietosuoja.html": {
       "meta.title": "Datenschutzerklärung — FinDera Consulting",
@@ -427,6 +465,16 @@
       "ts.7.body2": "Sollten Sie der Ansicht sein, dass Ihre Daten rechtswidrig verarbeitet wurden, haben Sie das Recht, sich bei der finnischen Datenschutzbehörde (<a href=\"https://tietosuoja.fi\" target=\"_blank\" rel=\"noopener\">tietosuoja.fi</a>) zu beschweren.",
       "ts.8.title": "8. Änderungen dieser Erklärung",
       "ts.8.body": "Wir können diese Datenschutzerklärung bei Bedarf aktualisieren. Das Datum der letzten Aktualisierung finden Sie am Anfang dieser Seite."
+    },
+    "kiitos.html": {
+      "meta.title": "Danke für Ihre Nachricht — FinDera Consulting",
+      "meta.desc": "Danke für Ihre Nachricht. Martin Brandt meldet sich in Kürze bei Ihnen.",
+      "ty.eyebrow": "Danke",
+      "ty.title": "Ihre Nachricht ist <em class=\"hl serif-accent\">angekommen</em>.",
+      "ty.lead": "Vielen Dank für Ihre Nachricht. Ich lese jede Nachricht persönlich und antworte in der Regel noch am selben Werktag. In dringenden Fällen erreichen Sie mich direkt unter <a href=\"tel:+358503363233\">+358 50 336 3233</a>.",
+      "ty.home": "Zurück zur Startseite",
+      "ty.projects": "Durchgeführte Reisen ansehen",
+      "ty.header": "Zur Startseite"
     }
   }
 }

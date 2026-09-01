@@ -57,6 +57,8 @@ tietosuoja.html       Tietosuojaseloste (findera.fi/tietosuoja)
 kiitos.html           Kiitossivu lomakkeen lähetyksen jälkeen
 landing1.html         Kampanjan laskeutumissivu (findera.fi/landing1)
 404.html              Virhesivu — Netlify tarjoilee tämän tuntemattomille osoitteille
+
+en/                   Englanninkieliset sivut — GENEROIDAAN, älä muokkaa käsin
 ```
 
 Tiedostojen nimissä on `.html`, mutta **sivuston osoitteissa ei**: `palvelut.html`
@@ -153,17 +155,54 @@ Muuta molemmat: `data-count="70"` (animaation loppuarvo) ja näkyvä `70+`.
 
 ## Kielet: FI / EN / DE
 
-Suomi on ensisijainen kieli ja se on kirjoitettu suoraan HTML:ään. Tämä tarkoittaa,
-että suomenkielinen sivusto näkyy heti, toimii ilman JavaScriptiä ja indeksoituu
-hakukoneisiin täysin.
+**Suomi ja englanti ovat omia sivujaan, saksa ladataan päälle selaimessa.**
 
-Englanti ja saksa ladataan päälle vasta, kun kävijä valitsee kielen
-yläpalkin `FI`-valikosta. Valinta muistetaan selaimessa.
+Suomi on ensisijainen kieli ja se on kirjoitettu suoraan HTML:ään. Englanninkieliset
+sivut ovat kansiossa `en/`, ja ne kirjoitetaan valmiiksi samoista käännöksistä
+skriptillä `tools/build_lang.py`. Kumpikin kieli näkyy siis hakukoneelle
+sellaisenaan — hakukone ei paina kielivalitsinta, joten pelkkä selaimessa tapahtuva
+vaihto ei riitä näkyvyyteen.
 
-Kieleen voi myös linkittää suoraan:
+Saksa ladataan yhä päälle, kun kävijä valitsee `DE` yläpalkin valikosta. Saksa ei
+siksi näy hakutuloksissa. Jos sekin halutaan joskus indeksiin, sama rakenne
+toistetaan saksalle: `tools/build_lang.py`:hyn lisätään saksankieliset osoitteet,
+jolloin syntyy kansio `de/`. Työ on pieni, koska koneisto on jo olemassa.
 
-- `https://www.findera.fi/?lang=de`
-- `https://www.findera.fi/palvelut?lang=en`
+| suomi | englanti |
+|---|---|
+| `/` | `/en/` |
+| `/palvelut` | `/en/services` |
+| `/projektit` | `/en/projects` |
+| `/minusta` | `/en/about` |
+| `/yhteystiedot` | `/en/contact` |
+| `/tietosuoja` | `/en/privacy` |
+| `/kiitos` | `/en/thank-you` |
+
+Sivut kertovat toisistaan `hreflang`-riveillä, joten Google tietää ne saman sivun
+kieliversioiksi eikä pidä niitä kaksoiskappaleina.
+
+Kielivalitsin siirtyy suomen ja englannin välillä sivulta toiselle. Valinta
+muistetaan selaimessa, mutta muistettu englanti ei enää vaihda suomenkielisen
+osoitteen tekstejä — muuten englanti näkyisi suomenkielisessä osoitteessa.
+Osoitteessa annettu `?lang=en` vie englanninkieliselle sivulle:
+
+- `https://www.findera.fi/?lang=de` — saksa ladataan päälle
+- `https://www.findera.fi/palvelut?lang=en` — siirtyy osoitteeseen `/en/services`
+
+### Englanninkielisten sivujen luonti
+
+```bash
+python3 tools/build_lang.py            # luo kansion en/
+python3 tools/build_lang.py --kokeile  # näyttää mitä syntyisi
+```
+
+Skripti ylikirjoittaa kansion `en/` kokonaan, joten **sen tiedostoja ei muokata
+käsin** — tekstit muutetaan kansiossa `content/<sivu>/en.json` kuten ennenkin.
+Netlify ajaa julkaisussa ensin `apply_content.py`:n ja sitten `build_lang.py`:n,
+joten englanninkieliset sivut ovat aina ajan tasalla ilman erillistä muistamista.
+
+Skripti tarkistaa lopuksi itse, että jokainen käännöskohta todella vaihtui, ja
+keskeytyy jos jokin jäi suomeksi.
 
 Käännöstiedostojen rakenne:
 

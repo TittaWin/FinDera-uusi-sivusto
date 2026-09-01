@@ -22,6 +22,7 @@ PAGES = [
     ("minusta.html",      "minusta"),
     ("yhteystiedot.html", "yhteystiedot"),
     ("tietosuoja.html",   "tietosuoja"),
+    ("kiitos.html",       "kiitos"),
 ]
 LANGS = ("fi", "en", "de")
 
@@ -103,6 +104,9 @@ SECTION = {
                 "Browser tab and search engine description",
                 "Browser-Tab und Suchmaschinenbeschreibung"),
     "a11y":    ("Saavutettavuus", "Accessibility", "Barrierefreiheit"),
+    "alt":     ("Kuvien vaihtoehtoiset tekstit", "Image alternative texts",
+                "Alternativtexte der Bilder"),
+    "ty":      ("Kiitossivu", "Thank-you page", "Dankesseite"),
     "nav":     ("Päävalikko", "Main navigation", "Hauptnavigation"),
     "hero":    ("Etusivun pääkuva-osio", "Front page hero section", "Hero-Bereich der Startseite"),
     "stats":   ("Tunnusluvut", "Key figures", "Kennzahlen"),
@@ -204,6 +208,9 @@ FIELD = {
     "body2":   ("leipäteksti, 2. kappale", "body text, 2nd paragraph", "Fließtext, 2. Absatz"),
     "updated": ("päivityspäivä", "date of last update", "Datum der letzten Aktualisierung"),
     "privacy": ("valikon linkki", "navigation link", "Navigationslink"),
+    "honeypot":("piilokentän teksti roskapostisuodatusta varten",
+                "hidden field label used for spam filtering",
+                "Text des versteckten Felds zur Spam-Abwehr"),
 }
 
 # Avaimet, jotka eivat noudata yleista kaavaa
@@ -324,6 +331,7 @@ PAGE_NAME = {
     "minusta":      ("Minusta", "About", "Über mich"),
     "yhteystiedot": ("Yhteystiedot", "Contact", "Kontakt"),
     "tietosuoja":   ("Tietosuojaseloste", "Privacy policy", "Datenschutzerklärung"),
+    "kiitos":       ("Kiitossivu", "Thank-you page", "Dankesseite"),
 }
 
 

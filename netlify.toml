@@ -2,10 +2,11 @@
 
 [build]
   publish = "."
-  # Vie content/-kansion tekstit sivuille ennen julkaisua, jotta julkaistu
-  # sivusto vastaa aina content/-kansiota. Jos skripti epäonnistuu, julkaisu
+  # Vie content/-kansion tekstit sivuille ja luo sen jälkeen englanninkieliset
+  # sivut kansioon en/, jotta julkaistu sivusto vastaa aina content/-kansiota
+  # molemmilla kielillä. Jos kumpi tahansa skripti epäonnistuu, julkaisu
   # keskeytyy ja edellinen versio jää pystyyn.
-  command = "python3 tools/apply_content.py"
+  command = "python3 tools/apply_content.py && python3 tools/build_lang.py"
 
 # Fontit eivät koskaan muutu, joten ne saavat pitkän välimuistin.
 [[headers]]
@@ -77,6 +78,11 @@
 
 [[headers]]
   for = "/kiitos"
+  [headers.values]
+    Cache-Control = "public, no-cache"
+
+[[headers]]
+  for = "/en/*"
   [headers.values]
     Cache-Control = "public, no-cache"
 
@@ -182,6 +188,50 @@
 [[redirects]]
   from = "/index.html"
   to = "/"
+  status = 301
+  force = true
+
+# Sama päätteetön muoto englanninkielisillä sivuilla.
+
+[[redirects]]
+  from = "/en/index.html"
+  to = "/en/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/services.html"
+  to = "/en/services"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/projects.html"
+  to = "/en/projects"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/about.html"
+  to = "/en/about"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/contact.html"
+  to = "/en/contact"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/privacy.html"
+  to = "/en/privacy"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/thank-you.html"
+  to = "/en/thank-you"
   status = 301
   force = true
 
