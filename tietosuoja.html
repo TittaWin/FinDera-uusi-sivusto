@@ -126,7 +126,7 @@
 
 <section class="section">
   <div class="wrap wrap-narrow">
-    <p class="ts-updated" data-i18n="ts.updated">Päivitetty 7.8.2026</p>
+    <p class="ts-updated" data-i18n="ts.updated">Päivitetty 1.9.2026</p>
 
     <hr class="rule" style="margin-block:clamp(1.5rem,3vw,2.25rem)">
 
@@ -179,19 +179,27 @@
       </p>
       <p data-i18n="ts.5.body2">
         Käytämme yhteydenottolomakkeen tekniseen toteutukseen Netlify-palvelua (Netlify, Inc.,
-        Yhdysvallat), joka toimii henkilötietojen käsittelijänä. Tämä tarkoittaa, että
-        lomakkeen kautta lähetetyt tiedot kulkevat Netlifyn infrastruktuurin kautta, mikä voi
-        sisältää tietojen siirtoa Euroopan talousalueen ulkopuolelle. Siirto perustuu EU:n
-        komission hyväksymiin suojatoimiin (kuten vakiosopimuslausekkeisiin tai EU–US Data
-        Privacy Framework -järjestelyyn, mikäli palveluntarjoaja on siihen sertifioitunut).
-        Emme käytä muita kolmansien osapuolten palveluja tietojen käsittelyyn.
+        Yhdysvallat), joka toimii henkilötietojen käsittelijänä. Tämä tarkoittaa, että lomakkeen
+        kautta lähetetyt tiedot kulkevat Netlifyn infrastruktuurin kautta, mikä voi sisältää
+        tietojen siirtoa Euroopan talousalueen ulkopuolelle. Siirto perustuu EU:n komission
+        hyväksymiin suojatoimiin (kuten vakiosopimuslausekkeisiin tai EU–US Data Privacy
+        Framework -järjestelyyn, mikäli palveluntarjoaja on siihen sertifioitunut).
+        Kävijätilastointiin käytämme lisäksi Cloudflare Web Analytics -palvelua (Cloudflare,
+        Inc., Yhdysvallat); siitä kerrotaan tarkemmin kohdassa 6. Emme käytä muita kolmansien
+        osapuolten palveluja tietojen käsittelyyn.
       </p>
 
-      <h2 data-i18n="ts.6.title">6. Evästeet</h2>
+      <h2 data-i18n="ts.6.title">6. Evästeet ja kävijätilastot</h2>
       <p data-i18n="ts.6.body">
         Sivustomme ei käytä analytiikka-, markkinointi- tai muita ei-välttämättömiä evästeitä.
-        Sivustolla oleva LinkedIn-linkki on tavallinen hyperlinkki, joka ei aseta evästeitä
-        ennen kuin klikkaat sitä ja siirryt LinkedIniin.
+        Kävijämäärien seurantaan käytämme Cloudflare Web Analytics -palvelua, joka ei aseta
+        evästeitä eikä tallenna mitään selaimesi muistiin. Palvelu ei tunnista yksittäisiä
+        kävijöitä eikä seuraa heitä sivustolta toiselle. Kerättävä tieto on tilastollista:
+        avattu sivu, viittaava sivusto, maa, selain ja laitetyyppi. Käsittelyn oikeusperusteena
+        on oikeutettu etu (EU:n yleinen tietosuoja-asetus, 6 artikla 1 kohta f alakohta): meillä
+        on perusteltu tarve tietää, mitkä sisällöt kiinnostavat kävijöitä. Sivustolla oleva
+        LinkedIn-linkki on tavallinen hyperlinkki, joka ei aseta evästeitä ennen kuin klikkaat
+        sitä ja siirryt LinkedIniin.
       </p>
 
       <h2 data-i18n="ts.7.title">7. Rekisteröidyn oikeudet</h2>
@@ -279,5 +287,11 @@
 
 <script src="assets/js/main.js"></script>
 <script>document.getElementById("vuosi").textContent = new Date().getFullYear();</script>
+
+<!-- Cloudflare Web Analytics. Evästeetön kävijälaskenta: skripti ei aseta
+     evästeitä eikä tallenna mitään selaimeen, joten evästebanneria ei tarvita.
+     Sama token kaikilla sivuilla — Cloudflare erottelee sivut osoitteen
+     perusteella. -->
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "7165316b12e9427abe3664cca7ffb2c5"}'></script>
 </body>
 </html>
