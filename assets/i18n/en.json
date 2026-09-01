@@ -39,7 +39,11 @@
     "footer.langs": "I work in Finnish, German and English.",
     "footer.rights": "All rights reserved.",
     "footer.credit": "Designed &amp; built by <a href=\"https://www.studiotitta.fi\" target=\"_blank\" rel=\"noopener\">Studio&nbsp;Titta</a>",
-    "footer.privacy": "Privacy Policy"
+    "footer.privacy": "Privacy Policy",
+    "a11y.home": "FinDera Consulting — home",
+    "a11y.nav": "Main menu",
+    "a11y.lang": "Change language",
+    "a11y.menu": "Open menu"
   },
   "pages": {
     "index.html": {
@@ -126,7 +130,26 @@
       "aii.1.desc": "The meetings and site visits that are otherwise hard to realize.",
       "aii.2.desc": "Comparable lessons you can actually apply, not just presentations.",
       "aii.3.desc": "A shared direction and concrete next steps.",
-      "footer.tagline": "Sustainable development consulting, and study/benchmarking trips across Europe."
+      "footer.tagline": "Sustainable development consulting, and study/benchmarking trips across Europe.",
+      "a11y.clients": "Clients: Rosk'n Roll Oy Ab, Koulutuskuntayhtymä OSAO, Seinäjoen Energia Oy, Lahden Seudun Kehitys LADEC Oy, Salpakierto Oy, Salaojayhdistys ry, Varsinais-Suomen ELY-keskus, Lounais-Suomen Jätehuolto Oy, Kymenlaakson Jäte Oy, Turun ammattikorkeakoulu, Muhoksen kunta",
+      "alt.hero-rotterdam": "A group of Finnish experts visiting an urban development site in Rotterdam beside the Erasmus Bridge.",
+      "alt.intro-ryhma": "A group of Finnish experts outside a host site in the Netherlands.",
+      "alt.palvelu-matkat": "A group in high-visibility vests and helmets on a site visit.",
+      "alt.palvelu-tapaamiset": "A Finnish delegation meeting at the premises of a German host organisation.",
+      "alt.palvelu-kartoitus": "Experts studying control room displays and process diagrams at a plant.",
+      "alt.illat-1": "The wood-panelled hall of a traditional German restaurant with chandeliers.",
+      "alt.illat-2": "German stoneware tankards being clinked together above a table.",
+      "alt.illat-3": "A group in conversation at the tables of a colourfully decorated restaurant.",
+      "alt.illat-4": "A folk music ensemble playing harp, double bass and accordion in a restaurant hall.",
+      "alt.illat-5": "Participants at a long banquet table with plates and beer glasses in front of them.",
+      "alt.galleria-1": "A group of experts in protective suits touring the yard of a treatment plant.",
+      "alt.galleria-2": "Participants in helmets studying a scale model of a plant and a process diagram.",
+      "alt.galleria-3": "A Finnish delegation in front of a solar energy site in Germany.",
+      "alt.intro-ryhma-2": "A group touring the tank area of a biogas plant.",
+      "alt.galleria-5": "Participants in safety gear at a circular economy site under construction.",
+      "alt.galleria-6": "Experts in conversation beside a solar panel field.",
+      "alt.galleria-7": "A group photo in a mountain landscape along a study trip.",
+      "alt.galleria-8": "Visitors in protective equipment beside a production line."
     },
     "palvelut.html": {
       "meta.title": "Services — FinDera Consulting",
@@ -214,7 +237,9 @@
       "pwhy.5.desc": "Smooth execution, good spirit, and a trip participants remember.",
       "pwhy.note": "The hardest work and the real risk are not in the itinerary on paper. They are in the quality of the sites, in getting the meetings confirmed, in a rhythm that holds, and in whether the visits genuinely serve the objective. Get those right and the trip produces insights, contacts and concrete next steps.",
       "p2.desc2": "When the aim is to find partners, map out opportunities for collaboration or benchmark solutions to support a decision, I build you a set of meetings where the right people and the right agenda come together.",
-      "footer.tagline": "Sustainable development consulting, and study/benchmarking trips across Europe."
+      "footer.tagline": "Sustainable development consulting, and study/benchmarking trips across Europe.",
+      "alt.palvelu-tapaamiset-2": "A Finnish delegation at the host organisation's premises at the start of a meeting.",
+      "alt.palvelu-kartoitus-2": "Experts examining process displays and diagrams at a plant."
     },
     "projektit.html": {
       "meta.title": "Projects and references — FinDera Consulting",
@@ -308,7 +333,17 @@
       "case.salaoja.more": "\n<p><strong>Participants:</strong> the association's executive director and representatives of member companies, 16 people in all.</p>\n<p><strong>Sites:</strong> subsurface drainage machinery plants, research institutes, and construction and design sites.</p>",
       "case.ely.more": "\n<p><strong>Participants:</strong> project leads and members together with invited organisations, among them MTK, the Baltic Sea Action Group, AFRY, Vaisala and the Ministry of Agriculture and Forestry. Sixteen people in all.</p>\n<p><strong>Content:</strong> practical solutions and models of cooperation in urban, agricultural and water management adaptation. The trip was delivered within the IBA and Lossi projects.</p>",
       "case.osao.more": "\n<p><strong>Participants:</strong> project leads and members together with invited organisations, among them Lassila &amp; Tikanoja, VTT, Micropolis, Lapland UAS and OAMK. Twenty people in all.</p>\n<p><strong>Content:</strong> sorting and recycling on construction sites, construction waste treatment technologies, a building materials recycling plant, waste heat recovery and use, an ”eco-block” with its own power and heat generation and smart control, ESCO projects, and energy management and storage.</p>\n<p><strong>Background:</strong> the trip was planned jointly with the ERDF-funded Energiaratkaisut 2020 and Teolliset symbioosit Pohjois-Pohjanmaalla projects and Micropolis in Ii.</p>",
-      "footer.tagline": "Sustainable development consulting, and study/benchmarking trips across Europe."
+      "footer.tagline": "Sustainable development consulting, and study/benchmarking trips across Europe.",
+      "alt.case-turkuamk": "Participants following a guided tour along a stormwater channel in a residential area.",
+      "alt.case-lsjh": "Participants in high-visibility vests in a reuse centre hall in the Netherlands.",
+      "alt.case-salaoja": "A group in front of drainage machinery at the manufacturer's factory in Germany.",
+      "alt.case-muhos": "A group listening to a guide beside the panel rows of a solar power plant.",
+      "alt.case-seinajoki": "A group photo in front of Nymphenburg Palace in Munich.",
+      "alt.case-ladec": "Participants listening to a guide beside mattress bales and a sorting line.",
+      "alt.case-rosknroll": "A group on a guided tour in front of the growing racks of a vertical farming facility.",
+      "alt.case-salpakierto": "A group on a guided tour in front of a brightly coloured plant building.",
+      "alt.case-ely": "An urban climate adaptation site in northern Germany.",
+      "alt.case-osao": "Participants listening to a guide in the courtyard of a residential block with solar panel roofs."
     },
     "minusta.html": {
       "meta.title": "Martin Brandt — FinDera Consulting",
@@ -353,7 +388,9 @@
       "about.p0a": "I am Martin Brandt, the founder of FinDera Consulting. FinDera grew out of hands-on work with sustainable solutions, sustainable development and international connections. My operations naturally build upon the powerful drive of both my home countries, Germany and Finland, to lead the way in energy and circular economy solutions.",
       "about.p0b": "My background spans several kinds of stakeholder. I have worked on sustainability from a number of different vantage points over my career, which gives an unusually complete picture of what the different players need and what actually works in practice.",
       "about.p4": "This background is what FinDera is built on. I find the right players and choose the sites that genuinely benefit you. I open doors, confirm the meetings and shape the encounters so that they produce learning and collaboration.",
-      "footer.tagline": "Sustainable development consulting, and study/benchmarking trips across Europe."
+      "footer.tagline": "Sustainable development consulting, and study/benchmarking trips across Europe.",
+      "alt.martin": "Martin Brandt on a site visit at the Johan Cruijff ArenA in Amsterdam.",
+      "a11y.linkedin": "Martin Brandt on LinkedIn"
     },
     "yhteystiedot.html": {
       "meta.title": "Contact — FinDera Consulting",
@@ -392,7 +429,8 @@
       "contact.n1": "I usually reply to your message the same working day.",
       "contact.n2": "We have a short conversation about your objective — free of charge and without obligation.",
       "contact.n3": "You receive a proposal for how to proceed, and a quote if continuing makes sense.",
-      "footer.tagline": "Sustainable development consulting, and study/benchmarking trips across Europe."
+      "footer.tagline": "Sustainable development consulting, and study/benchmarking trips across Europe.",
+      "form.honeypot": "Leave this field empty"
     },
     "tietosuoja.html": {
       "meta.title": "Privacy Policy — FinDera Consulting",
@@ -426,6 +464,16 @@
       "ts.7.body2": "If you believe your data has been processed unlawfully, you have the right to lodge a complaint with the Finnish Data Protection Ombudsman (<a href=\"https://tietosuoja.fi\" target=\"_blank\" rel=\"noopener\">tietosuoja.fi</a>).",
       "ts.8.title": "8. Changes to This Policy",
       "ts.8.body": "We may update this policy from time to time. The date of the latest update is shown at the top of this page."
+    },
+    "kiitos.html": {
+      "meta.title": "Thank you for your message — FinDera Consulting",
+      "meta.desc": "Thank you for getting in touch. Martin Brandt will be in touch shortly.",
+      "ty.eyebrow": "Thank you",
+      "ty.title": "Your message has <em class=\"hl serif-accent\">arrived</em>.",
+      "ty.lead": "Thank you for getting in touch. I read every message personally and usually reply the same working day. If your matter is urgent, call me directly on <a href=\"tel:+358503363233\">+358 50 336 3233</a>.",
+      "ty.home": "Back to the home page",
+      "ty.projects": "See completed trips",
+      "ty.header": "To the home page"
     }
   }
 }
