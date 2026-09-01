@@ -36,6 +36,13 @@ Avaa selaimessa <http://localhost:8765>.
 
 Palvelimen saa suljettua painamalla `Ctrl + C`.
 
+> **Huom:** sivuston osoitteet ovat päätteettömiä (`/palvelut`, ei
+> `/palvelut.html`). `python3 -m http.server` ei osaa tarjoilla niitä, joten
+> valikon linkit näyttävät paikallisesti virhesivun. Avaa sivut suoraan
+> tiedostonimellä (<http://localhost:8765/palvelut.html>) tai käynnistä
+> palvelin komennolla `npx netlify dev`, joka lukee `netlify.toml`-asetukset
+> ja toimii kuten julkaistu sivusto.
+
 ---
 
 ## Tiedostorakenne
@@ -50,6 +57,15 @@ tietosuoja.html       Tietosuojaseloste (findera.fi/tietosuoja)
 kiitos.html           Kiitossivu lomakkeen lähetyksen jälkeen
 landing1.html         Kampanjan laskeutumissivu (findera.fi/landing1)
 404.html              Virhesivu — Netlify tarjoilee tämän tuntemattomille osoitteille
+```
+
+Tiedostojen nimissä on `.html`, mutta **sivuston osoitteissa ei**: `palvelut.html`
+näkyy verkossa osoitteessa `findera.fi/palvelut`. Vanhat `.html`-osoitteet
+ohjautuvat pysyvästi (301) uusiin, ja ohjaukset on määritelty
+`netlify.toml`-tiedostossa. Sama muoto on kanonisissa osoitteissa, sivukartassa
+ja sivujen sisäisissä linkeissä.
+
+```
 
 assets/
   css/style.css       Kaikki tyylit (värit, typografia, animaatiot)
@@ -147,7 +163,7 @@ yläpalkin `FI`-valikosta. Valinta muistetaan selaimessa.
 Kieleen voi myös linkittää suoraan:
 
 - `https://www.findera.fi/?lang=de`
-- `https://www.findera.fi/palvelut.html?lang=en`
+- `https://www.findera.fi/palvelut?lang=en`
 
 Käännöstiedostojen rakenne:
 
