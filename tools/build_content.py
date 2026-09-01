@@ -195,6 +195,10 @@ FIELD = {
                 "Bezeichnung in der Faktenzeile: Teilnehmende"),
     "sites":   ("tietorivin otsake: kohteiden määrä", "fact row label: number of sites",
                 "Bezeichnung in der Faktenzeile: Anzahl der Ziele"),
+    "destv":   ("tietorivin arvo: kohdemaa", "fact row value: destination",
+                "Wert in der Faktenzeile: Zielland"),
+    "lenv":    ("tietorivin arvo: kesto", "fact row value: duration",
+                "Wert in der Faktenzeile: Dauer"),
     "body":    ("leipäteksti", "body text", "Fließtext"),
     "body1":   ("leipäteksti, 1. kappale", "body text, 1st paragraph", "Fließtext, 1. Absatz"),
     "body2":   ("leipäteksti, 2. kappale", "body text, 2nd paragraph", "Fließtext, 2. Absatz"),
@@ -233,6 +237,8 @@ CASE_NAMES = {
     "seinajoki": "Seinäjoen Energia Oy", "ladec": "Lahden Seudun Kehitys LADEC Oy",
     "salpakierto": "Salpakierto Oy", "salaoja": "Salaojayhdistys ry",
     "ely": "Varsinais-Suomen ELY-keskus", "osao": "Koulutuskuntayhtymä OSAO",
+    "turkuamk": "Turun ammattikorkeakoulu", "muhos": "Muhoksen kunta",
+    "se": "Seinäjoen Energia Oy", "salpa": "Salpakierto Oy",
     "type": None, "f": None, "more": None,
 }
 
