@@ -424,14 +424,21 @@ ladattu kansioon `assets/fonts/`. Sivusto ei siis tee yhtään pyyntöä Googlen
 palvelimille — tämä on tietoinen valinta GDPR:n vuoksi, koska asiakaskuntaa on
 Saksassa, missä Google Fontsin suora käyttö on todettu ongelmalliseksi.
 
-**Ei evästeitä eikä seurantaa.** Sivusto ei aseta evästeitä, joten evästebanneria
-ei tarvita. Kielivalinta tallennetaan selaimen omaan muistiin (localStorage),
-mikä ei ole eväste eikä vaadi suostumusta.
+**Ei evästeitä.** Sivusto ei aseta evästeitä, joten evästebanneria ei tarvita.
+Kielivalinta tallennetaan selaimen omaan muistiin (localStorage), mikä ei ole
+eväste eikä vaadi suostumusta.
+
+**Kävijämittaus on Cloudflare Web Analytics.** Skripti on jokaisen sivun lopussa
+ennen `</body>`-tagia. Se ei aseta evästeitä eikä kirjoita mitään kävijän
+laitteelle, ei tunnista yksittäisiä kävijöitä eikä seuraa heitä sivustojen
+välillä. Verkkotunnus ei ole Cloudflaren takana — mittaus toimii pelkällä
+skriptillä, eikä DNS:ää tarvitse siirtää. Sama token kaikilla sivuilla.
+Tulokset: Cloudflare-hallinta → Analytics → Web analytics.
 
 **Tietosuojaseloste** on omalla sivullaan `tietosuoja.html` kolmella kielellä ja
 kuuluu `content/`-käännösputkeen kuten muutkin sivut. Linkki on jokaisen sivun
-alatunnisteessa. Selosteen luku 6 kertoo, ettei sivustolla ole analytiikkaa —
-**jos kävijämittaus joskus otetaan käyttöön, tämä luku on päivitettävä samalla.**
+alatunnisteessa. Luku 6 kuvaa kävijämittauksen ja luku 5 nimeää käsittelijät —
+**jos mittaustyökalu vaihtuu tai palveluja lisätään, molemmat on päivitettävä.**
 
 **Saavutettavuus.** Sivusto kunnioittaa käyttöjärjestelmän *vähennä liikettä*
 -asetusta: jos se on päällä, kaikki animaatiot poistuvat käytöstä. Sivustoa voi
