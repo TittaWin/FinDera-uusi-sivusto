@@ -6,27 +6,27 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.findera.fi/palvelut.html</loc>
+    <loc>https://www.findera.fi/palvelut</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.findera.fi/projektit.html</loc>
+    <loc>https://www.findera.fi/projektit</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.findera.fi/minusta.html</loc>
+    <loc>https://www.findera.fi/minusta</loc>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.findera.fi/yhteystiedot.html</loc>
+    <loc>https://www.findera.fi/yhteystiedot</loc>
     <changefreq>yearly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.findera.fi/tietosuoja.html</loc>
+    <loc>https://www.findera.fi/tietosuoja</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>

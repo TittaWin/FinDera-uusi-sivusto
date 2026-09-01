@@ -41,6 +41,46 @@
 
 # HTML-sivut haetaan aina tuoreena
 [[headers]]
+  for = "/"
+  [headers.values]
+    Cache-Control = "public, no-cache"
+
+[[headers]]
+  for = "/palvelut"
+  [headers.values]
+    Cache-Control = "public, no-cache"
+
+[[headers]]
+  for = "/projektit"
+  [headers.values]
+    Cache-Control = "public, no-cache"
+
+[[headers]]
+  for = "/minusta"
+  [headers.values]
+    Cache-Control = "public, no-cache"
+
+[[headers]]
+  for = "/yhteystiedot"
+  [headers.values]
+    Cache-Control = "public, no-cache"
+
+[[headers]]
+  for = "/tietosuoja"
+  [headers.values]
+    Cache-Control = "public, no-cache"
+
+[[headers]]
+  for = "/landing1"
+  [headers.values]
+    Cache-Control = "public, no-cache"
+
+[[headers]]
+  for = "/kiitos"
+  [headers.values]
+    Cache-Control = "public, no-cache"
+
+[[headers]]
   for = "/*.html"
   [headers.values]
     Cache-Control = "public, no-cache"
@@ -86,56 +126,81 @@
   status = 301
   force = true
 
-# Siistit osoitteet ilman .html-päätettä (vanhat osoitteet ohjautuvat uusiin)
-[[redirects]]
-  from = "/palvelut"
-  to = "/palvelut.html"
-  status = 200
+# Sivuston osoitteet ovat päätteettömiä (/palvelut, ei /palvelut.html).
+# Netlify tarjoilee tiedoston palvelut.html osoitteessa /palvelut ilman
+# erillistä sääntöä, joten tässä ohjataan vain vanhat .html-osoitteet uusiin,
+# jotta hakukoneet ja vanhat linkit päätyvät kanoniseen osoitteeseen.
+#
+# force = true on välttämätön: ilman sitä olemassa oleva tiedosto voittaa
+# ohjaussäännön eikä ohjaus laukea lainkaan.
+#
+# HUOM: 404.html ei ole listalla — Netlify käyttää sitä virhesivuna
+# sellaisenaan, eikä sille saa tehdä ohjausta.
 
 [[redirects]]
-  from = "/projektit"
-  to = "/projektit.html"
-  status = 200
+  from = "/palvelut.html"
+  to = "/palvelut"
+  status = 301
+  force = true
 
 [[redirects]]
-  from = "/minusta"
-  to = "/minusta.html"
-  status = 200
+  from = "/projektit.html"
+  to = "/projektit"
+  status = 301
+  force = true
 
 [[redirects]]
-  from = "/yhteystiedot"
-  to = "/yhteystiedot.html"
-  status = 200
+  from = "/minusta.html"
+  to = "/minusta"
+  status = 301
+  force = true
 
 [[redirects]]
-  from = "/tietosuoja"
-  to = "/tietosuoja.html"
-  status = 200
+  from = "/yhteystiedot.html"
+  to = "/yhteystiedot"
+  status = 301
+  force = true
 
-# Kampanjoissa käytetty osoite findera.fi/landing1. Sivu on noindex, joten
-# tämä ei koske hakukoneita — kyse on siitä, että mainoslinkki pysyy vakaana
-# eikä nojaa Netlifyn oletuskäyttäytymiseen.
 [[redirects]]
-  from = "/landing1"
-  to = "/landing1.html"
-  status = 200
+  from = "/tietosuoja.html"
+  to = "/tietosuoja"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/landing1.html"
+  to = "/landing1"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/kiitos.html"
+  to = "/kiitos"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+  force = true
 
 # Google Sites -aikaiset osoitteet ohjataan uusiin, jotta hakukoneiden
 # ja vanhojen linkkien kautta tulevat kävijät eivät päädy virhesivulle.
 # Vanha yhteystietosivu oli osoitteessa /ota-yhteyttä (ä-kirjaimella).
 [[redirects]]
   from = "/ota-yhteyttä"
-  to = "/yhteystiedot.html"
+  to = "/yhteystiedot"
   status = 301
 
 [[redirects]]
   from = "/ota-yhteytt%C3%A4"
-  to = "/yhteystiedot.html"
+  to = "/yhteystiedot"
   status = 301
 
 [[redirects]]
   from = "/ota-yhteytta"
-  to = "/yhteystiedot.html"
+  to = "/yhteystiedot"
   status = 301
 
 # Google Sitesin etusivu oli myös osoitteessa /findera
