@@ -12,6 +12,15 @@
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  // Tietosuojaseloste (luku 6) lupaa ettei sivusto käytä evästeitä. Oletus
+  // "denied" ilman koskaan tulevaa "granted"-päivitystä (ei suostumus-
+  // banneria) estää GA4:ää asettamasta evästeitä.
+  gtag('consent', 'default', {
+    'analytics_storage': 'denied',
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied'
+  });
   gtag('js', new Date());
   gtag('config', 'G-DSJRJXVJZG');
 </script>
