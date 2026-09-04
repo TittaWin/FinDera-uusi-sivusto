@@ -12,15 +12,22 @@
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  // Tietosuojaseloste (luku 6) lupaa ettei sivusto käytä evästeitä. Oletus
-  // "denied" ilman koskaan tulevaa "granted"-päivitystä (ei suostumus-
-  // banneria) estää GA4:ää asettamasta evästeitä.
+  // Oletus on aina "denied": GA4 ei koskaan asenna evästettä itsestään.
+  // assets/js/evasteet.js kysyy luvan, ja rivit alla palauttavat aiemmin
+  // annetun luvan heti, ilman että kävijän täytyy nähdä banneria uudelleen
+  // joka sivulla.
   gtag('consent', 'default', {
     'analytics_storage': 'denied',
     'ad_storage': 'denied',
     'ad_user_data': 'denied',
     'ad_personalization': 'denied'
   });
+  try {
+    var findera_tallennettu = JSON.parse(localStorage.getItem('findera-evasteet') || 'null');
+    if (findera_tallennettu && findera_tallennettu.version === 1 && findera_tallennettu.status === 'granted') {
+      gtag('consent', 'update', { 'analytics_storage': 'granted' });
+    }
+  } catch (e) {}
   gtag('js', new Date());
   gtag('config', 'G-DSJRJXVJZG');
 </script>
@@ -331,6 +338,7 @@
   </div>
 </footer>
 
+<script defer src="/assets/js/evasteet.js"></script>
 <script src="/assets/js/main.js"></script>
 <script>document.getElementById("vuosi").textContent = new Date().getFullYear();</script>
 

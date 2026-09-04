@@ -13,15 +13,22 @@
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  // Tietosuojaseloste (luku 6) lupaa ettei sivusto käytä evästeitä. Oletus
-  // "denied" ilman koskaan tulevaa "granted"-päivitystä (ei suostumus-
-  // banneria) estää GA4:ää asettamasta evästeitä.
+  // Oletus on aina "denied": GA4 ei koskaan asenna evästettä itsestään.
+  // assets/js/evasteet.js kysyy luvan, ja rivit alla palauttavat aiemmin
+  // annetun luvan heti, ilman että kävijän täytyy nähdä banneria uudelleen
+  // joka sivulla.
   gtag('consent', 'default', {
     'analytics_storage': 'denied',
     'ad_storage': 'denied',
     'ad_user_data': 'denied',
     'ad_personalization': 'denied'
   });
+  try {
+    var findera_tallennettu = JSON.parse(localStorage.getItem('findera-evasteet') || 'null');
+    if (findera_tallennettu && findera_tallennettu.version === 1 && findera_tallennettu.status === 'granted') {
+      gtag('consent', 'update', { 'analytics_storage': 'granted' });
+    }
+  } catch (e) {}
   gtag('js', new Date());
   gtag('config', 'G-DSJRJXVJZG');
 </script>
@@ -170,8 +177,8 @@
       <p data-i18n="ts.5.body1">We do not share your data with third parties for marketing or other purposes.</p>
       <p data-i18n="ts.5.body2">We use Netlify (Netlify, Inc., United States) to technically operate our contact form; Netlify acts as our data processor. This means data submitted through the form passes through Netlify's infrastructure, which may involve transferring data outside the European Economic Area. Such transfers rely on safeguards recognised by the European Commission (such as Standard Contractual Clauses or the EU–US Data Privacy Framework, where the provider is certified under it). We also use Cloudflare Web Analytics (Cloudflare, Inc., United States) and Google Analytics (Google LLC, United States) for visitor statistics; see section 6 for details. We do not use any other third-party services to process your data.</p>
 
-      <h2 data-i18n="ts.6.title">6. Cookies and visitor statistics</h2>
-      <p data-i18n="ts.6.body">Our website does not use analytics, marketing, or other non-essential cookies. To measure visitor numbers we use Cloudflare Web Analytics, which sets no cookies and stores nothing in your browser. The service does not identify individual visitors or track them across websites. The data collected is statistical: the page opened, the referring site, country, browser and device type. We also use Google Analytics, configured so that it likewise sets no cookie and stores nothing in your browser: measurement starts with the consent setting “denied” (Google's Consent Mode), and the site has no feature that would ever change this setting. The legal basis for this processing is legitimate interest (EU General Data Protection Regulation, Article 6(1)(f)): we have a justified need to know which content interests our visitors. The LinkedIn link on our site is a standard hyperlink and does not set any cookies unless you click it and are taken to LinkedIn.</p>
+      <h2 id="evasteet" data-i18n="ts.6.title">6. Cookies and visitor statistics</h2>
+      <p data-i18n="ts.6.body">Our website does not set cookies without your permission. To measure visitor numbers we use Cloudflare Web Analytics, which sets no cookies and stores nothing in your browser; the service does not identify individual visitors or track them across websites. The data collected is statistical: the page opened, the referring site, country, browser and device type. We also use Google Analytics, which sets a cookie on your device — that's why we ask for permission via the banner shown at the bottom of the page on your first visit, and it does not start until you press “Accept”. If you press “Decline” or close the banner, Google Analytics installs nothing on your device. Your choice is remembered in your browser's local storage, so the banner doesn't need to appear again on every visit; you can change your choice at any time by clearing it. The legal basis for Cloudflare's measurement is legitimate interest (EU General Data Protection Regulation, Article 6(1)(f)); the legal basis for Google Analytics is your consent. The LinkedIn link on our site is a standard hyperlink and does not set any cookies unless you click it and are taken to LinkedIn.</p>
 
       <h2 data-i18n="ts.7.title">7. Your Rights</h2>
       <p data-i18n="ts.7.intro">You have the right to:</p>
@@ -242,6 +249,7 @@
   </div>
 </footer>
 
+<script defer src="/assets/js/evasteet.js"></script>
 <script src="/assets/js/main.js"></script>
 <script>document.getElementById("vuosi").textContent = new Date().getFullYear();</script>
 

@@ -1208,7 +1208,75 @@ p:last-child { margin-bottom: 0; }
 
 /* Tulostus */
 @media print {
-  .site-header, .site-footer, .scroll-hint, .btn, .marquee { display: none !important; }
+  .site-header, .site-footer, .scroll-hint, .btn, .marquee, .evaste-banneri { display: none !important; }
   body { color: #000; background: #fff; }
   [data-reveal] { opacity: 1 !important; transform: none !important; }
+}
+
+/* Evästebanneri.
+   Kelluva kortti, ei reunasta reunaan menevä palkki: näin sulkurasti ei
+   koskaan ole aivan ruudun reunassa puhelimessa. */
+.evaste-banneri {
+  position: fixed;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 110;
+  max-width: 34rem;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.35rem;
+  padding-right: 3rem;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  animation: evaste-sisaan var(--dur) var(--ease);
+}
+@keyframes evaste-sisaan {
+  from { opacity: 0; transform: translateY(.9rem); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.evaste-banneri__sulje {
+  position: absolute;
+  top: .5rem;
+  right: .5rem;
+  display: grid;
+  place-items: center;
+  /* Kosketusalue vähintään 44 px */
+  width: 2.75rem;
+  height: 2.75rem;
+  border: none;
+  border-radius: 100px;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  transition: background-color var(--dur-fast) var(--ease), color var(--dur-fast) var(--ease);
+}
+.evaste-banneri__sulje::before {
+  content: "";
+  width: 1.05em; height: 1.05em;
+  background:
+    linear-gradient(45deg, transparent 46%, currentColor 46% 54%, transparent 54%),
+    linear-gradient(-45deg, transparent 46%, currentColor 46% 54%, transparent 54%);
+}
+.evaste-banneri__sulje:hover { background: var(--paper-3); color: var(--ink); }
+.evaste-banneri__sulje:focus-visible { outline: 2px solid var(--forest); outline-offset: 2px; }
+.evaste-banneri__teksti {
+  margin: 0;
+  padding-right: 1.25rem;
+  font-size: .92rem;
+  line-height: 1.55;
+  color: var(--ink-2);
+}
+.evaste-banneri__linkki { color: var(--ink-2); text-decoration: underline; text-underline-offset: .15em; }
+.evaste-banneri__painikkeet { display: flex; gap: .7rem; }
+.evaste-banneri__painikkeet > .btn { flex: 1 1 0; justify-content: center; }
+@media (min-width: 40rem) {
+  .evaste-banneri { flex-direction: row; align-items: center; }
+  .evaste-banneri__teksti { flex: 1; padding-right: 0; }
+  .evaste-banneri__painikkeet { flex: none; }
+  .evaste-banneri__painikkeet > .btn { flex: none; }
 }
