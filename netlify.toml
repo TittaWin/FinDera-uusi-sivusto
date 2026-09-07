@@ -143,6 +143,18 @@
 # HUOM: 404.html ei ole listalla — Netlify käyttää sitä virhesivuna
 # sellaisenaan, eikä sille saa tehdä ohjausta.
 
+# Vanhan sivuston osoite, joka on yhä Googlen tiedossa ja näkyi Search
+# Consolen raportilla rivillä "Ei löydy (404)". Nykysivustolla ei ole
+# omaa alasivua liikkeenjohdon konsultoinnille, joten osoite ohjataan
+# palvelusivulle — se on aiheeltaan lähin vastine, jolloin Google siirtää
+# vanhan osoitteen hakuarvon eteenpäin eikä tulkitse ohjausta pehmeäksi
+# 404:ksi. Ohjaus etusivulle olisi tehnyt juuri niin.
+[[redirects]]
+  from = "/palvelut/liikkeenjohdon_konsultointi"
+  to = "/palvelut"
+  status = 301
+  force = true
+
 [[redirects]]
   from = "/palvelut.html"
   to = "/palvelut"
