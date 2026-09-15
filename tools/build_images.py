@@ -14,7 +14,8 @@ SRC = "/Users/titta/Documents/FinDera/Findera kuvat/good pictures"
 SRC_REF = "/Users/titta/Documents/FinDera/Referenssikuvat"
 SRC_ILLAT = "/Users/titta/Documents/FinDera/Ravintolaillat"
 SOURCES = [SRC, SRC_REF, SRC_ILLAT]
-DST = "/Users/titta/Documents/FinDera/Visual Studio - FD/assets/img"
+DST = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                   "assets", "img")
 
 # --- Kuvasuhteet rooleittain ------------------------------------------------
 AR_HERO = 16 / 9
@@ -158,9 +159,10 @@ MANIFEST = {
 
 def main():
     os.makedirs(DST, exist_ok=True)
-    # Siivotaan vanhat kuvat, favicon sailytetaan
+    # Siivotaan taman skriptin vanhat kuvat. Favicon ja laskeutumissivun
+    # lp-kuvat sailytetaan: ne tuottaa build_landing_images.py samaan kansioon.
     for f in os.listdir(DST):
-        if f.endswith((".webp", ".jpg", ".json")):
+        if f.endswith((".webp", ".jpg", ".json")) and not f.startswith("lp-"):
             os.remove(os.path.join(DST, f))
 
     print(f"{'slug':<20} {'lahde':<28} {'kirkkaus':>9} {'kyll.':>7}")

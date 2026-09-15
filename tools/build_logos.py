@@ -14,7 +14,8 @@ from PIL import Image, ImageOps
 import os, math
 
 SRC = "/Users/titta/Documents/FinDera/Referenssit"
-DST = "/Users/titta/Documents/FinDera/Visual Studio - FD/assets/logos"
+DST = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                   "assets", "logos")
 
 INK = (0x16, 0x40, 0x2A)          # --forest
 
