@@ -132,6 +132,15 @@
   status = 301
   force = true
 
+# CLAUDE.md on kehitystyökalun ohjetiedosto, ei sivuston sisältöä. Koska koko
+# repon juuri julkaistaan, se näkyisi muuten osoitteessa /CLAUDE.md.
+# force = true tarvitaan, jotta sääntö voittaa olemassa olevan tiedoston.
+[[redirects]]
+  from = "/CLAUDE.md"
+  to = "/404.html"
+  status = 404
+  force = true
+
 # Sivuston osoitteet ovat päätteettömiä (/palvelut, ei /palvelut.html).
 # Netlify tarjoilee tiedoston palvelut.html osoitteessa /palvelut ilman
 # erillistä sääntöä, joten tässä ohjataan vain vanhat .html-osoitteet uusiin,
