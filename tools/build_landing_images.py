@@ -19,7 +19,11 @@ oikean kokoisia, joten selain ei lataa turhaa dataa.
 from PIL import Image, ImageFilter, ImageOps
 import os
 
-SRC = "/Users/titta/Documents/FinDera/Landing Pages"
+import sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import lahteet
+
+SRC = lahteet.alikansio("Landing Pages")
 DST = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
                    "assets", "img")
 

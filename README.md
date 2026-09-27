@@ -226,9 +226,15 @@ sivukohtaiset tekstit ovat `pages`-osiossa.
 Kuvat ovat kansiossa `assets/img/` valmiiksi optimoituina useassa koossa
 (esim. `palvelu-matkat-1000.webp` ja `palvelu-matkat.jpg`).
 
+Alkuperäiskuvat eivät ole repossa vaan erillisessä aineistokansiossa
+(`FinDera/` iCloudissa). Kansion sijaintia ei ole kirjoitettu skripteihin
+kiinteästi: `tools/lahteet.py` etsii sen tunnetuista paikoista, ja polun voi
+antaa ympäristömuuttujalla `FINDERA_AINEISTO`. Kansion saa siis siirtää ilman
+että skriptejä tarvitsee muokata.
+
 Kuvat tuotetaan skriptillä `tools/build_images.py`. Se lukee alkuperäiset
 kuvat kahdesta kansiosta — `Findera kuvat/good pictures` ja referenssikorttien
-omat kuvat kansiosta `Documents/FinDera/Referenssikuvat` — kääntää ne oikein
+omat kuvat aineistokansion alikansiosta `Referenssikuvat` — kääntää ne oikein
 päin, rajaa kiinteisiin kuvasuhteisiin, yhtenäistää valotuksen ja värit ja
 pakkaa verkkokäyttöön. Ajo (vaatii Pythonin ja Pillow-kirjaston):
 
@@ -259,7 +265,7 @@ Referenssiyritysten logot ovat kansiossa `assets/logos/`. Ne tuotetaan skriptill
 python3 tools/build_logos.py
 ```
 
-Skripti lukee alkuperäiset logot kansiosta `Documents/FinDera/Referenssit`, poistaa
+Skripti lukee alkuperäiset logot aineistokansion alikansiosta `Referenssit`, poistaa
 valkoisen taustan, tekee etusivun nauhaa varten yksivärisen version FinDeran
 tummanvihreällä ja tasaa kaikkien logojen optisen koon niin, että rivi näyttää
 tasapainoiselta. Tiedostot tehdään kaksinkertaisella tarkkuudella, jotta ne ovat
@@ -458,7 +464,7 @@ Ulkoasu käyttää samaa `assets/css/style.css`-tiedostoa kuin muu sivusto, jote
 värit ja typografia pysyvät yhtenäisinä. Sivun omat asettelusäännöt ovat
 `<style>`-lohkossa tiedoston alussa, ja ne on nimetty `lp-`-etuliitteellä.
 
-**Kuvat.** Sivun omat kuvat tuotetaan kansiosta `Documents/FinDera/Landing Pages`:
+**Kuvat.** Sivun omat kuvat tuotetaan aineistokansion alikansiosta `Landing Pages`:
 
 ```bash
 python3 tools/build_landing_images.py

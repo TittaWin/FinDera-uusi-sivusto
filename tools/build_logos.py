@@ -13,7 +13,11 @@ Kuvat renderoidaan 2x-kokoisina, jotta ne ovat teravia myos tarkoilla naytoilla.
 from PIL import Image, ImageOps
 import os, math
 
-SRC = "/Users/titta/Documents/FinDera/Referenssit"
+import sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import lahteet
+
+SRC = lahteet.alikansio("Referenssit")
 DST = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
                    "assets", "logos")
 

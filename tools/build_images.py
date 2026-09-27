@@ -10,9 +10,13 @@ yhtenainen savynkorjaus (valotus, kontrasti, kylläisyys) ja WebP-pakkaus.
 from PIL import Image, ImageOps, ImageEnhance, ImageFilter
 import colorsys, os, shutil
 
-SRC = "/Users/titta/Documents/FinDera/Findera kuvat/good pictures"
-SRC_REF = "/Users/titta/Documents/FinDera/Referenssikuvat"
-SRC_ILLAT = "/Users/titta/Documents/FinDera/Ravintolaillat"
+import sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import lahteet
+
+SRC = lahteet.alikansio("Findera kuvat/good pictures")
+SRC_REF = lahteet.alikansio("Referenssikuvat")
+SRC_ILLAT = lahteet.alikansio("Ravintolaillat")
 SOURCES = [SRC, SRC_REF, SRC_ILLAT]
 DST = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
                    "assets", "img")
