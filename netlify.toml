@@ -279,3 +279,13 @@
   from = "/findera"
   to = "/"
   status = 301
+
+# Vanhan sivuston PDF-raportit (esim. EREMA, Fraunhofer) olivat polussa
+# /FI/files/. Kävijät avaavat niitä yhä, ja Cloudflaren kävijätiedoissa ne
+# näkyivät virhesivulla (lokakuu 2026). Ohjaus vie lukijan Projektit-sivulle.
+# Ei force-asetusta tarkoituksella: jos tiedostot palautetaan samoihin
+# osoitteisiin, olemassa oleva tiedosto voittaa ja ohjaus jää käyttämättä.
+[[redirects]]
+  from = "/FI/files/*"
+  to = "/projektit"
+  status = 301
