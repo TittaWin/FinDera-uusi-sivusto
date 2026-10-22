@@ -123,6 +123,10 @@ MANIFEST = {
     "palvelu-matkat":     ("20190405_144405.jpg",        "card", AR_CARD, 0.55),
     "palvelu-tapaamiset": ("20240926_153621.jpg",        "card", AR_CARD, 0.50),
     "palvelu-kartoitus":  ("20240416_160711.jpg",        "card", AR_CARD, 0.62),
+    # Palvelut-sivun ovien avaus: Rotterdamin satama 2019. Pystykuva sellaisenaan,
+    # koska kuvasarake venyy tekstin korkuiseksi (n. 0.42) — ihmisen kohdistus
+    # tehdään HTML:n object-positionilla. Etusivun kortti käyttää yhä palvelu-tapaamiset-kuvaa.
+    "palvelu-ovienavaus": ("20190523_105305.jpg",        "card", AR_PORT, 0.50),
 
     # Referenssit
     # Osalla korteista on oma referenssikuva kansiossa Referenssikuvat/,
@@ -133,8 +137,12 @@ MANIFEST = {
     "case-ladec":         ("Lahden seudun kierrätys_referenssikuva.png", "card", AR_CARD, 0.60),
     "case-salpakierto":   ("Salpakierto_referenssikuva.png",             "card", AR_CARD, 0.60),
     "case-salaoja":       ("20250415_110936.jpg",                        "card", AR_CARD, 0.55),
-    "case-ely":           ("20230525_123954.jpg",                        "card", AR_CARD, 0.80),
-    "case-osao":          ("Koulutuskuntayhtymä ASAO_referenssikuva.png","card", AR_CARD, 0.55),
+    # ELY (Berliini 2021) ja OSAO (2018): koko 4:3-kuva ilman esirajausta, koska
+    # kortti on tietokoneella pysty ja puhelimessa 16:9. Ihmisiin kohdistetaan
+    # HTML:n object-positionilla, joka toimii molemmissa näkymissä.
+    "case-ely":           ("20211029_104528.jpg",                        "card", AR_GAL, 0.50),
+    # OSAO: lasitalo vie kuvan yläosan, joten rajataan 3:2:een alhaalta -> ihmiset isommiksi.
+    "case-osao":          ("20180424_161205.jpg",                        "card", AR_CARD, 1.00),
     "case-turkuamk":      ("Turun AMK_referenssikuva.png",               "card", AR_CARD, 0.50),
     "case-muhos":         ("Muhoksen kunta_referenssikuva.png",          "card", AR_CARD, 0.62),
 
