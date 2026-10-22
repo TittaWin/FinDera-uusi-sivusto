@@ -127,6 +127,8 @@ MANIFEST = {
     # koska kuvasarake venyy tekstin korkuiseksi (n. 0.42) — ihmisen kohdistus
     # tehdään HTML:n object-positionilla. Etusivun kortti käyttää yhä palvelu-tapaamiset-kuvaa.
     "palvelu-ovienavaus": ("20190523_105305.jpg",        "card", AR_PORT, 0.50),
+    # Etusivun Learning-kortti: BioEconomy-seminaari 2016, pyöreät pöydät
+    "palvelu-jatkotyosto": ("20161012_BioEconomy_web_018.jpg", "card", AR_CARD, 0.70),
 
     # Referenssit
     # Osalla korteista on oma referenssikuva kansiossa Referenssikuvat/,

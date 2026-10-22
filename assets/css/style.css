@@ -513,6 +513,7 @@ p:last-child { margin-bottom: 0; }
 }
 .page-head h1 { max-width: 20ch; }
 .page-head .lead { max-width: 58ch; }
+.page-head__more { max-width: 58ch; color: var(--muted); margin-top: 1.25rem; margin-bottom: 0; }
 
 /* 8. OSIOT & KORTIT ----------------------------------------------------- */
 .section-head { margin-bottom: clamp(2.5rem, 5vw, 4rem); max-width: 70ch; }
@@ -574,6 +575,11 @@ p:last-child { margin-bottom: 0; }
 .svc__when {
   font-size: var(--t-small); color: var(--moss); font-weight: 500;
   margin-bottom: .9rem; display: block;
+}
+/* Palvelualueen nimi (Insight, Connections ...) kortin otsikon yläpuolella */
+.svc__body .svc__label {
+  font-size: var(--t-micro); font-weight: 600; letter-spacing: .16em;
+  text-transform: uppercase; color: var(--moss); margin: 0 0 .45rem;
 }
 .svc__body p { color: var(--muted); font-size: .97rem; }
 .svc__list {
@@ -654,6 +660,13 @@ p:last-child { margin-bottom: 0; }
 .step:hover::before { background: var(--forest); color: #fff; border-color: var(--forest); }
 .step h3 { font-size: var(--t-h4); font-family: var(--font-sans); font-weight: 600; margin-bottom: .3rem; }
 .step p { color: var(--muted); margin-bottom: 0; }
+/* Palvelut-sivun etenemispolku kahdessa sarakkeessa; pystyviiva vain yhden sarakkeen näkymässä */
+.steps--grid { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: clamp(2rem, 5vw, 4.5rem); }
+.steps--grid .step::after { display: none; }
+@media (max-width: 860px) {
+  .steps--grid { grid-template-columns: 1fr; }
+  .steps--grid .step:not(:last-child)::after { display: block; }
+}
 
 /* Referenssikortti / case */
 .case {
@@ -924,6 +937,7 @@ p:last-child { margin-bottom: 0; }
   border-radius: 0 var(--radius) var(--radius) 0;
 }
 .note p { margin: 0; max-width: 68ch; color: var(--ink-2); }
+.note p + p { margin-top: .75rem; }
 .section--paper2 .note { background: var(--paper-3); }
 
 /* Hinnoittelu — avautuva osio.
